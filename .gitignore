@@ -1,60 +1,93 @@
-# Virtual environments
+# ============================================
+# GITIGNORE FOR REPRODUCIBILITY
+# ============================================
+# This repository contains CODE ONLY for reproducibility.
+# Data files must be obtained from original sources (see README.md)
+# ============================================
+
+# ----- Virtual environments -----
 .venv/
 venv/
 env/
 .env/
 
-# Python cache
+# ----- Python cache -----
 __pycache__/
 *.py[cod]
 *$py.class
 .mypy_cache/
 .pytest_cache/
 
-# R cache and history
+# ----- R cache and history -----
 .Rhistory
 .Rdata
 .RData
 .Rproj.user/
 
-# Large data files - Input data
-Input_data/*.csv
-Input_data/*.nc
-Input_data/*.gpkg
-Input_data/*.tif
-Input_data/**/*.csv
+# ----- ALL INPUT DATA (obtain from original sources) -----
+Input_data/
 
-# Temporary data folders (large files)
+# ----- Temporary/intermediate data folders -----
 new_analysis/phase0_data_prep/temp_srag/
 new_analysis/phase0_data_prep/temp_cams/
 new_analysis/phase0_data_prep/temp_life_tables/
 
-# Large parquet and result files
+# ----- ALL data files (binary/large) -----
 *.parquet
-new_analysis/phase0_data_prep/results/*.parquet
-new_analysis/phase1b_causal_analysis/results/*.parquet
+*.nc
+*.gpkg
+*.tif
+*.xls
+*.xlsx
 
-# Large JSON result files (over 10MB)
-new_analysis/phase3_confounding/results/supplementary_analyses_v2*.json
-new_analysis/phase4_heterogeneity/results/*region_effects*.json
-new_analysis/phase1_core_model/results/dlnm_v2_*_results.json
-new_analysis/phase1_core_model/results/dlnm_v2_*_clean.json
+# ----- Document production files (not for repo) -----
+*.qmd
+*.pdf
+*.docx
+*.tex
+*.bib
+*.csl
+new_analysis/phase6_paper/
 
-# Jupyter notebooks checkpoints
+# ----- Generated outputs (regenerate from code) -----
+*.png
+*.jpg
+*.jpeg
+new_analysis/phase5_outputs/figures/
+new_analysis/phase5_outputs/maps/
+new_analysis/phase5_outputs/tables/*.xlsx
+new_analysis/phase5_outputs/convergence_diagnostics/
+
+# ----- All result files (regenerate from code) -----
+# Keep only small summary CSVs, exclude large JSON results
+**/results/*.json
+**/results/*_daily.csv
+**/results/*_matched_data.csv
+new_analysis/phase2_robustness/figures/
+
+# ----- Archive folders -----
+**/archive/
+**/archive_v1/
+
+# ----- Quarto/build artifacts -----
+.quarto/
+_site/
+_book/
+
+# ----- Jupyter notebooks -----
+*.ipynb
 .ipynb_checkpoints/
 
-# IDE settings
+# ----- IDE settings -----
 .vscode/
 .idea/
 
-# OS files
+# ----- OS files -----
 .DS_Store
 Thumbs.db
 
-# Temporary files
+# ----- Temporary files -----
 *.tmp
 *.temp
 *.log
-
-# Results and outputs (uncomment if you want to track these)
-# new_analysis/results/
+*.bak
