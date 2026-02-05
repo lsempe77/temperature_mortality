@@ -1,0 +1,60 @@
+# Virtual environments
+.venv/
+venv/
+env/
+.env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.mypy_cache/
+.pytest_cache/
+
+# R cache and history
+.Rhistory
+.Rdata
+.RData
+.Rproj.user/
+
+# Large data files - Input data
+Input_data/*.csv
+Input_data/*.nc
+Input_data/*.gpkg
+Input_data/*.tif
+Input_data/**/*.csv
+
+# Temporary data folders (large files)
+new_analysis/phase0_data_prep/temp_srag/
+new_analysis/phase0_data_prep/temp_cams/
+new_analysis/phase0_data_prep/temp_life_tables/
+
+# Large parquet and result files
+*.parquet
+new_analysis/phase0_data_prep/results/*.parquet
+new_analysis/phase1b_causal_analysis/results/*.parquet
+
+# Large JSON result files (over 10MB)
+new_analysis/phase3_confounding/results/supplementary_analyses_v2*.json
+new_analysis/phase4_heterogeneity/results/*region_effects*.json
+new_analysis/phase1_core_model/results/dlnm_v2_*_results.json
+new_analysis/phase1_core_model/results/dlnm_v2_*_clean.json
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# IDE settings
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Results and outputs (uncomment if you want to track these)
+# new_analysis/results/

@@ -1,0 +1,110 @@
+{
+  "analysis_date": "2025-12-16T21:53:35.181010",
+  "level": "intermediate",
+  "sexes": [
+    "Male",
+    "Female"
+  ],
+  "dlnm_params": {
+    "max_lag": 21,
+    "var_df": 4,
+    "lag_df": 4,
+    "basis_type": "natural_spline"
+  },
+  "approach": "per_region_dlnm_then_mvmeta_pooling",
+  "methodology": "Gasparrini MVMeta - pool DLNM coefficients not RRs",
+  "offset": "log(pop_elderly * sex_proportion)",
+  "percentile_method": "region_specific",
+  "pooled_results": {
+    "Male": {
+      "method": "mvmeta",
+      "heat": {
+        "rr": 22026.465794806718,
+        "rr_lo": 0.0,
+        "rr_hi": Infinity,
+        "k": 133
+      },
+      "cold": {
+        "rr": 1.0,
+        "rr_lo": 1.0,
+        "rr_hi": 1.0,
+        "k": 133
+      },
+      "mmt": 20.123621101379396,
+      "mmt_percentile": 1.0,
+      "n_regions": 133,
+      "n_pooled": 133,
+      "pooled_percentiles": {
+        "p1": 20.123621101379396,
+        "p50": 24.804656982421875,
+        "p99": 28.53893440246583
+      }
+    },
+    "Female": {
+      "method": "mvmeta",
+      "heat": {
+        "rr": 2.956244400060934,
+        "rr_lo": 0.0,
+        "rr_hi": Infinity,
+        "k": 133
+      },
+      "cold": {
+        "rr": 3.8229298714303193,
+        "rr_lo": 0.0,
+        "rr_hi": Infinity,
+        "k": 133
+      },
+      "mmt": 25.90383629808523,
+      "mmt_percentile": 68.31313131313134,
+      "n_regions": 133,
+      "n_pooled": 133,
+      "pooled_percentiles": {
+        "p1": 20.123621101379396,
+        "p50": 24.804656982421875,
+        "p99": 28.53893440246583
+      }
+    }
+  },
+  "comparisons": {
+    "heat": {
+      "male_vs_female": {
+        "rr_ratio": 1.0,
+        "rr_ratio_lo": 0.06254565041285011,
+        "rr_ratio_hi": 15.988322023981196,
+        "diff_log_rr": 0.0,
+        "se_diff": 1.4142135623730951,
+        "z": 0.0,
+        "p": 1.0,
+        "significant": false
+      },
+      "paired": {
+        "rr_ratio": 0.9260749183612276,
+        "rr_ratio_lo": 0.9106632627425958,
+        "rr_ratio_hi": 0.9417473939103702,
+        "p": 0.0,
+        "k": 132,
+        "I2": 6.5153300614472265
+      }
+    },
+    "cold": {
+      "male_vs_female": {
+        "rr_ratio": 1.0,
+        "rr_ratio_lo": 0.140858420921045,
+        "rr_ratio_hi": 7.099327065156633,
+        "diff_log_rr": 0.0,
+        "se_diff": 1.0,
+        "z": 0.0,
+        "p": 1.0,
+        "significant": false
+      },
+      "paired": {
+        "rr_ratio": 1.014217374107702,
+        "rr_ratio_lo": 0.9981340498832811,
+        "rr_ratio_hi": 1.0305598552240636,
+        "p": 0.0834531643744072,
+        "k": 133,
+        "I2": 0.0
+      }
+    }
+  }
+}

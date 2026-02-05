@@ -1,0 +1,127 @@
+{
+  "mode": "actual",
+  "life_table_source": "IBGE Brazil life table",
+  "timestamp": "2025-12-16T08:22:39.009807",
+  "actual": {
+    "total_yll": 156230182.5684209,
+    "n_deaths": 13664240,
+    "avg_life_exp": 11.43350691794208,
+    "yll_per_death": 11.43350691794208,
+    "age_group_breakdown": [
+      {
+        "age_group": "60-64",
+        "n_deaths": 1634598,
+        "pct_deaths": 11.962597261172228,
+        "total_yll": 33713050.0943256,
+        "avg_life_exp": 20.62467352482115
+      },
+      {
+        "age_group": "65-69",
+        "n_deaths": 1875334,
+        "pct_deaths": 13.724393014174224,
+        "total_yll": 31942949.159629997,
+        "avg_life_exp": 17.03320537015273
+      },
+      {
+        "age_group": "70-74",
+        "n_deaths": 2061855,
+        "pct_deaths": 15.089423195142942,
+        "total_yll": 28355780.818609353,
+        "avg_life_exp": 13.75255816660694
+      },
+      {
+        "age_group": "75-79",
+        "n_deaths": 2186569,
+        "pct_deaths": 16.00212671908573,
+        "total_yll": 23763719.203503072,
+        "avg_life_exp": 10.868039930824535
+      },
+      {
+        "age_group": "80-84",
+        "n_deaths": 2202092,
+        "pct_deaths": 16.115729817391966,
+        "total_yll": 17523126.7732587,
+        "avg_life_exp": 7.9574907738907825
+      },
+      {
+        "age_group": "85-89",
+        "n_deaths": 1879512,
+        "pct_deaths": 13.754969175014491,
+        "total_yll": 11229112.565862533,
+        "avg_life_exp": 5.974483039141295
+      },
+      {
+        "age_group": "90+",
+        "n_deaths": 1824280,
+        "pct_deaths": 13.350760818018419,
+        "total_yll": 9702443.95323164,
+        "avg_life_exp": 5.318505905470454
+      }
+    ],
+    "intermediate_yll": {
+      "heat_an": 307915.0003790146,
+      "cold_an": 122463.00266871203,
+      "heat_yll": 3520548.286971601,
+      "cold_yll": 1400181.5882046781,
+      "total_yll": 4920729.875176279,
+      "yll_per_death": 11.43350691794208
+    },
+    "immediate_yll": {
+      "heat_an": 315738.1792548973,
+      "cold_an": 173674.76938466783,
+      "heat_yll": 3609994.6567693045,
+      "cold_yll": 1985711.677231595,
+      "total_yll": 5595706.334000899,
+      "yll_per_death": 11.43350691794208
+    },
+    "parse_stats": {
+      "total_rows": 20405974,
+      "parsed_rows": 20403540,
+      "success_rate": 99.98807212044865,
+      "n_elderly_deaths": 13706565,
+      "years_processed": [
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "year_range": "2010-2024",
+      "unparsed_examples": [
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN
+      ],
+      "n_ages_used_for_yll": 13664240
+    }
+  },
+  "assumed": null,
+  "comparison": null
+}

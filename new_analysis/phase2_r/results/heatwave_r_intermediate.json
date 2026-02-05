@@ -1,0 +1,26 @@
+{
+  "exposure_type": "intermediate",
+  "analysis_date": "2025-12-19 10:57:59.01736",
+  "heatwave_definition": {
+    "threshold_pct": 0.95,
+    "threshold_temp": 28.606163,
+    "min_days": 3
+  },
+  "results": {
+    "n_regions": 69,
+    "n_heatwave_days": 29613,
+    "pct_heatwave": 4.178101,
+    "avg_main_rr_p99": 1.336763,
+    "heatwave_rr": 1.013537,
+    "heatwave_ci_low": 1.005834,
+    "heatwave_ci_high": 1.021299,
+    "heatwave_log_rr": 0.013447,
+    "heatwave_se": 0.003892,
+    "heterogeneity": {
+      "cochrans_Q": 75.620079,
+      "Q_df": 68,
+      "Q_pvalue": 0.245984,
+      "I2_percent": 10.076793
+    }
+  }
+}

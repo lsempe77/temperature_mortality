@@ -1,0 +1,279 @@
+{
+  "level": "immediate",
+  "enso_electrification": {
+    "deaths_all": {
+      "continuous_model": {
+        "oni_effect": {
+          "coefficient": -0.12111586534635466,
+          "std_error": 0.06461327742019987,
+          "p_value": 0.060865214525526755
+        },
+        "electrified_effect": {
+          "coefficient": 0.30786594936906914,
+          "std_error": 0.078234570259399,
+          "p_value": 8.313952835475947e-05
+        },
+        "interaction": {
+          "coefficient": -0.008955345017854263,
+          "std_error": 0.06881651221233856,
+          "p_value": 0.8964606749414994
+        },
+        "n_obs": 2523235,
+        "r_squared": 0.004546042006104201
+      },
+      "binary_model": {
+        "el_nino_effect": {
+          "coefficient": 0.19785908844144398,
+          "std_error": 0.057942400847545907,
+          "p_value": 0.0006383946463479036
+        },
+        "la_nina_effect": {
+          "coefficient": 0.6028793819868945,
+          "std_error": 0.17367081614503913,
+          "p_value": 0.0005177686664933919
+        },
+        "el_nino_x_electrified": {
+          "coefficient": -0.10484778047070047,
+          "std_error": 0.06336246061945915,
+          "p_value": 0.09797922752771758
+        },
+        "la_nina_x_electrified": {
+          "coefficient": -0.09745486230959036,
+          "std_error": 0.16714947962126298,
+          "p_value": 0.5598662535007264
+        },
+        "n_obs": 2523235,
+        "r_squared": 0.0056992360105735385
+      }
+    },
+    "deaths_cardiovascular": {
+      "continuous_model": {
+        "oni_effect": {
+          "coefficient": 0.016181086612186923,
+          "std_error": 0.012235174429907103,
+          "p_value": 0.18599984824283355
+        },
+        "electrified_effect": {
+          "coefficient": 0.030612987560210535,
+          "std_error": 0.03492353713128903,
+          "p_value": 0.38071926562241987
+        },
+        "interaction": {
+          "coefficient": -0.004756533657289403,
+          "std_error": 0.012827436709211368,
+          "p_value": 0.7107795258109417
+        },
+        "n_obs": 2523235,
+        "r_squared": 0.00429923384428732
+      },
+      "binary_model": {
+        "el_nino_effect": {
+          "coefficient": 0.04848904415539463,
+          "std_error": 0.023778226104372354,
+          "p_value": 0.041428034089302165
+        },
+        "la_nina_effect": {
+          "coefficient": 0.016107635526074443,
+          "std_error": 0.03712341659957287,
+          "p_value": 0.664365264318558
+        },
+        "el_nino_x_electrified": {
+          "coefficient": 0.0051475979567141995,
+          "std_error": 0.02126961001324095,
+          "p_value": 0.8087673276169328
+        },
+        "la_nina_x_electrified": {
+          "coefficient": 0.01887150042142014,
+          "std_error": 0.037457330664036274,
+          "p_value": 0.6143925984560409
+        },
+        "n_obs": 2523235,
+        "r_squared": 0.004416729968525823
+      }
+    },
+    "deaths_respiratory": {
+      "continuous_model": {
+        "oni_effect": {
+          "coefficient": 0.03990598397914447,
+          "std_error": 0.009371404163879788,
+          "p_value": 2.0601358129231272e-05
+        },
+        "electrified_effect": {
+          "coefficient": 0.018756635152085404,
+          "std_error": 0.02379890292162071,
+          "p_value": 0.43062052654543814
+        },
+        "interaction": {
+          "coefficient": -0.006018486426896907,
+          "std_error": 0.010056992429659522,
+          "p_value": 0.549547717276665
+        },
+        "n_obs": 2523235,
+        "r_squared": 0.005050421065370458
+      },
+      "binary_model": {
+        "el_nino_effect": {
+          "coefficient": 0.09034072343508125,
+          "std_error": 0.01185999626877256,
+          "p_value": 2.5910891234572436e-14
+        },
+        "la_nina_effect": {
+          "coefficient": 0.011196505895255168,
+          "std_error": 0.017453800166276515,
+          "p_value": 0.521201859350204
+        },
+        "el_nino_x_electrified": {
+          "coefficient": -0.05122750740186476,
+          "std_error": 0.013180286033454242,
+          "p_value": 0.00010162606096032416
+        },
+        "la_nina_x_electrified": {
+          "coefficient": -0.04400397958093225,
+          "std_error": 0.02207469536067944,
+          "p_value": 0.04621626690551398
+        },
+        "n_obs": 2523235,
+        "r_squared": 0.004914205673317684
+      }
+    }
+  },
+  "temperature_electrification": {
+    "deaths_all": {
+      "extreme_heat_effect": {
+        "coefficient": 0.4162528689750698,
+        "std_error": 0.15343384917332747,
+        "p_value": 0.006669437162599177
+      },
+      "extreme_cold_effect": {
+        "coefficient": -0.018461678217691867,
+        "std_error": 0.32382159075960976,
+        "p_value": 0.9545357303253489
+      },
+      "heat_x_electrified": {
+        "coefficient": 0.11419494056814206,
+        "std_error": 0.15525110515333593,
+        "p_value": 0.46200463926182656,
+        "ci_lower": -0.19009163409243712,
+        "ci_upper": 0.41848151522872123
+      },
+      "cold_x_electrified": {
+        "coefficient": 0.17905416488093287,
+        "std_error": 0.32961952626841684,
+        "p_value": 0.5869820015647221,
+        "ci_lower": -0.4669882352063185,
+        "ci_upper": 0.8250965649681842
+      },
+      "n_obs": 2523235,
+      "r_squared": 0.004564550869138206,
+      "interpretation": {
+        "heat_protection": "No protective effect of electrification on heat days",
+        "mechanism": "AC mechanism not supported"
+      }
+    },
+    "deaths_cardiovascular": {
+      "extreme_heat_effect": {
+        "coefficient": 0.08364325465713196,
+        "std_error": 0.0254799661446334,
+        "p_value": 0.0010281559148128628
+      },
+      "extreme_cold_effect": {
+        "coefficient": 0.006507258240301897,
+        "std_error": 0.0728998663082625,
+        "p_value": 0.9288729259090538
+      },
+      "heat_x_electrified": {
+        "coefficient": 0.04431501153758498,
+        "std_error": 0.024633898093513445,
+        "p_value": 0.07202748577713047,
+        "ci_lower": -0.0039665415245312766,
+        "ci_upper": 0.09259656459970123
+      },
+      "cold_x_electrified": {
+        "coefficient": 0.11949061682521994,
+        "std_error": 0.08129581091703625,
+        "p_value": 0.14160915125612158,
+        "ci_lower": -0.03984624466614925,
+        "ci_upper": 0.27882747831658916
+      },
+      "n_obs": 2523235,
+      "r_squared": 0.004765155615435002,
+      "interpretation": {
+        "heat_protection": "No protective effect of electrification on heat days",
+        "mechanism": "AC mechanism not supported"
+      }
+    },
+    "deaths_respiratory": {
+      "extreme_heat_effect": {
+        "coefficient": 0.12155037704484706,
+        "std_error": 0.04365785917789267,
+        "p_value": 0.005366688760199742
+      },
+      "extreme_cold_effect": {
+        "coefficient": -0.09079283195314906,
+        "std_error": 0.03191057144397234,
+        "p_value": 0.004437972893803956
+      },
+      "heat_x_electrified": {
+        "coefficient": -0.0333862840922115,
+        "std_error": 0.04317923566494989,
+        "p_value": 0.4394026684240502,
+        "ci_lower": -0.11801603087548068,
+        "ci_upper": 0.051243462691057694
+      },
+      "cold_x_electrified": {
+        "coefficient": 0.10115590910619196,
+        "std_error": 0.032011255353668985,
+        "p_value": 0.0015776335058799193,
+        "ci_lower": 0.03841500151308576,
+        "ci_upper": 0.16389681669929818
+      },
+      "n_obs": 2523235,
+      "r_squared": 0.004663804256174298,
+      "interpretation": {
+        "heat_protection": "Electrification reduces heat-related mortality",
+        "mechanism": "Consistent with AC access hypothesis",
+        "magnitude": "0.03 fewer deaths per extreme heat day"
+      }
+    }
+  },
+  "triple_interaction": {
+    "deaths_all": {
+      "main_effects": {
+        "el_nino": -0.1077031192820307,
+        "heat": 0.42166560622486493,
+        "electrified": 0.23920481744663383
+      },
+      "two_way_interactions": {
+        "el_nino_x_heat": 0.017717192046581953,
+        "el_nino_x_electrified": -0.08614672364074322,
+        "heat_x_electrified": 0.03553060636247393
+      },
+      "triple_interaction": {
+        "coefficient": 0.21384883413341918,
+        "std_error": 0.2334431627762346,
+        "p_value": 0.3596334255605067,
+        "ci_lower": -0.243691357345122,
+        "ci_upper": 0.6713890256119603
+      },
+      "n_obs": 2523235,
+      "r_squared": 0.004225466570553449,
+      "interpretation": "No significant triple interaction. Electrification effect is not differentially larger during ENSO-induced heat."
+    }
+  },
+  "heterogeneity": {
+    "deaths_all": {
+      "hot_regions": {
+        "att": 0.12260163115588969,
+        "std_error": 0.02044879273277886,
+        "p_value": 2.028057031912105e-09,
+        "n_obs": 1224625
+      },
+      "cool_regions": {
+        "att": 0.39391650726665284,
+        "std_error": 1.7737145716859647e-14,
+        "p_value": 0.0,
+        "n_obs": 1298610
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "exposure_type": "intermediate",
+  "analysis_date": "2025-12-19 08:41:28.303883",
+  "methodology": {
+    "life_table_source": "IBGE Brazilian life tables",
+    "age_distribution": [
+      {
+        "age_group": "60-64",
+        "mid_age": 62,
+        "weight": 0.15,
+        "life_exp": 20.6629
+      },
+      {
+        "age_group": "65-69",
+        "mid_age": 67,
+        "weight": 0.18,
+        "life_exp": 17.0493
+      },
+      {
+        "age_group": "70-74",
+        "mid_age": 72,
+        "weight": 0.2,
+        "life_exp": 13.758
+      },
+      {
+        "age_group": "75-79",
+        "mid_age": 77,
+        "weight": 0.17,
+        "life_exp": 10.8573
+      },
+      {
+        "age_group": "80-84",
+        "mid_age": 82,
+        "weight": 0.15,
+        "life_exp": 7.9256
+      },
+      {
+        "age_group": "85-89",
+        "mid_age": 87,
+        "weight": 0.1,
+        "life_exp": 5.9094
+      },
+      {
+        "age_group": "90+",
+        "mid_age": 92,
+        "weight": 0.05,
+        "life_exp": 5.3185
+      }
+    ],
+    "weighted_avg_le": 12.8114,
+    "median_elderly_le": 11.9636
+  },
+  "national": {
+    "n_years": 14.5902,
+    "total_deaths": 13677712,
+    "pop_elderly": 32113490,
+    "heat_attributable": 245024.3359,
+    "cold_attributable": 648614.106,
+    "total_attributable": 893638.4419,
+    "yll_heat": 3139092.9042,
+    "yll_cold": 8309623.3291,
+    "yll_total": 11448716.2332,
+    "annual_yll_heat": 215150.5879,
+    "annual_yll_cold": 569534.0657,
+    "annual_yll_total": 784684.6536,
+    "yll_rate_heat_per_100k": 669.9695,
+    "yll_rate_cold_per_100k": 1773.5041,
+    "yll_rate_total_per_100k": 2443.4736,
+    "yll_per_death": 12.8114,
+    "yll_heat_median_method": 2931364.1316,
+    "yll_cold_median_method": 7759735.8591,
+    "yll_total_median_method": 10691099.9906
+  },
+  "regional_summary": {
+    "n_regions": 133,
+    "total_regional_yll": 11448716.2332,
+    "mean_regional_yll": 86080.5732,
+    "median_regional_yll": 43529.7259
+  }
+}

@@ -1,0 +1,21 @@
+analysis,temp_variable,extra_controls,pooling_method,percentile,pooled_rr,pooled_rr_lower,pooled_rr_upper,log_rr,log_rr_se,n_regions,pooled_mmt,pooled_mmt_percentile
+Base (Dry-bulb),temp_mean,,MVMeta,p1,1.0,1.0,1.0,0.0,inf,507,18.39247985839844,1
+Base (Dry-bulb),temp_mean,,MVMeta,p2.5,1.0,1.0,1.0,0.0,inf,507,18.39247985839844,1
+Base (Dry-bulb),temp_mean,,MVMeta,p97.5,1.0,1.0,1.0,0.0,inf,507,18.39247985839844,1
+Base (Dry-bulb),temp_mean,,MVMeta,p99,1.0,1.0,1.0,0.0,inf,507,18.39247985839844,1
+Apparent Temperature,apparent_temp,,MVMeta,p1,1.0,1.0,1.0,0.0,inf,507,18.683789253234863,1
+Apparent Temperature,apparent_temp,,MVMeta,p2.5,1.0,1.0,1.0,0.0,inf,507,18.683789253234863,1
+Apparent Temperature,apparent_temp,,MVMeta,p97.5,1.0,1.0,1.0,0.0,inf,507,18.683789253234863,1
+Apparent Temperature,apparent_temp,,MVMeta,p99,1.0,1.0,1.0,0.0,inf,507,18.683789253234863,1
+Pollution-Adjusted,temp_mean,"pm25, o3",MVMeta,p1,1.0,1.0,1.0,0.0,inf,507,18.39247985839844,1
+Pollution-Adjusted,temp_mean,"pm25, o3",MVMeta,p2.5,1.0,1.0,1.0,0.0,inf,507,18.39247985839844,1
+Pollution-Adjusted,temp_mean,"pm25, o3",MVMeta,p97.5,1.0,1.0,1.0,0.0,inf,507,18.39247985839844,1
+Pollution-Adjusted,temp_mean,"pm25, o3",MVMeta,p99,1.0,1.0,1.0,0.0,inf,507,18.39247985839844,1
+Influenza-Adjusted,temp_mean,srag_cases,MVMeta,p1,1.0,1.0,1.0,0.0,inf,507,18.39247985839844,1
+Influenza-Adjusted,temp_mean,srag_cases,MVMeta,p2.5,1.0,1.0,1.0,0.0,inf,507,18.39247985839844,1
+Influenza-Adjusted,temp_mean,srag_cases,MVMeta,p97.5,1.0,1.0,1.0,0.0,inf,507,18.39247985839844,1
+Influenza-Adjusted,temp_mean,srag_cases,MVMeta,p99,1.0,1.0,1.0,0.0,inf,507,18.39247985839844,1
+Fully Adjusted,temp_mean,"pm25, o3, srag_cases",MVMeta,p1,1.0,1.0,1.0,0.0,inf,507,18.39247985839844,1
+Fully Adjusted,temp_mean,"pm25, o3, srag_cases",MVMeta,p2.5,1.0,1.0,1.0,0.0,inf,507,18.39247985839844,1
+Fully Adjusted,temp_mean,"pm25, o3, srag_cases",MVMeta,p97.5,1.0,1.0,1.0,0.0,inf,507,18.39247985839844,1
+Fully Adjusted,temp_mean,"pm25, o3, srag_cases",MVMeta,p99,1.0,1.0,1.0,0.0,inf,507,18.39247985839844,1

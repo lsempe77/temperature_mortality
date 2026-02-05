@@ -1,0 +1,93 @@
+{
+  "level": "intermediate",
+  "placebo_outcomes": {
+    "enso_deaths_all": {
+      "coefficient": -0.41833329921466494,
+      "std_error": 0.08937337058550555,
+      "p_value": 2.858445638318322e-06,
+      "n_obs": 721096
+    },
+    "enso_deaths_cardiovascular": {
+      "coefficient": 0.04073402042906927,
+      "std_error": 0.015890560536277264,
+      "p_value": 0.010364959479952137,
+      "n_obs": 721096
+    },
+    "enso_deaths_respiratory": {
+      "coefficient": 0.12102637159758038,
+      "std_error": 0.013398843228266203,
+      "p_value": 1.6764277272585974e-19,
+      "n_obs": 721096
+    },
+    "lpt_deaths_all": {
+      "coefficient": 0.18900250471248453,
+      "std_error": 1.1479238799084208e-14,
+      "p_value": 0.0,
+      "n_obs": 721096
+    },
+    "lpt_deaths_cardiovascular": {
+      "coefficient": 0.024330570403079746,
+      "std_error": 1.9680708785495525e-15,
+      "p_value": 0.0,
+      "n_obs": 721096
+    },
+    "lpt_deaths_respiratory": {
+      "coefficient": 0.025602292973895407,
+      "std_error": 8.022804334029024e-16,
+      "p_value": 0.0,
+      "n_obs": 721096
+    }
+  },
+  "placebo_timing": {
+    "lead_2": {
+      "coefficient": 0.0,
+      "std_error": 0.0,
+      "p_value": null,
+      "n_obs": 27373,
+      "significant": false
+    },
+    "lead_3": {
+      "coefficient": 0.0,
+      "std_error": 0.0,
+      "p_value": null,
+      "n_obs": 27373,
+      "significant": false
+    },
+    "lead_4": {
+      "coefficient": 0.0,
+      "std_error": 0.0,
+      "p_value": null,
+      "n_obs": 27373,
+      "significant": false
+    },
+    "summary": {
+      "any_significant_placebo": false,
+      "interpretation": "Placebo test PASSED - no pre-trends"
+    }
+  },
+  "permutation": {
+    "actual_effect": 0.18900250471248453,
+    "n_permutations": 50,
+    "mean_permutation_effect": 0.0,
+    "std_permutation_effect": 0.0,
+    "p_value": 0.0,
+    "percentile_5": 0.0,
+    "percentile_95": 0.0,
+    "interpretation": "Effect is significant beyond random chance"
+  },
+  "exclusion_restriction": {
+    "reduced_form": {
+      "enso_effect": -0.41833329921466494,
+      "std_error": 0.08937337058550555,
+      "p_value": 2.858445638318322e-06
+    },
+    "conditional": {
+      "enso_effect_conditional": -0.36159456105347804,
+      "std_error": 0.08436215592095543,
+      "p_value": 1.817409415652713e-05,
+      "temp_effect": -0.17953073561287516
+    },
+    "interpretation": "Exclusion restriction QUESTIONABLE: ENSO has residual effect not explained by temperature"
+  },
+  "balance": null
+}

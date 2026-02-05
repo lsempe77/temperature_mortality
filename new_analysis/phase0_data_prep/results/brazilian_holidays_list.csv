@@ -1,0 +1,197 @@
+date,holiday_name_pt,year,month,day,day_of_week,holiday_type,is_holiday
+2010-01-01,Universal Fraternization Day,2010,1,1,Friday,civic,1
+2010-02-13,Sábado de Carnaval,2010,2,13,Saturday,carnival,1
+2010-02-14,Domingo de Carnaval,2010,2,14,Sunday,carnival,1
+2010-02-15,Segunda-feira de Carnaval,2010,2,15,Monday,carnival,1
+2010-02-16,Terça-feira de Carnaval,2010,2,16,Tuesday,carnival,1
+2010-04-02,Good Friday,2010,4,2,Friday,civic,1
+2010-04-21,Tiradentes' Day,2010,4,21,Wednesday,civic,1
+2010-05-01,Worker's Day,2010,5,1,Saturday,civic,1
+2010-09-07,Independence Day,2010,9,7,Tuesday,civic,1
+2010-10-12,Our Lady of Aparecida,2010,10,12,Tuesday,civic,1
+2010-11-02,All Souls' Day,2010,11,2,Tuesday,civic,1
+2010-11-15,Republic Proclamation Day,2010,11,15,Monday,civic,1
+2010-12-25,Christmas Day,2010,12,25,Saturday,civic,1
+2011-01-01,Universal Fraternization Day,2011,1,1,Saturday,civic,1
+2011-03-05,Sábado de Carnaval,2011,3,5,Saturday,carnival,1
+2011-03-06,Domingo de Carnaval,2011,3,6,Sunday,carnival,1
+2011-03-07,Segunda-feira de Carnaval,2011,3,7,Monday,carnival,1
+2011-03-08,Terça-feira de Carnaval,2011,3,8,Tuesday,carnival,1
+2011-04-21,Tiradentes' Day,2011,4,21,Thursday,civic,1
+2011-04-22,Good Friday,2011,4,22,Friday,civic,1
+2011-05-01,Worker's Day,2011,5,1,Sunday,civic,1
+2011-09-07,Independence Day,2011,9,7,Wednesday,civic,1
+2011-10-12,Our Lady of Aparecida,2011,10,12,Wednesday,civic,1
+2011-11-02,All Souls' Day,2011,11,2,Wednesday,civic,1
+2011-11-15,Republic Proclamation Day,2011,11,15,Tuesday,civic,1
+2011-12-25,Christmas Day,2011,12,25,Sunday,civic,1
+2012-01-01,Universal Fraternization Day,2012,1,1,Sunday,civic,1
+2012-02-18,Sábado de Carnaval,2012,2,18,Saturday,carnival,1
+2012-02-19,Domingo de Carnaval,2012,2,19,Sunday,carnival,1
+2012-02-20,Segunda-feira de Carnaval,2012,2,20,Monday,carnival,1
+2012-02-21,Terça-feira de Carnaval,2012,2,21,Tuesday,carnival,1
+2012-04-06,Good Friday,2012,4,6,Friday,civic,1
+2012-04-21,Tiradentes' Day,2012,4,21,Saturday,civic,1
+2012-05-01,Worker's Day,2012,5,1,Tuesday,civic,1
+2012-09-07,Independence Day,2012,9,7,Friday,civic,1
+2012-10-12,Our Lady of Aparecida,2012,10,12,Friday,civic,1
+2012-11-02,All Souls' Day,2012,11,2,Friday,civic,1
+2012-11-15,Republic Proclamation Day,2012,11,15,Thursday,civic,1
+2012-12-25,Christmas Day,2012,12,25,Tuesday,civic,1
+2013-01-01,Universal Fraternization Day,2013,1,1,Tuesday,civic,1
+2013-02-09,Sábado de Carnaval,2013,2,9,Saturday,carnival,1
+2013-02-10,Domingo de Carnaval,2013,2,10,Sunday,carnival,1
+2013-02-11,Segunda-feira de Carnaval,2013,2,11,Monday,carnival,1
+2013-02-12,Terça-feira de Carnaval,2013,2,12,Tuesday,carnival,1
+2013-03-29,Good Friday,2013,3,29,Friday,civic,1
+2013-04-21,Tiradentes' Day,2013,4,21,Sunday,civic,1
+2013-05-01,Worker's Day,2013,5,1,Wednesday,civic,1
+2013-09-07,Independence Day,2013,9,7,Saturday,civic,1
+2013-10-12,Our Lady of Aparecida,2013,10,12,Saturday,civic,1
+2013-11-02,All Souls' Day,2013,11,2,Saturday,civic,1
+2013-11-15,Republic Proclamation Day,2013,11,15,Friday,civic,1
+2013-12-25,Christmas Day,2013,12,25,Wednesday,civic,1
+2014-01-01,Universal Fraternization Day,2014,1,1,Wednesday,civic,1
+2014-03-01,Sábado de Carnaval,2014,3,1,Saturday,carnival,1
+2014-03-02,Domingo de Carnaval,2014,3,2,Sunday,carnival,1
+2014-03-03,Segunda-feira de Carnaval,2014,3,3,Monday,carnival,1
+2014-03-04,Terça-feira de Carnaval,2014,3,4,Tuesday,carnival,1
+2014-04-18,Good Friday,2014,4,18,Friday,civic,1
+2014-04-21,Tiradentes' Day,2014,4,21,Monday,civic,1
+2014-05-01,Worker's Day,2014,5,1,Thursday,civic,1
+2014-09-07,Independence Day,2014,9,7,Sunday,civic,1
+2014-10-12,Our Lady of Aparecida,2014,10,12,Sunday,civic,1
+2014-11-02,All Souls' Day,2014,11,2,Sunday,civic,1
+2014-11-15,Republic Proclamation Day,2014,11,15,Saturday,civic,1
+2014-12-25,Christmas Day,2014,12,25,Thursday,civic,1
+2015-01-01,Universal Fraternization Day,2015,1,1,Thursday,civic,1
+2015-02-14,Sábado de Carnaval,2015,2,14,Saturday,carnival,1
+2015-02-15,Domingo de Carnaval,2015,2,15,Sunday,carnival,1
+2015-02-16,Segunda-feira de Carnaval,2015,2,16,Monday,carnival,1
+2015-02-17,Terça-feira de Carnaval,2015,2,17,Tuesday,carnival,1
+2015-04-03,Good Friday,2015,4,3,Friday,civic,1
+2015-04-21,Tiradentes' Day,2015,4,21,Tuesday,civic,1
+2015-05-01,Worker's Day,2015,5,1,Friday,civic,1
+2015-09-07,Independence Day,2015,9,7,Monday,civic,1
+2015-10-12,Our Lady of Aparecida,2015,10,12,Monday,civic,1
+2015-11-02,All Souls' Day,2015,11,2,Monday,civic,1
+2015-11-15,Republic Proclamation Day,2015,11,15,Sunday,civic,1
+2015-12-25,Christmas Day,2015,12,25,Friday,civic,1
+2016-01-01,Universal Fraternization Day,2016,1,1,Friday,civic,1
+2016-02-06,Sábado de Carnaval,2016,2,6,Saturday,carnival,1
+2016-02-07,Domingo de Carnaval,2016,2,7,Sunday,carnival,1
+2016-02-08,Segunda-feira de Carnaval,2016,2,8,Monday,carnival,1
+2016-02-09,Terça-feira de Carnaval,2016,2,9,Tuesday,carnival,1
+2016-03-25,Good Friday,2016,3,25,Friday,civic,1
+2016-04-21,Tiradentes' Day,2016,4,21,Thursday,civic,1
+2016-05-01,Worker's Day,2016,5,1,Sunday,civic,1
+2016-09-07,Independence Day,2016,9,7,Wednesday,civic,1
+2016-10-12,Our Lady of Aparecida,2016,10,12,Wednesday,civic,1
+2016-11-02,All Souls' Day,2016,11,2,Wednesday,civic,1
+2016-11-15,Republic Proclamation Day,2016,11,15,Tuesday,civic,1
+2016-12-25,Christmas Day,2016,12,25,Sunday,civic,1
+2017-01-01,Universal Fraternization Day,2017,1,1,Sunday,civic,1
+2017-02-25,Sábado de Carnaval,2017,2,25,Saturday,carnival,1
+2017-02-26,Domingo de Carnaval,2017,2,26,Sunday,carnival,1
+2017-02-27,Segunda-feira de Carnaval,2017,2,27,Monday,carnival,1
+2017-02-28,Terça-feira de Carnaval,2017,2,28,Tuesday,carnival,1
+2017-04-14,Good Friday,2017,4,14,Friday,civic,1
+2017-04-21,Tiradentes' Day,2017,4,21,Friday,civic,1
+2017-05-01,Worker's Day,2017,5,1,Monday,civic,1
+2017-09-07,Independence Day,2017,9,7,Thursday,civic,1
+2017-10-12,Our Lady of Aparecida,2017,10,12,Thursday,civic,1
+2017-11-02,All Souls' Day,2017,11,2,Thursday,civic,1
+2017-11-15,Republic Proclamation Day,2017,11,15,Wednesday,civic,1
+2017-12-25,Christmas Day,2017,12,25,Monday,civic,1
+2018-01-01,Universal Fraternization Day,2018,1,1,Monday,civic,1
+2018-02-10,Sábado de Carnaval,2018,2,10,Saturday,carnival,1
+2018-02-11,Domingo de Carnaval,2018,2,11,Sunday,carnival,1
+2018-02-12,Segunda-feira de Carnaval,2018,2,12,Monday,carnival,1
+2018-02-13,Terça-feira de Carnaval,2018,2,13,Tuesday,carnival,1
+2018-03-30,Good Friday,2018,3,30,Friday,civic,1
+2018-04-21,Tiradentes' Day,2018,4,21,Saturday,civic,1
+2018-05-01,Worker's Day,2018,5,1,Tuesday,civic,1
+2018-09-07,Independence Day,2018,9,7,Friday,civic,1
+2018-10-12,Our Lady of Aparecida,2018,10,12,Friday,civic,1
+2018-11-02,All Souls' Day,2018,11,2,Friday,civic,1
+2018-11-15,Republic Proclamation Day,2018,11,15,Thursday,civic,1
+2018-12-25,Christmas Day,2018,12,25,Tuesday,civic,1
+2019-01-01,Universal Fraternization Day,2019,1,1,Tuesday,civic,1
+2019-03-02,Sábado de Carnaval,2019,3,2,Saturday,carnival,1
+2019-03-03,Domingo de Carnaval,2019,3,3,Sunday,carnival,1
+2019-03-04,Segunda-feira de Carnaval,2019,3,4,Monday,carnival,1
+2019-03-05,Terça-feira de Carnaval,2019,3,5,Tuesday,carnival,1
+2019-04-19,Good Friday,2019,4,19,Friday,civic,1
+2019-04-21,Tiradentes' Day,2019,4,21,Sunday,civic,1
+2019-05-01,Worker's Day,2019,5,1,Wednesday,civic,1
+2019-09-07,Independence Day,2019,9,7,Saturday,civic,1
+2019-10-12,Our Lady of Aparecida,2019,10,12,Saturday,civic,1
+2019-11-02,All Souls' Day,2019,11,2,Saturday,civic,1
+2019-11-15,Republic Proclamation Day,2019,11,15,Friday,civic,1
+2019-12-25,Christmas Day,2019,12,25,Wednesday,civic,1
+2020-01-01,Universal Fraternization Day,2020,1,1,Wednesday,civic,1
+2020-02-22,Sábado de Carnaval,2020,2,22,Saturday,carnival,1
+2020-02-23,Domingo de Carnaval,2020,2,23,Sunday,carnival,1
+2020-02-24,Segunda-feira de Carnaval,2020,2,24,Monday,carnival,1
+2020-02-25,Terça-feira de Carnaval,2020,2,25,Tuesday,carnival,1
+2020-04-10,Good Friday,2020,4,10,Friday,civic,1
+2020-04-21,Tiradentes' Day,2020,4,21,Tuesday,civic,1
+2020-05-01,Worker's Day,2020,5,1,Friday,civic,1
+2020-09-07,Independence Day,2020,9,7,Monday,civic,1
+2020-10-12,Our Lady of Aparecida,2020,10,12,Monday,civic,1
+2020-11-02,All Souls' Day,2020,11,2,Monday,civic,1
+2020-11-15,Republic Proclamation Day,2020,11,15,Sunday,civic,1
+2020-12-25,Christmas Day,2020,12,25,Friday,civic,1
+2021-01-01,Universal Fraternization Day,2021,1,1,Friday,civic,1
+2021-02-13,Sábado de Carnaval,2021,2,13,Saturday,carnival,1
+2021-02-14,Domingo de Carnaval,2021,2,14,Sunday,carnival,1
+2021-02-15,Segunda-feira de Carnaval,2021,2,15,Monday,carnival,1
+2021-02-16,Terça-feira de Carnaval,2021,2,16,Tuesday,carnival,1
+2021-04-02,Good Friday,2021,4,2,Friday,civic,1
+2021-04-21,Tiradentes' Day,2021,4,21,Wednesday,civic,1
+2021-05-01,Worker's Day,2021,5,1,Saturday,civic,1
+2021-09-07,Independence Day,2021,9,7,Tuesday,civic,1
+2021-10-12,Our Lady of Aparecida,2021,10,12,Tuesday,civic,1
+2021-11-02,All Souls' Day,2021,11,2,Tuesday,civic,1
+2021-11-15,Republic Proclamation Day,2021,11,15,Monday,civic,1
+2021-12-25,Christmas Day,2021,12,25,Saturday,civic,1
+2022-01-01,Universal Fraternization Day,2022,1,1,Saturday,civic,1
+2022-02-26,Sábado de Carnaval,2022,2,26,Saturday,carnival,1
+2022-02-27,Domingo de Carnaval,2022,2,27,Sunday,carnival,1
+2022-02-28,Segunda-feira de Carnaval,2022,2,28,Monday,carnival,1
+2022-03-01,Terça-feira de Carnaval,2022,3,1,Tuesday,carnival,1
+2022-04-15,Good Friday,2022,4,15,Friday,civic,1
+2022-04-21,Tiradentes' Day,2022,4,21,Thursday,civic,1
+2022-05-01,Worker's Day,2022,5,1,Sunday,civic,1
+2022-09-07,Independence Day,2022,9,7,Wednesday,civic,1
+2022-10-12,Our Lady of Aparecida,2022,10,12,Wednesday,civic,1
+2022-11-02,All Souls' Day,2022,11,2,Wednesday,civic,1
+2022-11-15,Republic Proclamation Day,2022,11,15,Tuesday,civic,1
+2022-12-25,Christmas Day,2022,12,25,Sunday,civic,1
+2023-01-01,Universal Fraternization Day,2023,1,1,Sunday,civic,1
+2023-02-18,Sábado de Carnaval,2023,2,18,Saturday,carnival,1
+2023-02-19,Domingo de Carnaval,2023,2,19,Sunday,carnival,1
+2023-02-20,Segunda-feira de Carnaval,2023,2,20,Monday,carnival,1
+2023-02-21,Terça-feira de Carnaval,2023,2,21,Tuesday,carnival,1
+2023-04-07,Good Friday,2023,4,7,Friday,civic,1
+2023-04-21,Tiradentes' Day,2023,4,21,Friday,civic,1
+2023-05-01,Worker's Day,2023,5,1,Monday,civic,1
+2023-09-07,Independence Day,2023,9,7,Thursday,civic,1
+2023-10-12,Our Lady of Aparecida,2023,10,12,Thursday,civic,1
+2023-11-02,All Souls' Day,2023,11,2,Thursday,civic,1
+2023-11-15,Republic Proclamation Day,2023,11,15,Wednesday,civic,1
+2023-12-25,Christmas Day,2023,12,25,Monday,civic,1
+2024-01-01,Universal Fraternization Day,2024,1,1,Monday,civic,1
+2024-02-10,Sábado de Carnaval,2024,2,10,Saturday,carnival,1
+2024-02-11,Domingo de Carnaval,2024,2,11,Sunday,carnival,1
+2024-02-12,Segunda-feira de Carnaval,2024,2,12,Monday,carnival,1
+2024-02-13,Terça-feira de Carnaval,2024,2,13,Tuesday,carnival,1
+2024-03-29,Good Friday,2024,3,29,Friday,civic,1
+2024-04-21,Tiradentes' Day,2024,4,21,Sunday,civic,1
+2024-05-01,Worker's Day,2024,5,1,Wednesday,civic,1
+2024-09-07,Independence Day,2024,9,7,Saturday,civic,1
+2024-10-12,Our Lady of Aparecida,2024,10,12,Saturday,civic,1
+2024-11-02,All Souls' Day,2024,11,2,Saturday,civic,1
+2024-11-15,Republic Proclamation Day,2024,11,15,Friday,civic,1
+2024-11-20,National Day of Zumbi and Black Awareness,2024,11,20,Wednesday,civic,1
+2024-12-25,Christmas Day,2024,12,25,Wednesday,civic,1

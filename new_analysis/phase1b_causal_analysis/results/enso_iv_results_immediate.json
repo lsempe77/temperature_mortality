@@ -1,0 +1,266 @@
+{
+  "level": "immediate",
+  "first_stage": [
+    {
+      "instrument": "oni",
+      "temp_var": "temp_mean",
+      "n_obs": 2523235,
+      "n_regions": 510,
+      "coefficient": 0.32587645450703845,
+      "std_error": 0.0058070701489363686,
+      "t_stat": 56.117189245032016,
+      "p_value": 0.0,
+      "r_squared": 0.30106403009596705,
+      "f_stat": 590.6442322211377,
+      "f_pvalue": 0.0,
+      "weak_instrument_test": "Strong"
+    },
+    {
+      "instrument": "oni",
+      "temp_var": "temp_anomaly",
+      "n_obs": 2523235,
+      "n_regions": 510,
+      "coefficient": 0.32587645449430375,
+      "std_error": 0.005807070155811678,
+      "t_stat": 56.11718917639883,
+      "p_value": 0.0,
+      "r_squared": 0.30106403009490135,
+      "f_stat": 590.6442373541037,
+      "f_pvalue": 0.0,
+      "weak_instrument_test": "Strong"
+    },
+    {
+      "instrument": "mei",
+      "temp_var": "temp_mean",
+      "n_obs": 2523235,
+      "n_regions": 510,
+      "coefficient": 0.30164626481942997,
+      "std_error": 0.00531079317832214,
+      "t_stat": 56.79872190291738,
+      "p_value": 0.0,
+      "r_squared": 0.30066515212474054,
+      "f_stat": 524.0833723195408,
+      "f_pvalue": 1.037364869e-314,
+      "weak_instrument_test": "Strong"
+    },
+    {
+      "instrument": "mei",
+      "temp_var": "temp_anomaly",
+      "n_obs": 2523235,
+      "n_regions": 510,
+      "coefficient": 0.3016462648456146,
+      "std_error": 0.005310793182491263,
+      "t_stat": 56.79872186325923,
+      "p_value": 0.0,
+      "r_squared": 0.30066515212656264,
+      "f_stat": 524.0833742564636,
+      "f_pvalue": 1.0373639447e-314,
+      "weak_instrument_test": "Strong"
+    },
+    {
+      "instrument": "nino34",
+      "temp_var": "temp_mean",
+      "n_obs": 2523235,
+      "n_regions": 510,
+      "coefficient": 0.3168490637031573,
+      "std_error": 0.005672291069602868,
+      "t_stat": 55.85909816954099,
+      "p_value": 0.0,
+      "r_squared": 0.3009123031629496,
+      "f_stat": 587.2571722856396,
+      "f_pvalue": 0.0,
+      "weak_instrument_test": "Strong"
+    },
+    {
+      "instrument": "nino34",
+      "temp_var": "temp_anomaly",
+      "n_obs": 2523235,
+      "n_regions": 510,
+      "coefficient": 0.31684906369255733,
+      "std_error": 0.005672291076328657,
+      "t_stat": 55.85909810143862,
+      "p_value": 0.0,
+      "r_squared": 0.3009123031620716,
+      "f_stat": 587.2571773207414,
+      "f_pvalue": 0.0,
+      "weak_instrument_test": "Strong"
+    }
+  ],
+  "reduced_form": [
+    {
+      "method": "Reduced Form",
+      "instrument": "oni",
+      "outcome": "deaths_all",
+      "n_obs": 2523235,
+      "coefficient": -0.12974182347941973,
+      "std_error": 0.02446828547841629,
+      "t_stat": -5.302448493739631,
+      "p_value": 1.142597098387392e-07,
+      "r_squared": 0.004544976433688008
+    },
+    {
+      "method": "Reduced Form",
+      "instrument": "oni",
+      "outcome": "deaths_cardiovascular",
+      "n_obs": 2523235,
+      "coefficient": 0.011575645181871815,
+      "std_error": 0.003885925589096571,
+      "t_stat": 2.9788643442765994,
+      "p_value": 0.0028931883594676354,
+      "r_squared": 0.004298930366106735
+    },
+    {
+      "method": "Reduced Form",
+      "instrument": "oni",
+      "outcome": "deaths_respiratory",
+      "n_obs": 2523235,
+      "coefficient": 0.034075089667167255,
+      "std_error": 0.0034529999820110207,
+      "t_stat": 9.868256543494676,
+      "p_value": 5.714926076619901e-23,
+      "r_squared": 0.005049703410866746
+    },
+    {
+      "method": "Reduced Form",
+      "instrument": "mei",
+      "outcome": "deaths_all",
+      "n_obs": 2523235,
+      "coefficient": -0.2089611010833864,
+      "std_error": 0.030313469375057408,
+      "t_stat": -6.893341652781063,
+      "p_value": 5.449677572443469e-12,
+      "r_squared": 0.005426732682050628
+    },
+    {
+      "method": "Reduced Form",
+      "instrument": "mei",
+      "outcome": "deaths_cardiovascular",
+      "n_obs": 2523235,
+      "coefficient": -0.0062059878171998135,
+      "std_error": 0.0038362309056591474,
+      "t_stat": -1.6177305198299816,
+      "p_value": 0.10572068568626156,
+      "r_squared": 0.0042733797885591285
+    },
+    {
+      "method": "Reduced Form",
+      "instrument": "mei",
+      "outcome": "deaths_respiratory",
+      "n_obs": 2523235,
+      "coefficient": 0.026623801018922918,
+      "std_error": 0.003657933581403754,
+      "t_stat": 7.2783719076457025,
+      "p_value": 3.3787282407137285e-13,
+      "r_squared": 0.004841133061631808
+    },
+    {
+      "method": "Reduced Form",
+      "instrument": "nino34",
+      "outcome": "deaths_all",
+      "n_obs": 2523235,
+      "coefficient": -0.122421073418077,
+      "std_error": 0.023605767919181574,
+      "t_stat": -5.1860661274484565,
+      "p_value": 2.147825722282782e-07,
+      "r_squared": 0.004512389907295522
+    },
+    {
+      "method": "Reduced Form",
+      "instrument": "nino34",
+      "outcome": "deaths_cardiovascular",
+      "n_obs": 2523235,
+      "coefficient": 0.011175077870170398,
+      "std_error": 0.00370328699188819,
+      "t_stat": 3.0176105429173274,
+      "p_value": 0.002547761002895264,
+      "r_squared": 0.004297892343485099
+    },
+    {
+      "method": "Reduced Form",
+      "instrument": "nino34",
+      "outcome": "deaths_respiratory",
+      "n_obs": 2523235,
+      "coefficient": 0.032842626590235006,
+      "std_error": 0.0032802594644307497,
+      "t_stat": 10.012203896173943,
+      "p_value": 1.3471743472861657e-23,
+      "r_squared": 0.005029281478972192
+    }
+  ],
+  "ols": [
+    {
+      "method": "OLS",
+      "temp_var": "temp_mean",
+      "outcome": "deaths_all",
+      "n_obs": 2523235,
+      "coefficient": 0.010962209840942145,
+      "std_error": 0.006983380371769567,
+      "t_stat": 1.5697569453981144,
+      "p_value": 0.11647166751808752,
+      "r_squared": 0.0041077302841677765
+    },
+    {
+      "method": "OLS",
+      "temp_var": "temp_mean",
+      "outcome": "deaths_cardiovascular",
+      "n_obs": 2523235,
+      "coefficient": -0.010439715441936672,
+      "std_error": 0.0022765358055068827,
+      "t_stat": -4.585790136348071,
+      "p_value": 4.522727253972572e-06,
+      "r_squared": 0.004467698526486541
+    },
+    {
+      "method": "OLS",
+      "temp_var": "temp_mean",
+      "outcome": "deaths_respiratory",
+      "n_obs": 2523235,
+      "coefficient": 2.109749290105241e-06,
+      "std_error": 0.0015330773444738194,
+      "t_stat": 0.0013761531978214356,
+      "p_value": 0.9989019889567272,
+      "r_squared": 0.004383023229200034
+    }
+  ],
+  "iv_2sls": [
+    {
+      "method": "2SLS",
+      "instrument": "oni",
+      "temp_var": "temp_mean",
+      "outcome": "deaths_all",
+      "n_obs": 2523235,
+      "coefficient": -0.3981243980929321,
+      "std_error": 0.075214470971575,
+      "t_stat": -5.293188836539061,
+      "p_value": 1.2020168527193675e-07,
+      "first_stage_f": 3192.042392560704,
+      "sargan_stat": null
+    },
+    {
+      "method": "2SLS",
+      "instrument": "oni",
+      "temp_var": "temp_mean",
+      "outcome": "deaths_cardiovascular",
+      "n_obs": 2523235,
+      "coefficient": 0.03397192821523731,
+      "std_error": 0.011633600103286248,
+      "t_stat": 2.9201560921490635,
+      "p_value": 0.0034985610349511642,
+      "first_stage_f": 3192.042392560704,
+      "sargan_stat": null
+    },
+    {
+      "method": "2SLS",
+      "instrument": "oni",
+      "temp_var": "temp_mean",
+      "outcome": "deaths_respiratory",
+      "n_obs": 2523235,
+      "coefficient": 0.10278261207838568,
+      "std_error": 0.01055698597305329,
+      "t_stat": 9.735980737375074,
+      "p_value": 0.0,
+      "first_stage_f": 3192.042392560704,
+      "sargan_stat": null
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "exposure_type": "intermediate",
+  "analysis_date": "2025-12-19 23:51:06.676881",
+  "baseline": {
+    "n_regions": 97,
+    "heat": {
+      "rr": 1.30116,
+      "ci_low": 1.25926,
+      "ci_high": 1.344454,
+      "log_rr": 0.263256,
+      "se": 0.0167,
+      "heterogeneity": {
+        "cochrans_Q": 719.952671,
+        "Q_df": 96,
+        "Q_pvalue": 0,
+        "I2_percent": 86.66579
+      }
+    },
+    "cold": {
+      "rr": 1.270998,
+      "ci_low": 1.239421,
+      "ci_high": 1.30338,
+      "log_rr": 0.239802,
+      "se": 0.012836,
+      "heterogeneity": {
+        "cochrans_Q": 567.945046,
+        "Q_df": 96,
+        "Q_pvalue": 0,
+        "I2_percent": 83.096956
+      }
+    }
+  },
+  "apparent_temp": {
+    "n_regions": 82,
+    "heat": {
+      "rr": 1.209801,
+      "ci_low": 1.178233,
+      "ci_high": 1.242216,
+      "log_rr": 0.190456,
+      "se": 0.01349,
+      "heterogeneity": {
+        "cochrans_Q": 378.376804,
+        "Q_df": 81,
+        "Q_pvalue": 0,
+        "I2_percent": 78.592768
+      }
+    },
+    "cold": {
+      "rr": 1.279034,
+      "ci_low": 1.241066,
+      "ci_high": 1.318164,
+      "log_rr": 0.246105,
+      "se": 0.015375,
+      "heterogeneity": {
+        "cochrans_Q": 613.726351,
+        "Q_df": 81,
+        "Q_pvalue": 0,
+        "I2_percent": 86.801935
+      }
+    }
+  },
+  "pollution_adjusted": {
+    "n_regions": 97,
+    "heat": {
+      "rr": 1.294828,
+      "ci_low": 1.253299,
+      "ci_high": 1.337734,
+      "log_rr": 0.258378,
+      "se": 0.016632,
+      "heterogeneity": {
+        "cochrans_Q": 723.013515,
+        "Q_df": 96,
+        "Q_pvalue": 0,
+        "I2_percent": 86.72224
+      }
+    },
+    "cold": {
+      "rr": 1.274852,
+      "ci_low": 1.242594,
+      "ci_high": 1.307948,
+      "log_rr": 0.24283,
+      "se": 0.013076,
+      "heterogeneity": {
+        "cochrans_Q": 581.436068,
+        "Q_df": 96,
+        "Q_pvalue": 0,
+        "I2_percent": 83.489156
+      }
+    }
+  },
+  "flu_adjusted": {
+    "n_regions": 97,
+    "heat": {
+      "rr": 1.30116,
+      "ci_low": 1.25926,
+      "ci_high": 1.344454,
+      "log_rr": 0.263256,
+      "se": 0.0167,
+      "heterogeneity": {
+        "cochrans_Q": 719.952671,
+        "Q_df": 96,
+        "Q_pvalue": 0,
+        "I2_percent": 86.66579
+      }
+    },
+    "cold": {
+      "rr": 1.270998,
+      "ci_low": 1.239421,
+      "ci_high": 1.30338,
+      "log_rr": 0.239802,
+      "se": 0.012836,
+      "heterogeneity": {
+        "cochrans_Q": 567.945046,
+        "Q_df": 96,
+        "Q_pvalue": 0,
+        "I2_percent": 83.096956
+      }
+    }
+  },
+  "metadata": {
+    "pollution_regions": 133,
+    "min_pollution_coverage": 0.7
+  }
+}

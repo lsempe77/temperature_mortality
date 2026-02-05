@@ -1,0 +1,50 @@
+{
+  "analysis_date": "2025-12-16T22:10:04.615919",
+  "level": "immediate",
+  "n_regions_total": 510,
+  "n_regions_fitted": 509,
+  "n_regions_meta": 508,
+  "dlnm_params": {
+    "max_lag": 21,
+    "var_df": 4,
+    "lag_df": 4,
+    "basis_type": "natural_spline"
+  },
+  "percentile_method": "region_specific",
+  "offset": "log(pop_elderly)",
+  "meta_results": {
+    "heat": {
+      "pooled": {
+        "rr": NaN,
+        "rr_lo": NaN,
+        "rr_hi": NaN,
+        "log_rr": NaN,
+        "se": 0.0,
+        "i_squared": 0.0,
+        "tau_squared": 0.0,
+        "n_regions": 508
+      },
+      "predictors": {}
+    },
+    "cold": {
+      "pooled": {
+        "rr": NaN,
+        "rr_lo": NaN,
+        "rr_hi": NaN,
+        "log_rr": NaN,
+        "se": 0.0,
+        "i_squared": 0.0,
+        "tau_squared": 0.0,
+        "n_regions": 508
+      },
+      "predictors": {}
+    }
+  },
+  "global_percentiles": {
+    "p1": 10.873759536743163,
+    "p2_5": 13.650576305389404,
+    "p50": 24.423614501953125,
+    "p97_5": 29.468291759490967,
+    "p99": 30.33762928009034
+  }
+}

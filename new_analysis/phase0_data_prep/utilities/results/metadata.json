@@ -1,0 +1,1558 @@
+{
+  "generated": "2025-12-10T08:11:55.540642",
+  "generator": "00a_document_data.py",
+  "datasets": {
+    "era5_intermediate_daily": {
+      "file": "era5_intermediate_daily.parquet",
+      "file_path": "C:\\Users\\LucasSempe\\OneDrive - International Initiative for Impact Evaluation\\Desktop\\sim_data\\new_analysis\\phase0_data_prep\\results\\era5_intermediate_daily.parquet",
+      "file_exists": true,
+      "category": "Exposure",
+      "description": "ERA5 temperature data aggregated to 133 intermediate regions",
+      "spatial_unit": "intermediate",
+      "temporal_unit": "daily",
+      "is_legacy": false,
+      "rows": 728707,
+      "columns": 6,
+      "column_names": [
+        "date",
+        "region_code",
+        "temp_mean",
+        "temp_min",
+        "temp_max",
+        "dewpoint_mean"
+      ],
+      "memory_mb": 46.64,
+      "column_types": {
+        "date": "object",
+        "region_code": "int64",
+        "temp_mean": "float32",
+        "temp_min": "float32",
+        "temp_max": "float32",
+        "dewpoint_mean": "float32"
+      },
+      "date_range": {
+        "start": "2010-01-01",
+        "end": "2024-12-31",
+        "days": 5478
+      },
+      "region_coverage": {
+        "column": "region_code",
+        "unique_regions": 133,
+        "expected": 133
+      },
+      "summary_stats": {
+        "region_code": {
+          "min": 1101.0,
+          "max": 5301.0,
+          "mean": 3086.5414,
+          "std": 1133.7351,
+          "missing_pct": 0.0
+        },
+        "temp_mean": {
+          "min": 0.9910675287246704,
+          "max": 33.90562438964844,
+          "mean": 23.9929,
+          "std": 3.8222,
+          "missing_pct": 0.0
+        },
+        "temp_min": {
+          "min": -4.310385227203369,
+          "max": 28.15737533569336,
+          "mean": 20.4032,
+          "std": 4.1017,
+          "missing_pct": 0.0
+        },
+        "temp_max": {
+          "min": 3.9060635566711426,
+          "max": 41.685279846191406,
+          "mean": 28.3643,
+          "std": 4.385,
+          "missing_pct": 0.0
+        },
+        "dewpoint_mean": {
+          "min": -6.718876838684082,
+          "max": 25.7446231842041,
+          "mean": 18.1824,
+          "std": 4.4252,
+          "missing_pct": 0.0
+        }
+      }
+    },
+    "era5_immediate_daily": {
+      "file": "era5_immediate_daily.parquet",
+      "file_path": "C:\\Users\\LucasSempe\\OneDrive - International Initiative for Impact Evaluation\\Desktop\\sim_data\\new_analysis\\phase0_data_prep\\results\\era5_immediate_daily.parquet",
+      "file_exists": true,
+      "category": "Exposure",
+      "description": "ERA5 temperature data aggregated to 510 immediate regions",
+      "spatial_unit": "immediate",
+      "temporal_unit": "daily",
+      "is_legacy": false,
+      "rows": 2794290,
+      "columns": 6,
+      "column_names": [
+        "date",
+        "region_code",
+        "temp_mean",
+        "temp_min",
+        "temp_max",
+        "dewpoint_mean"
+      ],
+      "memory_mb": 178.83,
+      "column_types": {
+        "date": "object",
+        "region_code": "int64",
+        "temp_mean": "float32",
+        "temp_min": "float32",
+        "temp_max": "float32",
+        "dewpoint_mean": "float32"
+      },
+      "date_range": {
+        "start": "2010-01-01",
+        "end": "2024-12-31",
+        "days": 5478
+      },
+      "region_coverage": {
+        "column": "region_code",
+        "unique_regions": 510,
+        "expected": 510
+      },
+      "summary_stats": {
+        "region_code": {
+          "min": 110001.0,
+          "max": 530001.0,
+          "mean": 318584.9275,
+          "std": 107006.4971,
+          "missing_pct": 0.0
+        },
+        "temp_mean": {
+          "min": 0.6679649353027344,
+          "max": 35.14051818847656,
+          "mean": 23.717,
+          "std": 4.0268,
+          "missing_pct": 0.0
+        },
+        "temp_min": {
+          "min": -4.77435302734375,
+          "max": 30.167463302612305,
+          "mean": 19.8628,
+          "std": 4.3119,
+          "missing_pct": 0.0
+        },
+        "temp_max": {
+          "min": 3.458087921142578,
+          "max": 42.699859619140625,
+          "mean": 28.4541,
+          "std": 4.4862,
+          "missing_pct": 0.0
+        },
+        "dewpoint_mean": {
+          "min": -8.742935180664062,
+          "max": 26.44525718688965,
+          "mean": 17.975,
+          "std": 4.4095,
+          "missing_pct": 0.0
+        }
+      }
+    },
+    "cams_intermediate_daily": {
+      "file": "cams_intermediate_daily.parquet",
+      "file_path": "C:\\Users\\LucasSempe\\OneDrive - International Initiative for Impact Evaluation\\Desktop\\sim_data\\new_analysis\\phase0_data_prep\\results\\cams_intermediate_daily.parquet",
+      "file_exists": true,
+      "category": "Exposure",
+      "description": "CAMS pollution data aggregated to 133 intermediate regions",
+      "spatial_unit": "intermediate",
+      "temporal_unit": "daily",
+      "is_legacy": false,
+      "rows": 728707,
+      "columns": 5,
+      "column_names": [
+        "intermediate_code",
+        "date",
+        "pm25",
+        "pm10",
+        "ozone"
+      ],
+      "memory_mb": 20.4,
+      "column_types": {
+        "intermediate_code": "int64",
+        "date": "datetime64[ns]",
+        "pm25": "float32",
+        "pm10": "float32",
+        "ozone": "float32"
+      },
+      "date_range": {
+        "start": "2010-01-01",
+        "end": "2024-12-31",
+        "days": 5478
+      },
+      "region_coverage": {
+        "column": "intermediate_code",
+        "unique_regions": 133,
+        "expected": 133
+      },
+      "summary_stats": {
+        "intermediate_code": {
+          "min": 1101.0,
+          "max": 5301.0,
+          "mean": 3086.5414,
+          "std": 1133.7351,
+          "missing_pct": 0.0
+        },
+        "pm25": {
+          "min": 0.3335162401199341,
+          "max": 948.6184692382812,
+          "mean": 10.9035,
+          "std": 13.3138,
+          "missing_pct": 0.0
+        },
+        "pm10": {
+          "min": 0.47296324372291565,
+          "max": 1288.8953857421875,
+          "mean": 15.4731,
+          "std": 18.2642,
+          "missing_pct": 0.0
+        },
+        "ozone": {
+          "min": 223.6924285888672,
+          "max": 370.0074462890625,
+          "mean": 264.5692,
+          "std": 12.5235,
+          "missing_pct": 0.0
+        }
+      }
+    },
+    "cams_immediate_daily": {
+      "file": "cams_immediate_daily.parquet",
+      "file_path": "C:\\Users\\LucasSempe\\OneDrive - International Initiative for Impact Evaluation\\Desktop\\sim_data\\new_analysis\\phase0_data_prep\\results\\cams_immediate_daily.parquet",
+      "file_exists": true,
+      "category": "Exposure",
+      "description": "CAMS pollution data aggregated to 510 immediate regions",
+      "spatial_unit": "immediate",
+      "temporal_unit": "daily",
+      "is_legacy": false,
+      "rows": 2794290,
+      "columns": 5,
+      "column_names": [
+        "immediate_code",
+        "date",
+        "pm25",
+        "pm10",
+        "ozone"
+      ],
+      "memory_mb": 78.24,
+      "column_types": {
+        "immediate_code": "int64",
+        "date": "datetime64[ns]",
+        "pm25": "float32",
+        "pm10": "float32",
+        "ozone": "float32"
+      },
+      "date_range": {
+        "start": "2010-01-01",
+        "end": "2024-12-31",
+        "days": 5478
+      },
+      "region_coverage": {
+        "column": "immediate_code",
+        "unique_regions": 510,
+        "expected": 510
+      },
+      "summary_stats": {
+        "immediate_code": {
+          "min": 110001.0,
+          "max": 530001.0,
+          "mean": 318584.9275,
+          "std": 107006.4971,
+          "missing_pct": 0.0
+        },
+        "pm25": {
+          "min": 0.20517317950725555,
+          "max": 1398.4154052734375,
+          "mean": 10.7149,
+          "std": 13.8281,
+          "missing_pct": 0.0
+        },
+        "pm10": {
+          "min": 0.2897503077983856,
+          "max": 1850.1185302734375,
+          "mean": 15.2261,
+          "std": 18.99,
+          "missing_pct": 0.0
+        },
+        "ozone": {
+          "min": 222.7713165283203,
+          "max": 371.91790771484375,
+          "mean": 264.9364,
+          "std": 12.6729,
+          "missing_pct": 0.0
+        }
+      }
+    },
+    "mortality_intermediate_daily": {
+      "file": "mortality_intermediate_daily.parquet",
+      "file_path": "C:\\Users\\LucasSempe\\OneDrive - International Initiative for Impact Evaluation\\Desktop\\sim_data\\new_analysis\\phase0_data_prep\\results\\mortality_intermediate_daily.parquet",
+      "file_exists": true,
+      "category": "Outcome",
+      "description": "All-ages mortality aggregated to 133 intermediate regions",
+      "spatial_unit": "intermediate",
+      "temporal_unit": "daily",
+      "is_legacy": false,
+      "rows": 721096,
+      "columns": 6,
+      "column_names": [
+        "date",
+        "intermediate_code",
+        "deaths_all",
+        "deaths_respiratory",
+        "deaths_cardiovascular",
+        "deaths_heat_direct"
+      ],
+      "memory_mb": 57.69,
+      "column_types": {
+        "date": "object",
+        "intermediate_code": "int64",
+        "deaths_all": "int64",
+        "deaths_respiratory": "int64",
+        "deaths_cardiovascular": "int64",
+        "deaths_heat_direct": "int64"
+      },
+      "date_range": {
+        "start": "2010-01-01",
+        "end": "2024-12-31",
+        "days": 5478
+      },
+      "region_coverage": {
+        "column": "intermediate_code",
+        "unique_regions": 133,
+        "expected": 133
+      },
+      "summary_stats": {
+        "intermediate_code": {
+          "min": 1101.0,
+          "max": 5301.0,
+          "mean": 3100.9925,
+          "std": 1128.5429,
+          "missing_pct": 0.0
+        },
+        "deaths_all": {
+          "min": 1.0,
+          "max": 1106.0,
+          "mean": 28.2328,
+          "std": 48.2483,
+          "missing_pct": 0.0
+        },
+        "deaths_respiratory": {
+          "min": 0.0,
+          "max": 137.0,
+          "mean": 3.1334,
+          "std": 6.1761,
+          "missing_pct": 0.0
+        },
+        "deaths_cardiovascular": {
+          "min": 0.0,
+          "max": 206.0,
+          "mean": 7.4729,
+          "std": 13.8619,
+          "missing_pct": 0.0
+        },
+        "deaths_heat_direct": {
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.0001,
+          "std": 0.0089,
+          "missing_pct": 0.0
+        }
+      }
+    },
+    "mortality_intermediate_daily_elderly": {
+      "file": "mortality_intermediate_daily_elderly.parquet",
+      "file_path": "C:\\Users\\LucasSempe\\OneDrive - International Initiative for Impact Evaluation\\Desktop\\sim_data\\new_analysis\\phase0_data_prep\\results\\mortality_intermediate_daily_elderly.parquet",
+      "file_exists": true,
+      "category": "Outcome",
+      "description": "Elderly (60+) mortality aggregated to 133 intermediate regions",
+      "spatial_unit": "intermediate",
+      "temporal_unit": "daily",
+      "is_legacy": false,
+      "rows": 708767,
+      "columns": 6,
+      "column_names": [
+        "date",
+        "intermediate_code",
+        "deaths_elderly",
+        "deaths_elderly_resp",
+        "deaths_elderly_cvd",
+        "deaths_elderly_heat"
+      ],
+      "memory_mb": 56.7,
+      "column_types": {
+        "date": "object",
+        "intermediate_code": "int64",
+        "deaths_elderly": "int64",
+        "deaths_elderly_resp": "int64",
+        "deaths_elderly_cvd": "int64",
+        "deaths_elderly_heat": "int64"
+      },
+      "date_range": {
+        "start": "2010-01-01",
+        "end": "2024-12-31",
+        "days": 5478
+      },
+      "region_coverage": {
+        "column": "intermediate_code",
+        "unique_regions": 133,
+        "expected": 133
+      },
+      "summary_stats": {
+        "intermediate_code": {
+          "min": 1101.0,
+          "max": 5301.0,
+          "mean": 3120.5036,
+          "std": 1118.7995,
+          "missing_pct": 0.0
+        },
+        "deaths_elderly": {
+          "min": 1.0,
+          "max": 775.0,
+          "mean": 19.2979,
+          "std": 34.0547,
+          "missing_pct": 0.0
+        },
+        "deaths_elderly_resp": {
+          "min": 0.0,
+          "max": 106.0,
+          "mean": 2.6631,
+          "std": 5.1615,
+          "missing_pct": 0.0
+        },
+        "deaths_elderly_cvd": {
+          "min": 0.0,
+          "max": 172.0,
+          "mean": 6.0744,
+          "std": 10.9484,
+          "missing_pct": 0.0
+        },
+        "deaths_elderly_heat": {
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.0,
+          "std": 0.0043,
+          "missing_pct": 0.0
+        }
+      }
+    },
+    "mortality_immediate_daily": {
+      "file": "mortality_immediate_daily.parquet",
+      "file_path": "C:\\Users\\LucasSempe\\OneDrive - International Initiative for Impact Evaluation\\Desktop\\sim_data\\new_analysis\\phase0_data_prep\\results\\mortality_immediate_daily.parquet",
+      "file_exists": true,
+      "category": "Outcome",
+      "description": "All-ages mortality aggregated to 510 immediate regions",
+      "spatial_unit": "immediate",
+      "temporal_unit": "daily",
+      "is_legacy": false,
+      "rows": 2523235,
+      "columns": 6,
+      "column_names": [
+        "date",
+        "immediate_code",
+        "deaths_all",
+        "deaths_respiratory",
+        "deaths_cardiovascular",
+        "deaths_heat_direct"
+      ],
+      "memory_mb": 201.86,
+      "column_types": {
+        "date": "object",
+        "immediate_code": "int64",
+        "deaths_all": "int64",
+        "deaths_respiratory": "int64",
+        "deaths_cardiovascular": "int64",
+        "deaths_heat_direct": "int64"
+      },
+      "date_range": {
+        "start": "2010-01-01",
+        "end": "2024-12-31",
+        "days": 5478
+      },
+      "region_coverage": {
+        "column": "immediate_code",
+        "unique_regions": 510,
+        "expected": 510
+      },
+      "summary_stats": {
+        "immediate_code": {
+          "min": 110001.0,
+          "max": 530001.0,
+          "mean": 320402.6232,
+          "std": 104000.7443,
+          "missing_pct": 0.0
+        },
+        "deaths_all": {
+          "min": 1.0,
+          "max": 1007.0,
+          "mean": 8.0684,
+          "std": 24.3375,
+          "missing_pct": 0.0
+        },
+        "deaths_respiratory": {
+          "min": 0.0,
+          "max": 132.0,
+          "mean": 0.8955,
+          "std": 3.1103,
+          "missing_pct": 0.0
+        },
+        "deaths_cardiovascular": {
+          "min": 0.0,
+          "max": 190.0,
+          "mean": 2.1356,
+          "std": 6.9699,
+          "missing_pct": 0.0
+        },
+        "deaths_heat_direct": {
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.0,
+          "std": 0.0048,
+          "missing_pct": 0.0
+        }
+      }
+    },
+    "mortality_immediate_daily_elderly": {
+      "file": "mortality_immediate_daily_elderly.parquet",
+      "file_path": "C:\\Users\\LucasSempe\\OneDrive - International Initiative for Impact Evaluation\\Desktop\\sim_data\\new_analysis\\phase0_data_prep\\results\\mortality_immediate_daily_elderly.parquet",
+      "file_exists": true,
+      "category": "Outcome",
+      "description": "Elderly (60+) mortality aggregated to 510 immediate regions",
+      "spatial_unit": "immediate",
+      "temporal_unit": "daily",
+      "is_legacy": false,
+      "rows": 2302539,
+      "columns": 6,
+      "column_names": [
+        "date",
+        "immediate_code",
+        "deaths_elderly",
+        "deaths_elderly_resp",
+        "deaths_elderly_cvd",
+        "deaths_elderly_heat"
+      ],
+      "memory_mb": 184.2,
+      "column_types": {
+        "date": "object",
+        "immediate_code": "int64",
+        "deaths_elderly": "int64",
+        "deaths_elderly_resp": "int64",
+        "deaths_elderly_cvd": "int64",
+        "deaths_elderly_heat": "int64"
+      },
+      "date_range": {
+        "start": "2010-01-01",
+        "end": "2024-12-31",
+        "days": 5478
+      },
+      "region_coverage": {
+        "column": "immediate_code",
+        "unique_regions": 510,
+        "expected": 510
+      },
+      "summary_stats": {
+        "immediate_code": {
+          "min": 110001.0,
+          "max": 530001.0,
+          "mean": 322359.1409,
+          "std": 101145.8811,
+          "missing_pct": 0.0
+        },
+        "deaths_elderly": {
+          "min": 1.0,
+          "max": 692.0,
+          "mean": 5.9403,
+          "std": 17.6632,
+          "missing_pct": 0.0
+        },
+        "deaths_elderly_resp": {
+          "min": 0.0,
+          "max": 99.0,
+          "mean": 0.8197,
+          "std": 2.6866,
+          "missing_pct": 0.0
+        },
+        "deaths_elderly_cvd": {
+          "min": 0.0,
+          "max": 154.0,
+          "mean": 1.8698,
+          "std": 5.6896,
+          "missing_pct": 0.0
+        },
+        "deaths_elderly_heat": {
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.0,
+          "std": 0.0024,
+          "missing_pct": 0.0
+        }
+      }
+    },
+    "mortality_regional_daily": {
+      "file": "mortality_regional_daily.parquet",
+      "file_path": "C:\\Users\\LucasSempe\\OneDrive - International Initiative for Impact Evaluation\\Desktop\\sim_data\\new_analysis\\phase0_data_prep\\results\\mortality_regional_daily.parquet",
+      "file_exists": true,
+      "category": "Outcome",
+      "description": "[LEGACY] All-ages mortality - intermediate regions (old naming)",
+      "spatial_unit": "intermediate",
+      "temporal_unit": "daily",
+      "is_legacy": true,
+      "rows": 721096,
+      "columns": 6,
+      "column_names": [
+        "date",
+        "region_code",
+        "deaths_all",
+        "deaths_respiratory",
+        "deaths_cardiovascular",
+        "deaths_heat_direct"
+      ],
+      "memory_mb": 57.69,
+      "column_types": {
+        "date": "object",
+        "region_code": "int64",
+        "deaths_all": "int64",
+        "deaths_respiratory": "int64",
+        "deaths_cardiovascular": "int64",
+        "deaths_heat_direct": "int64"
+      },
+      "date_range": {
+        "start": "2010-01-01",
+        "end": "2024-12-31",
+        "days": 5478
+      },
+      "region_coverage": {
+        "column": "region_code",
+        "unique_regions": 133,
+        "expected": 133
+      },
+      "summary_stats": {
+        "region_code": {
+          "min": 1101.0,
+          "max": 5301.0,
+          "mean": 3100.9925,
+          "std": 1128.5429,
+          "missing_pct": 0.0
+        },
+        "deaths_all": {
+          "min": 1.0,
+          "max": 1106.0,
+          "mean": 28.2328,
+          "std": 48.2483,
+          "missing_pct": 0.0
+        },
+        "deaths_respiratory": {
+          "min": 0.0,
+          "max": 137.0,
+          "mean": 3.1334,
+          "std": 6.1761,
+          "missing_pct": 0.0
+        },
+        "deaths_cardiovascular": {
+          "min": 0.0,
+          "max": 206.0,
+          "mean": 7.4729,
+          "std": 13.8619,
+          "missing_pct": 0.0
+        },
+        "deaths_heat_direct": {
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.0001,
+          "std": 0.0089,
+          "missing_pct": 0.0
+        }
+      }
+    },
+    "mortality_regional_daily_elderly": {
+      "file": "mortality_regional_daily_elderly.parquet",
+      "file_path": "C:\\Users\\LucasSempe\\OneDrive - International Initiative for Impact Evaluation\\Desktop\\sim_data\\new_analysis\\phase0_data_prep\\results\\mortality_regional_daily_elderly.parquet",
+      "file_exists": true,
+      "category": "Outcome",
+      "description": "[LEGACY] Elderly mortality - intermediate regions (old naming)",
+      "spatial_unit": "intermediate",
+      "temporal_unit": "daily",
+      "is_legacy": true,
+      "rows": 660980,
+      "columns": 6,
+      "column_names": [
+        "date",
+        "region_code",
+        "deaths_elderly",
+        "deaths_elderly_resp",
+        "deaths_elderly_cvd",
+        "deaths_elderly_heat"
+      ],
+      "memory_mb": 52.88,
+      "column_types": {
+        "date": "object",
+        "region_code": "int64",
+        "deaths_elderly": "int64",
+        "deaths_elderly_resp": "int64",
+        "deaths_elderly_cvd": "int64",
+        "deaths_elderly_heat": "int64"
+      },
+      "date_range": {
+        "start": "2010-01-01",
+        "end": "2024-12-31",
+        "days": 5478
+      },
+      "region_coverage": {
+        "column": "region_code",
+        "unique_regions": 133,
+        "expected": 133
+      },
+      "summary_stats": {
+        "region_code": {
+          "min": 1101.0,
+          "max": 5301.0,
+          "mean": 3121.3311,
+          "std": 1118.2967,
+          "missing_pct": 0.0
+        },
+        "deaths_elderly": {
+          "min": 1.0,
+          "max": 520.0,
+          "mean": 18.8107,
+          "std": 32.9493,
+          "missing_pct": 0.0
+        },
+        "deaths_elderly_resp": {
+          "min": 0.0,
+          "max": 106.0,
+          "mean": 2.6763,
+          "std": 5.1728,
+          "missing_pct": 0.0
+        },
+        "deaths_elderly_cvd": {
+          "min": 0.0,
+          "max": 172.0,
+          "mean": 6.044,
+          "std": 10.9101,
+          "missing_pct": 0.0
+        },
+        "deaths_elderly_heat": {
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.0,
+          "std": 0.0043,
+          "missing_pct": 0.0
+        }
+      }
+    },
+    "influenza_daily_by_intermediate_region": {
+      "file": "influenza_daily_by_intermediate_region.parquet",
+      "file_path": "C:\\Users\\LucasSempe\\OneDrive - International Initiative for Impact Evaluation\\Desktop\\sim_data\\new_analysis\\phase0_data_prep\\results\\influenza_daily_by_intermediate_region.parquet",
+      "file_exists": true,
+      "category": "Confounder",
+      "description": "SRAG/Influenza cases aggregated to 133 intermediate regions",
+      "spatial_unit": "intermediate",
+      "temporal_unit": "daily",
+      "is_legacy": false,
+      "rows": 187055,
+      "columns": 7,
+      "column_names": [
+        "date",
+        "intermediate_code",
+        "intermediate_name",
+        "srag_cases",
+        "srag_influenza",
+        "srag_covid",
+        "srag_deaths"
+      ],
+      "memory_mb": 21.34,
+      "column_types": {
+        "date": "datetime64[ns]",
+        "intermediate_code": "int64",
+        "intermediate_name": "object",
+        "srag_cases": "int64",
+        "srag_influenza": "int64",
+        "srag_covid": "int64",
+        "srag_deaths": "int64"
+      },
+      "date_range": {
+        "start": "2010-01-03",
+        "end": "2024-12-28",
+        "days": 5473
+      },
+      "region_coverage": {
+        "column": "intermediate_code",
+        "unique_regions": 133,
+        "expected": 133
+      },
+      "summary_stats": {
+        "intermediate_code": {
+          "min": 1101.0,
+          "max": 5301.0,
+          "mean": 3286.8225,
+          "std": 1035.1844,
+          "missing_pct": 0.0
+        },
+        "srag_cases": {
+          "min": 1.0,
+          "max": 1099.0,
+          "mean": 9.7363,
+          "std": 28.1578,
+          "missing_pct": 0.0
+        },
+        "srag_influenza": {
+          "min": 0.0,
+          "max": 1099.0,
+          "mean": 9.5553,
+          "std": 28.2088,
+          "missing_pct": 0.0
+        },
+        "srag_covid": {
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "std": 0.0,
+          "missing_pct": 0.0
+        },
+        "srag_deaths": {
+          "min": 0.0,
+          "max": 12.0,
+          "mean": 0.0596,
+          "std": 0.2907,
+          "missing_pct": 0.0
+        }
+      }
+    },
+    "influenza_daily_by_immediate_region": {
+      "file": "influenza_daily_by_immediate_region.parquet",
+      "file_path": "C:\\Users\\LucasSempe\\OneDrive - International Initiative for Impact Evaluation\\Desktop\\sim_data\\new_analysis\\phase0_data_prep\\results\\influenza_daily_by_immediate_region.parquet",
+      "file_exists": true,
+      "category": "Confounder",
+      "description": "SRAG/Influenza cases aggregated to 510 immediate regions",
+      "spatial_unit": "immediate",
+      "temporal_unit": "daily",
+      "is_legacy": false,
+      "rows": 378575,
+      "columns": 7,
+      "column_names": [
+        "date",
+        "immediate_code",
+        "immediate_name",
+        "srag_cases",
+        "srag_influenza",
+        "srag_covid",
+        "srag_deaths"
+      ],
+      "memory_mb": 43.83,
+      "column_types": {
+        "date": "datetime64[ns]",
+        "immediate_code": "int64",
+        "immediate_name": "object",
+        "srag_cases": "int64",
+        "srag_influenza": "int64",
+        "srag_covid": "int64",
+        "srag_deaths": "int64"
+      },
+      "date_range": {
+        "start": "2010-01-03",
+        "end": "2024-12-28",
+        "days": 5473
+      },
+      "region_coverage": {
+        "column": "immediate_code",
+        "unique_regions": 510,
+        "expected": 510
+      },
+      "summary_stats": {
+        "immediate_code": {
+          "min": 110001.0,
+          "max": 530001.0,
+          "mean": 334877.5109,
+          "std": 97447.1578,
+          "missing_pct": 0.0
+        },
+        "srag_cases": {
+          "min": 1.0,
+          "max": 1039.0,
+          "mean": 4.8107,
+          "std": 17.9718,
+          "missing_pct": 0.0
+        },
+        "srag_influenza": {
+          "min": 0.0,
+          "max": 1039.0,
+          "mean": 4.7213,
+          "std": 17.9885,
+          "missing_pct": 0.0
+        },
+        "srag_covid": {
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "std": 0.0,
+          "missing_pct": 0.0
+        },
+        "srag_deaths": {
+          "min": 0.0,
+          "max": 12.0,
+          "mean": 0.0294,
+          "std": 0.196,
+          "missing_pct": 0.0
+        }
+      }
+    },
+    "brazilian_holidays_daily": {
+      "file": "brazilian_holidays_daily.parquet",
+      "file_path": "C:\\Users\\LucasSempe\\OneDrive - International Initiative for Impact Evaluation\\Desktop\\sim_data\\new_analysis\\phase0_data_prep\\results\\brazilian_holidays_daily.parquet",
+      "file_exists": true,
+      "category": "Confounder",
+      "description": "Brazilian national holidays 2010-2024",
+      "spatial_unit": "national",
+      "temporal_unit": "daily",
+      "is_legacy": false,
+      "rows": 5479,
+      "columns": 10,
+      "column_names": [
+        "date",
+        "holiday_name_pt",
+        "holiday_type",
+        "is_holiday",
+        "is_day_before_holiday",
+        "is_day_after_holiday",
+        "is_holiday_week",
+        "year",
+        "month",
+        "day_of_week"
+      ],
+      "memory_mb": 0.56,
+      "column_types": {
+        "date": "datetime64[ns]",
+        "holiday_name_pt": "object",
+        "holiday_type": "object",
+        "is_holiday": "int64",
+        "is_day_before_holiday": "int64",
+        "is_day_after_holiday": "int64",
+        "is_holiday_week": "int64",
+        "year": "int32",
+        "month": "int32",
+        "day_of_week": "int32"
+      },
+      "date_range": {
+        "start": "2010-01-01",
+        "end": "2024-12-31",
+        "days": 5478
+      },
+      "summary_stats": {
+        "is_holiday": {
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.0358,
+          "std": 0.1857,
+          "missing_pct": 0.0
+        },
+        "is_day_before_holiday": {
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.0356,
+          "std": 0.1853,
+          "missing_pct": 0.0
+        },
+        "is_day_after_holiday": {
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.0358,
+          "std": 0.1857,
+          "missing_pct": 0.0
+        },
+        "is_holiday_week": {
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.0902,
+          "std": 0.2864,
+          "missing_pct": 0.0
+        },
+        "year": {
+          "min": 2010.0,
+          "max": 2024.0,
+          "mean": 2017.0007,
+          "std": 4.3211,
+          "missing_pct": 0.0
+        },
+        "month": {
+          "min": 1.0,
+          "max": 12.0,
+          "mean": 6.5227,
+          "std": 3.4491,
+          "missing_pct": 0.0
+        },
+        "day_of_week": {
+          "min": 0.0,
+          "max": 6.0,
+          "mean": 3.0002,
+          "std": 2.0005,
+          "missing_pct": 0.0
+        }
+      }
+    },
+    "ses_intermediate_covariates": {
+      "file": "ses_intermediate_covariates.csv",
+      "file_path": "C:\\Users\\LucasSempe\\OneDrive - International Initiative for Impact Evaluation\\Desktop\\sim_data\\new_analysis\\phase0_data_prep\\results\\ses_intermediate_covariates.csv",
+      "file_exists": true,
+      "category": "Covariate",
+      "description": "Socioeconomic covariates for 133 intermediate regions",
+      "spatial_unit": "intermediate",
+      "temporal_unit": "cross-sectional",
+      "is_legacy": false,
+      "rows": 133,
+      "columns": 10,
+      "column_names": [
+        "intermediate_code",
+        "intermediate_name",
+        "pop_total",
+        "pop_elderly",
+        "gdp_total",
+        "pop_urban",
+        "n_municipalities",
+        "pct_elderly",
+        "gdp_per_capita",
+        "urbanization_rate"
+      ],
+      "memory_mb": 0.02,
+      "column_types": {
+        "intermediate_code": "int64",
+        "intermediate_name": "object",
+        "pop_total": "int64",
+        "pop_elderly": "float64",
+        "gdp_total": "int64",
+        "pop_urban": "float64",
+        "n_municipalities": "int64",
+        "pct_elderly": "float64",
+        "gdp_per_capita": "float64",
+        "urbanization_rate": "float64"
+      },
+      "region_coverage": {
+        "column": "intermediate_code",
+        "unique_regions": 133,
+        "expected": 133
+      },
+      "summary_stats": {
+        "intermediate_code": {
+          "min": 1101.0,
+          "max": 5301.0,
+          "mean": 3086.5414,
+          "std": 1138.0207,
+          "missing_pct": 0.0
+        },
+        "pop_total": {
+          "min": 90456.0,
+          "max": 22564260.0,
+          "mean": 1526922.9774,
+          "std": 2371637.6325,
+          "missing_pct": 0.0
+        },
+        "pop_elderly": {
+          "min": 8168.0,
+          "max": 3742255.0,
+          "mean": 241454.812,
+          "std": 404143.9044,
+          "missing_pct": 0.0
+        },
+        "gdp_total": {
+          "min": 2137659.0,
+          "max": 1469758150.0,
+          "mean": 67760466.2406,
+          "std": 151836341.2515,
+          "missing_pct": 0.0
+        },
+        "pop_urban": {
+          "min": 38195.0,
+          "max": 21136475.0,
+          "mean": 1209968.4511,
+          "std": 2244848.6237,
+          "missing_pct": 0.0
+        },
+        "n_municipalities": {
+          "min": 1.0,
+          "max": 146.0,
+          "mean": 41.8797,
+          "std": 28.2119,
+          "missing_pct": 0.0
+        },
+        "pct_elderly": {
+          "min": 6.652571754627609,
+          "max": 22.525679361219726,
+          "mean": 15.1507,
+          "std": 3.4642,
+          "missing_pct": 0.0
+        },
+        "gdp_per_capita": {
+          "min": 9939.454793438856,
+          "max": 101847.70252940584,
+          "mean": 36935.4426,
+          "std": 18997.9078,
+          "missing_pct": 0.0
+        },
+        "urbanization_rate": {
+          "min": 37.94766878432217,
+          "max": 100.0,
+          "mean": 70.7561,
+          "std": 13.2831,
+          "missing_pct": 0.0
+        }
+      }
+    },
+    "ses_immediate_covariates": {
+      "file": "ses_immediate_covariates.csv",
+      "file_path": "C:\\Users\\LucasSempe\\OneDrive - International Initiative for Impact Evaluation\\Desktop\\sim_data\\new_analysis\\phase0_data_prep\\results\\ses_immediate_covariates.csv",
+      "file_exists": true,
+      "category": "Covariate",
+      "description": "Socioeconomic covariates for 510 immediate regions",
+      "spatial_unit": "immediate",
+      "temporal_unit": "cross-sectional",
+      "is_legacy": false,
+      "rows": 510,
+      "columns": 10,
+      "column_names": [
+        "immediate_code",
+        "immediate_name",
+        "pop_total",
+        "pop_elderly",
+        "gdp_total",
+        "pop_urban",
+        "n_municipalities",
+        "pct_elderly",
+        "gdp_per_capita",
+        "urbanization_rate"
+      ],
+      "memory_mb": 0.07,
+      "column_types": {
+        "immediate_code": "int64",
+        "immediate_name": "object",
+        "pop_total": "int64",
+        "pop_elderly": "float64",
+        "gdp_total": "int64",
+        "pop_urban": "float64",
+        "n_municipalities": "int64",
+        "pct_elderly": "float64",
+        "gdp_per_capita": "float64",
+        "urbanization_rate": "float64"
+      },
+      "region_coverage": {
+        "column": "immediate_code",
+        "unique_regions": 510,
+        "expected": 510
+      },
+      "summary_stats": {
+        "immediate_code": {
+          "min": 110001.0,
+          "max": 530001.0,
+          "mean": 318584.9275,
+          "std": 107111.5408,
+          "missing_pct": 0.0
+        },
+        "pop_total": {
+          "min": 30980.0,
+          "max": 20731920.0,
+          "mean": 398197.5608,
+          "std": 1160888.7881,
+          "missing_pct": 0.0
+        },
+        "pop_elderly": {
+          "min": 3090.0,
+          "max": 3391059.0,
+          "mean": 62967.6275,
+          "std": 194552.6652,
+          "missing_pct": 0.0
+        },
+        "gdp_total": {
+          "min": 488502.0,
+          "max": 1390102770.0,
+          "mean": 17670866.6863,
+          "std": 73825221.0468,
+          "missing_pct": 0.0
+        },
+        "pop_urban": {
+          "min": 9182.0,
+          "max": 19458888.0,
+          "mean": 315540.7922,
+          "std": 1101484.6632,
+          "missing_pct": 0.0
+        },
+        "n_municipalities": {
+          "min": 1.0,
+          "max": 47.0,
+          "mean": 10.9216,
+          "std": 6.5661,
+          "missing_pct": 0.0
+        },
+        "pct_elderly": {
+          "min": 5.660253571487149,
+          "max": 25.83294694310128,
+          "mean": 15.9709,
+          "std": 3.7405,
+          "missing_pct": 0.0
+        },
+        "gdp_per_capita": {
+          "min": 7979.787640239494,
+          "max": 226369.2874061523,
+          "mean": 36059.0842,
+          "std": 23635.4285,
+          "missing_pct": 0.0
+        },
+        "urbanization_rate": {
+          "min": 15.060112516196757,
+          "max": 100.0,
+          "mean": 69.2102,
+          "std": 14.5477,
+          "missing_pct": 0.0
+        }
+      }
+    },
+    "regional_covariates": {
+      "file": "regional_covariates.csv",
+      "file_path": "C:\\Users\\LucasSempe\\OneDrive - International Initiative for Impact Evaluation\\Desktop\\sim_data\\new_analysis\\phase0_data_prep\\results\\regional_covariates.csv",
+      "file_exists": true,
+      "category": "Covariate",
+      "description": "Additional regional covariates for meta-regression",
+      "spatial_unit": "intermediate",
+      "temporal_unit": "cross-sectional",
+      "is_legacy": false,
+      "rows": 133,
+      "columns": 13,
+      "column_names": [
+        "region_code",
+        "region_name",
+        "primary_state",
+        "macro_region",
+        "n_municipalities",
+        "ac_pct",
+        "hdi",
+        "gdp_per_capita_brl",
+        "elderly_pct",
+        "urban_pct",
+        "hospital_beds_per_1000",
+        "physicians_per_1000",
+        "mean_temp_annual"
+      ],
+      "memory_mb": 0.03,
+      "column_types": {
+        "region_code": "int64",
+        "region_name": "object",
+        "primary_state": "object",
+        "macro_region": "object",
+        "n_municipalities": "int64",
+        "ac_pct": "float64",
+        "hdi": "float64",
+        "gdp_per_capita_brl": "int64",
+        "elderly_pct": "float64",
+        "urban_pct": "float64",
+        "hospital_beds_per_1000": "float64",
+        "physicians_per_1000": "float64",
+        "mean_temp_annual": "float64"
+      },
+      "region_coverage": {
+        "column": "region_code",
+        "unique_regions": 133,
+        "expected": 133
+      },
+      "summary_stats": {
+        "region_code": {
+          "min": 1101.0,
+          "max": 5301.0,
+          "mean": 3086.5414,
+          "std": 1138.0207,
+          "missing_pct": 0.0
+        },
+        "n_municipalities": {
+          "min": 1.0,
+          "max": 146.0,
+          "mean": 41.8872,
+          "std": 28.212,
+          "missing_pct": 0.0
+        },
+        "ac_pct": {
+          "min": 15.2,
+          "max": 42.1,
+          "mean": 26.3,
+          "std": 7.7293,
+          "missing_pct": 0.0
+        },
+        "hdi": {
+          "min": 0.676,
+          "max": 0.85,
+          "mean": 0.7519,
+          "std": 0.0401,
+          "missing_pct": 0.0
+        },
+        "gdp_per_capita_brl": {
+          "min": 14739.0,
+          "max": 90742.0,
+          "mean": 32185.7068,
+          "std": 13891.144,
+          "missing_pct": 0.0
+        },
+        "elderly_pct": {
+          "min": 7.4,
+          "max": 18.5,
+          "mean": 13.3293,
+          "std": 2.7937,
+          "missing_pct": 0.0
+        },
+        "urban_pct": {
+          "min": 65.3,
+          "max": 97.8,
+          "mean": 83.3617,
+          "std": 8.1212,
+          "missing_pct": 0.0
+        },
+        "hospital_beds_per_1000": {
+          "min": 1.3,
+          "max": 2.8,
+          "mean": 1.9098,
+          "std": 0.3628,
+          "missing_pct": 0.0
+        },
+        "physicians_per_1000": {
+          "min": 0.8,
+          "max": 4.5,
+          "mean": 1.7586,
+          "std": 0.6857,
+          "missing_pct": 0.0
+        },
+        "mean_temp_annual": {
+          "min": 18.2,
+          "max": 27.8,
+          "mean": 23.7511,
+          "std": 3.0263,
+          "missing_pct": 0.0
+        }
+      }
+    },
+    "municipality_to_all_regions_map": {
+      "file": "municipality_to_all_regions_map.csv",
+      "file_path": "C:\\Users\\LucasSempe\\OneDrive - International Initiative for Impact Evaluation\\Desktop\\sim_data\\new_analysis\\phase0_data_prep\\results\\municipality_to_all_regions_map.csv",
+      "file_exists": true,
+      "category": "Reference",
+      "description": "Municipality to intermediate/immediate region mapping",
+      "spatial_unit": "municipality",
+      "temporal_unit": "cross-sectional",
+      "is_legacy": false,
+      "rows": 5571,
+      "columns": 7,
+      "column_names": [
+        "code_muni",
+        "name_muni",
+        "abbrev_state",
+        "intermediate_code",
+        "intermediate_name",
+        "immediate_code",
+        "immediate_name"
+      ],
+      "memory_mb": 1.54,
+      "column_types": {
+        "code_muni": "int64",
+        "name_muni": "object",
+        "abbrev_state": "object",
+        "intermediate_code": "int64",
+        "intermediate_name": "object",
+        "immediate_code": "int64",
+        "immediate_name": "object"
+      },
+      "region_coverage": {
+        "column": "intermediate_code",
+        "unique_regions": 133,
+        "expected": null
+      },
+      "summary_stats": {
+        "code_muni": {
+          "min": 1100015.0,
+          "max": 5300108.0,
+          "mean": 3253922.5328,
+          "std": 985133.1883,
+          "missing_pct": 0.0
+        },
+        "intermediate_code": {
+          "min": 1101.0,
+          "max": 5301.0,
+          "mean": 3242.1867,
+          "std": 984.0414,
+          "missing_pct": 0.0
+        },
+        "immediate_code": {
+          "min": 110001.0,
+          "max": 530001.0,
+          "mean": 323826.8884,
+          "std": 98363.4557,
+          "missing_pct": 0.0
+        }
+      }
+    },
+    "ibge_life_tables_combined": {
+      "file": "ibge_life_tables_combined.parquet",
+      "file_path": "C:\\Users\\LucasSempe\\OneDrive - International Initiative for Impact Evaluation\\Desktop\\sim_data\\new_analysis\\phase0_data_prep\\results\\ibge_life_tables_combined.parquet",
+      "file_exists": true,
+      "category": "Reference",
+      "description": "IBGE life tables for YLL calculation",
+      "spatial_unit": "national",
+      "temporal_unit": "annual",
+      "is_legacy": false,
+      "rows": 1230,
+      "columns": 8,
+      "column_names": [
+        "age",
+        "qx",
+        "dx",
+        "lx",
+        "Lx",
+        "Tx",
+        "ex",
+        "year"
+      ],
+      "memory_mb": 0.08,
+      "column_types": {
+        "age": "int64",
+        "qx": "float64",
+        "dx": "float64",
+        "lx": "float64",
+        "Lx": "float64",
+        "Tx": "float64",
+        "ex": "float64",
+        "year": "int64"
+      },
+      "summary_stats": {
+        "age": {
+          "min": 0.0,
+          "max": 89.0,
+          "mean": 40.5976,
+          "std": 23.8557,
+          "missing_pct": 0.0
+        },
+        "qx": {
+          "min": 0.194826189153903,
+          "max": 131.17088737132,
+          "mean": 10.6179,
+          "std": 17.839,
+          "missing_pct": 0.0
+        },
+        "dx": {
+          "min": 19.1823432965029,
+          "max": 3557.53360182968,
+          "mean": 690.4584,
+          "std": 828.1618,
+          "missing_pct": 0.0
+        },
+        "lx": {
+          "min": 21799.2847899794,
+          "max": 100000.0,
+          "mean": 87822.9308,
+          "std": 14196.6085,
+          "missing_pct": 0.0
+        },
+        "Lx": {
+          "min": 20369.5690249985,
+          "max": 98968.26542223149,
+          "mean": 87470.9227,
+          "std": 14593.7887,
+          "missing_pct": 0.0
+        },
+        "Tx": {
+          "min": 116034.09578835,
+          "max": 7702721.34497579,
+          "mean": 3729914.0665,
+          "std": 2161597.045,
+          "missing_pct": 0.0
+        },
+        "ex": {
+          "min": 5.29424343795688,
+          "max": 77.0272134497579,
+          "mean": 39.8,
+          "std": 20.4563,
+          "missing_pct": 0.0
+        },
+        "year": {
+          "min": 2010.0,
+          "max": 2024.0,
+          "mean": 2017.1463,
+          "std": 4.3703,
+          "missing_pct": 0.0
+        }
+      }
+    },
+    "yll_lookup_by_age": {
+      "file": "yll_lookup_by_age.csv",
+      "file_path": "C:\\Users\\LucasSempe\\OneDrive - International Initiative for Impact Evaluation\\Desktop\\sim_data\\new_analysis\\phase0_data_prep\\results\\yll_lookup_by_age.csv",
+      "file_exists": true,
+      "category": "Reference",
+      "description": "YLL lookup table by single year of age",
+      "spatial_unit": "national",
+      "temporal_unit": "cross-sectional",
+      "is_legacy": false,
+      "rows": 90,
+      "columns": 5,
+      "column_names": [
+        "age",
+        "ex_mean",
+        "ex_min",
+        "ex_max",
+        "n_years"
+      ],
+      "memory_mb": 0.0,
+      "column_types": {
+        "age": "int64",
+        "ex_mean": "float64",
+        "ex_min": "float64",
+        "ex_max": "float64",
+        "n_years": "int64"
+      },
+      "summary_stats": {
+        "age": {
+          "min": 0.0,
+          "max": 89.0,
+          "mean": 44.5,
+          "std": 26.1247,
+          "missing_pct": 0.0
+        },
+        "ex_mean": {
+          "min": 5.318505905470453,
+          "max": 75.7063878071105,
+          "mean": 36.8794,
+          "std": 21.7571,
+          "missing_pct": 0.0
+        },
+        "ex_min": {
+          "min": 5.29424343795688,
+          "max": 74.10626328325972,
+          "mean": 35.794,
+          "std": 21.3553,
+          "missing_pct": 0.0
+        },
+        "ex_max": {
+          "min": 5.3384347033833,
+          "max": 77.0272134497579,
+          "mean": 37.7135,
+          "std": 22.0583,
+          "missing_pct": 0.0
+        },
+        "n_years": {
+          "min": 3.0,
+          "max": 15.0,
+          "mean": 13.6667,
+          "std": 3.7924,
+          "missing_pct": 0.0
+        }
+      }
+    }
+  },
+  "summary": {
+    "total_datasets": 17,
+    "datasets_found": 17,
+    "total_rows": 13880407,
+    "categories": [
+      "Confounder",
+      "Exposure",
+      "Covariate",
+      "Outcome",
+      "Reference"
+    ],
+    "legacy_files_count": 2
+  }
+}

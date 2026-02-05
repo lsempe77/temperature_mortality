@@ -1,0 +1,35 @@
+{
+  "script": "03a_supplementary_analyses_v2.py",
+  "timestamp": "2025-12-17T06:28:20.102219",
+  "level": "immediate",
+  "configuration": {
+    "max_lag": 21,
+    "temp_df": 4,
+    "lag_df": 4,
+    "min_obs": 1000,
+    "min_pollution_coverage": 0.7,
+    "temp_knot_pcts": [
+      10,
+      75,
+      90
+    ],
+    "lag_knots": [
+      1,
+      3,
+      7,
+      14
+    ]
+  },
+  "data": {
+    "total_observations": 2301001,
+    "n_regions_all": 508,
+    "n_regions_pollution_valid": 508
+  },
+  "analyses_run": [
+    "base",
+    "apparent_temp",
+    "pollution_adjusted",
+    "flu_adjusted",
+    "fully_adjusted"
+  ]
+}

@@ -1,0 +1,322 @@
+{
+  "method": "Counterfactual excess mortality with flexible baseline model",
+  "version": "v2",
+  "settings": {
+    "include_flu": false,
+    "restrict_heat_season": false,
+    "seasonal_df": 6,
+    "n_bootstrap": 500,
+    "ci_level": 0.95
+  },
+  "model": {
+    "family": "NegativeBinomial",
+    "dispersion": 1.0,
+    "n_parameters": 22,
+    "n_observations": 5114,
+    "has_population_offset": true,
+    "has_holiday_control": true,
+    "has_flu_adjustment": false
+  },
+  "diagnostics": {
+    "dispersion": 0.0036623082860303044,
+    "acf_values": [
+      1.0,
+      0.9498819331263335,
+      0.9371777992724832,
+      0.9262260807336887,
+      0.9170267064788019,
+      0.9092290117367567,
+      0.9011025265193374,
+      0.8938611152047438,
+      0.8864191249232055,
+      0.87796343594077,
+      0.8707113020031457
+    ],
+    "significant_acf_lags": "many",
+    "shapiro_p_value": 1.6024148747378444e-45,
+    "n_influential_obs": 5114,
+    "rmse": 2467.494439519698,
+    "mae": 2431.270553938271,
+    "mean_observed": 2431.2706296441143,
+    "mean_predicted": 7.570584359168608e-05
+  },
+  "temperature_percentiles": {
+    "p01": 20.20521265029907,
+    "p025": 20.769270277023317,
+    "p05": 21.247635746002196,
+    "p25": 22.77895736694336,
+    "p50": 24.29585361480713,
+    "p75": 25.129050731658936,
+    "p95": 26.04514875411987,
+    "p975": 26.340097332000735,
+    "p99": 26.633614921569823
+  },
+  "excess_mortality": {
+    "primary": {
+      "heat": {
+        "threshold": 26.340097332000735,
+        "threshold_name": "p975",
+        "n_days": 128,
+        "excess": 323540.99059109704,
+        "excess_95ci": [
+          323541.0,
+          323541.0
+        ],
+        "mean_excess_per_day": 2527.6639889929456
+      },
+      "cold": {
+        "threshold": 20.769270277023317,
+        "threshold_name": "p025",
+        "n_days": 128,
+        "excess": 334903.9895703512,
+        "excess_95ci": [
+          334904.0,
+          334904.0
+        ],
+        "mean_excess_per_day": 2616.4374185183688
+      }
+    },
+    "comparison": {
+      "heat": {
+        "threshold": 26.633614921569823,
+        "threshold_name": "p99",
+        "n_days": 52,
+        "excess": 137535.99609766022,
+        "excess_95ci": [
+          137536.0,
+          137536.0
+        ],
+        "mean_excess_per_day": 2644.923001878081
+      },
+      "cold": {
+        "threshold": 20.20521265029907,
+        "threshold_name": "p01",
+        "n_days": 52,
+        "excess": 134751.9957842788,
+        "excess_95ci": [
+          134752.0,
+          134752.0
+        ],
+        "mean_excess_per_day": 2591.3845343130542
+      }
+    },
+    "traditional": {
+      "heat": {
+        "threshold": 25.129050731658936,
+        "threshold_name": "p75",
+        "n_days": 1279,
+        "excess": 3091420.905683102,
+        "excess_95ci": [
+          3091421.0,
+          3091421.0
+        ],
+        "mean_excess_per_day": 2417.060911401956
+      },
+      "cold": {
+        "threshold": 22.77895736694336,
+        "threshold_name": "p25",
+        "n_days": 1279,
+        "excess": 3302020.896962433,
+        "excess_95ci": [
+          3302021.0,
+          3302021.0
+        ],
+        "mean_excess_per_day": 2581.7207951230907
+      }
+    }
+  },
+  "comparison_with_dlnm": {
+    "levels": {
+      "intermediate": {
+        "dlnm_heat_an": 307915.0003790542,
+        "dlnm_cold_an": 122463.00266882652,
+        "excess_heat": 323540.99059109704,
+        "excess_cold": 334903.9895703512,
+        "ratio_heat": 1.0507477394501945,
+        "ratio_cold": 2.7347360612741407
+      },
+      "immediate": {
+        "dlnm_heat_an": 315738.1792548973,
+        "dlnm_cold_an": 173674.76938466783,
+        "excess_heat": 323540.99059109704,
+        "excess_cold": 334903.9895703512,
+        "ratio_heat": 1.0247129167420088,
+        "ratio_cold": 1.9283399123368397
+      }
+    },
+    "threshold_used": "primary (P2.5/P97.5)"
+  },
+  "sensitivity_analyses": {
+    "full": {
+      "years": "2010-2024",
+      "n_obs": 5114,
+      "total_excess": 12433517.612840317,
+      "mean_daily_excess": 2431.270553938271,
+      "dispersion": 0.0036623082860303044
+    },
+    "pre_covid": {
+      "years": "2010-2019",
+      "n_obs": 3652,
+      "total_excess": 8127007.746934297,
+      "mean_daily_excess": 2225.3580906172774,
+      "dispersion": 0.0017054284911036137
+    },
+    "post_2015": {
+      "years": "2015-2024",
+      "n_obs": 3288,
+      "total_excess": 8695518.729221152,
+      "mean_daily_excess": 2644.6224845563115,
+      "dispersion": 0.005654095985898024
+    },
+    "pre_2020": {
+      "years": "2010-2019",
+      "n_obs": 3652,
+      "total_excess": 8127007.746934297,
+      "mean_daily_excess": 2225.3580906172774,
+      "dispersion": 0.0017054284911036137
+    }
+  },
+  "annual_summary": [
+    {
+      "year": 2010,
+      "total_deaths": 704830.0,
+      "expected": 0.02198616029973025,
+      "total_excess": 704829.9780138398,
+      "heat_excess": 29077.999152089116,
+      "cold_excess": 30449.99902329073,
+      "n_heat_days": 15.0,
+      "n_cold_days": 15.0
+    },
+    {
+      "year": 2011,
+      "total_deaths": 733686.0,
+      "expected": 0.022793210504291093,
+      "total_excess": 733685.9772067894,
+      "heat_excess": 0.0,
+      "cold_excess": 35051.99891525261,
+      "n_heat_days": 0.0,
+      "n_cold_days": 16.0
+    },
+    {
+      "year": 2012,
+      "total_deaths": 742306.0,
+      "expected": 0.023091201496319193,
+      "total_excess": 742305.9769087984,
+      "heat_excess": 14856.999578136045,
+      "cold_excess": 22619.9993127837,
+      "n_heat_days": 7.0,
+      "n_cold_days": 10.0
+    },
+    {
+      "year": 2013,
+      "total_deaths": 769724.0,
+      "expected": 0.023726069101735275,
+      "total_excess": 769723.9762739309,
+      "heat_excess": 4314.999875791476,
+      "cold_excess": 18556.999445328234,
+      "n_heat_days": 2.0,
+      "n_cold_days": 8.0
+    },
+    {
+      "year": 2014,
+      "total_deaths": 787453.0,
+      "expected": 0.024947192989399486,
+      "total_excess": 787452.975052807,
+      "heat_excess": 19037.999476099725,
+      "cold_excess": 11360.999630064129,
+      "n_heat_days": 8.0,
+      "n_cold_days": 5.0
+    },
+    {
+      "year": 2015,
+      "total_deaths": 827590.0,
+      "expected": 0.026054427959817706,
+      "total_excess": 827589.973945572,
+      "heat_excess": 56910.99828483897,
+      "cold_excess": 2529.9999217110767,
+      "n_heat_days": 25.0,
+      "n_cold_days": 1.0
+    },
+    {
+      "year": 2016,
+      "total_deaths": 864151.0,
+      "expected": 0.026592084682936307,
+      "total_excess": 864150.9734079153,
+      "heat_excess": 20989.99937159933,
+      "cold_excess": 28598.99913401941,
+      "n_heat_days": 9.0,
+      "n_cold_days": 11.0
+    },
+    {
+      "year": 2017,
+      "total_deaths": 877265.0,
+      "expected": 0.026796510083045996,
+      "total_excess": 877264.9732034899,
+      "heat_excess": 7191.9997851754415,
+      "cold_excess": 24603.999277517243,
+      "n_heat_days": 3.0,
+      "n_cold_days": 9.0
+    },
+    {
+      "year": 2018,
+      "total_deaths": 890271.0,
+      "expected": 0.027780121152181734,
+      "total_excess": 890270.9722198788,
+      "heat_excess": 0.0,
+      "cold_excess": 13070.999588326835,
+      "n_heat_days": 0.0,
+      "n_cold_days": 5.0
+    },
+    {
+      "year": 2019,
+      "total_deaths": 929732.0,
+      "expected": 0.029999592481584673,
+      "total_excess": 929731.9700004075,
+      "heat_excess": 32608.998992982106,
+      "cold_excess": 19681.999370830552,
+      "n_heat_days": 13.0,
+      "n_cold_days": 7.0
+    },
+    {
+      "year": 2020,
+      "total_deaths": 1084335.0,
+      "expected": 0.03284646719095564,
+      "total_excess": 1084334.9671535327,
+      "heat_excess": 18571.999472989428,
+      "cold_excess": 23121.999326604753,
+      "n_heat_days": 6.0,
+      "n_cold_days": 7.0
+    },
+    {
+      "year": 2022,
+      "total_deaths": 1098323.0,
+      "expected": 0.03438003235552157,
+      "total_excess": 1098322.9656199678,
+      "heat_excess": 0.0,
+      "cold_excess": 58948.9980889628,
+      "n_heat_days": 0.0,
+      "n_cold_days": 19.0
+    },
+    {
+      "year": 2023,
+      "total_deaths": 1034609.0,
+      "expected": 0.032597118745907955,
+      "total_excess": 1034608.9674028812,
+      "heat_excess": 72048.99799006719,
+      "cold_excess": 24919.999223020262,
+      "n_heat_days": 24.0,
+      "n_cold_days": 8.0
+    },
+    {
+      "year": 2024,
+      "total_deaths": 1089243.0,
+      "expected": 0.03356949508445574,
+      "total_excess": 1089242.9664305048,
+      "heat_excess": 47929.998611328214,
+      "cold_excess": 21386.99931263893,
+      "n_heat_days": 16.0,
+      "n_cold_days": 7.0
+    }
+  ],
+  "timestamp": "2025-12-16T00:59:08.078828"
+}

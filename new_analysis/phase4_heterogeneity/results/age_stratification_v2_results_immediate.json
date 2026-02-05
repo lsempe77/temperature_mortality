@@ -1,0 +1,40 @@
+{
+  "analysis_date": "2025-12-16T23:38:08.288363",
+  "level": "immediate",
+  "age_groups": [
+    "60-69",
+    "70-79",
+    "80+"
+  ],
+  "dlnm_params": {
+    "max_lag": 21,
+    "var_df": 4,
+    "lag_df": 4,
+    "basis_type": "natural_spline"
+  },
+  "approach": "per_region_dlnm_then_mvmeta_pooling",
+  "methodology": "Gasparrini MVMeta - pool DLNM coefficients not RRs",
+  "offset": "log(pop_elderly * age_proportion)",
+  "percentile_method": "region_specific",
+  "pooled_results": {},
+  "heterogeneity": {
+    "heat": {
+      "Q": NaN,
+      "df": 0,
+      "p": NaN,
+      "I2": NaN,
+      "groups": []
+    },
+    "cold": {
+      "Q": NaN,
+      "df": 0,
+      "p": NaN,
+      "I2": NaN,
+      "groups": []
+    }
+  },
+  "pairwise_comparisons": {
+    "heat": {},
+    "cold": {}
+  }
+}

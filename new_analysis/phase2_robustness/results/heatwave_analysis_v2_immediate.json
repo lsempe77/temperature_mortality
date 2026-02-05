@@ -1,0 +1,37 @@
+{
+  "meta_results": {},
+  "comparison_results": {
+    "moderate": {
+      "heatwave_rr": 0.9581285367037798,
+      "non_heatwave_rr": 1.474399956511635,
+      "ratio": 0.6498430310393317,
+      "k_hw": 8,
+      "k_non": 25
+    }
+  },
+  "definitions": [
+    {
+      "name": "strict",
+      "threshold_pct": 0.95,
+      "min_days": 3
+    },
+    {
+      "name": "moderate",
+      "threshold_pct": 0.9,
+      "min_days": 2
+    },
+    {
+      "name": "lenient",
+      "threshold_pct": 0.85,
+      "min_days": 2
+    }
+  ],
+  "metadata": {
+    "max_lag": 21,
+    "var_df": 4,
+    "lag_df": 4,
+    "n_regions": 508,
+    "level": "immediate",
+    "analysis_date": "2025-12-16T02:00:41.291751"
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "exposure_type": "intermediate",
+  "analysis_date": "2025-12-25 11:34:26.712701",
+  "method": "single_model_cumulative_v2",
+  "description": "Corrected harvesting analysis: fit ONE model with max_lag, extract cumulative RR at each horizon using crosspred(to=) parameter",
+  "max_lag": 35,
+  "lag_horizons": [7, 14, 21, 28, 35],
+  "eval_temperatures": {
+    "cold_p1": 11.514145,
+    "heat_p99": 30.147478
+  },
+  "results": {
+    "lag_7": {
+      "lag_days": 7,
+      "n_regions": 129,
+      "heat": {
+        "rr": 1.489251,
+        "ci_low": 1.233521,
+        "ci_high": 1.797999,
+        "cochrans_Q": 13652.582105,
+        "Q_df": 114,
+        "I2_percent": 99.164993
+      },
+      "cold": {
+        "rr": 1.296127,
+        "ci_low": 1.217962,
+        "ci_high": 1.379309,
+        "cochrans_Q": 2076.17985,
+        "Q_df": 92,
+        "I2_percent": 95.568785
+      }
+    },
+    "lag_14": {
+      "lag_days": 14,
+      "n_regions": 128,
+      "heat": {
+        "rr": 1.454931,
+        "ci_low": 1.08456,
+        "ci_high": 1.95178,
+        "cochrans_Q": 12902.239792,
+        "Q_df": 114,
+        "I2_percent": 99.116432
+      },
+      "cold": {
+        "rr": 1.44718,
+        "ci_low": 1.311745,
+        "ci_high": 1.596599,
+        "cochrans_Q": 2412.748055,
+        "Q_df": 85,
+        "I2_percent": 96.477046
+      }
+    },
+    "lag_21": {
+      "lag_days": 21,
+      "n_regions": 127,
+      "heat": {
+        "rr": 1.173187,
+        "ci_low": 0.843284,
+        "ci_high": 1.632152,
+        "cochrans_Q": 11056.453682,
+        "Q_df": 111,
+        "I2_percent": 98.996061
+      },
+      "cold": {
+        "rr": 0.41257,
+        "ci_low": 0.131608,
+        "ci_high": 1.293342,
+        "cochrans_Q": 2706.571718,
+        "Q_df": 85,
+        "I2_percent": 96.859496
+      }
+    },
+    "lag_28": {
+      "lag_days": 28,
+      "n_regions": 127,
+      "heat": {
+        "rr": 1.080955,
+        "ci_low": 0.721155,
+        "ci_high": 1.620267,
+        "cochrans_Q": 10057.125553,
+        "Q_df": 112,
+        "I2_percent": 98.886362
+      },
+      "cold": {
+        "rr": 0.223214,
+        "ci_low": 0.046715,
+        "ci_high": 1.066563,
+        "cochrans_Q": 2651.441345,
+        "Q_df": 84,
+        "I2_percent": 96.831912
+      }
+    },
+    "lag_35": {
+      "lag_days": 35,
+      "n_regions": 127,
+      "heat": {
+        "rr": 1.001337,
+        "ci_low": 0.666583,
+        "ci_high": 1.504203,
+        "cochrans_Q": 7652.787622,
+        "Q_df": 112,
+        "I2_percent": 98.536481
+      },
+      "cold": {
+        "rr": 1.340441,
+        "ci_low": 1.008381,
+        "ci_high": 1.781848,
+        "cochrans_Q": 2299.78043,
+        "Q_df": 84,
+        "I2_percent": 96.347477
+      }
+    },
+    "summary": {
+      "harvesting_ratio_heat": 0.997267,
+      "harvesting_ratio_cold": -0.149645,
+      "err_heat_7day": 0.489251,
+      "err_heat_35day": 0.001337,
+      "err_cold_7day": 0.296127,
+      "err_cold_35day": 0.340441,
+      "method": "single_model_cumulative"
+    }
+  }
+}

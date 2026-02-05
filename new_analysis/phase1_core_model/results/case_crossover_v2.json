@@ -1,0 +1,100 @@
+{
+  "method": "Time-stratified case-crossover (individual-level)",
+  "version": "v2",
+  "is_true_case_crossover": true,
+  "design": {
+    "control_strategy": "time_stratified",
+    "description": "Same year-month, same day-of-week",
+    "sample_size_used": 50000
+  },
+  "model": {
+    "method": "ConditionalLogit",
+    "converged": true,
+    "coefficients": {
+      "temp_linear": 0.042112751900223525,
+      "temp_quadratic": 0.008310619462335788,
+      "se_linear": 0.010489829830297068,
+      "se_quadratic": 0.004873141735198492
+    },
+    "centering": {
+      "temp_mean": 23.93085033928772,
+      "temp_std": 1.523431143712265
+    },
+    "temperature_percentiles": {
+      "p01": 20.246671676635742,
+      "p025": 20.77540397644043,
+      "p25": 22.750917434692383,
+      "p50": 24.265058517456055,
+      "p75": 25.11005401611328,
+      "p975": 26.317245483398438,
+      "p99": 26.615156173706055
+    },
+    "odds_ratios_vs_p50": {
+      "p01": {
+        "temperature": 20.246671676635742,
+        "or": 0.9390580365582485
+      },
+      "p025": {
+        "temperature": 20.77540397644043,
+        "or": 0.9406241407789403
+      },
+      "p25": {
+        "temperature": 22.750917434692383,
+        "or": 0.9634155142063325
+      },
+      "p75": {
+        "temperature": 25.11005401611328,
+        "or": 1.0283317351339862
+      },
+      "p975": {
+        "temperature": 26.317245483398438,
+        "or": 1.0797418299690316
+      },
+      "p99": {
+        "temperature": 26.615156173706055,
+        "or": 1.0945754020908645
+      }
+    }
+  },
+  "stratified_or": {
+    "heat": {
+      "threshold": 26.317245483398438,
+      "or": 1.0716397013067671,
+      "comparison": ">P97.5 vs \u2264P97.5"
+    },
+    "cold": {
+      "threshold": 20.77540397644043,
+      "or": 1.0080915178571395,
+      "comparison": "<P2.5 vs \u2265P2.5"
+    }
+  },
+  "diagnostics": {
+    "n_cases": 50000,
+    "n_total_records": 220147,
+    "controls_per_case": {
+      "mean": 3.40294,
+      "median": 3.0,
+      "min": 3,
+      "max": 4,
+      "std": 0.4904938002496685
+    },
+    "zero_control_cases": 0,
+    "temperature_distribution": {
+      "case_mean": 23.9488134696579,
+      "control_mean": 23.925571630180247,
+      "case_std": 1.5233190942704335,
+      "control_std": 1.523428279236878,
+      "ks_statistic": 0.008451419537223726,
+      "ks_pvalue": 0.007962965331915442
+    }
+  },
+  "comparison_with_dlnm": {
+    "dlnm_heat_rr_p99": 7.602032839647297,
+    "dlnm_cold_rr_p1": 2.0616114881959504,
+    "case_crossover_heat_or_p99": 1.0945754020908645,
+    "case_crossover_cold_or_p01": 0.9390580365582485,
+    "heat_ratio": 0.14398456638890925,
+    "cold_ratio": 0.45549709144276634
+  },
+  "timestamp": "2025-12-16T01:22:10.706519"
+}

@@ -1,0 +1,110 @@
+{
+  "exposure_type": "immediate",
+  "analysis_date": "2025-12-19 20:58:31.074179",
+  "cause_groups": {
+    "cvd": {
+      "n_regions": 468,
+      "pooled_mmt": 25.107285,
+      "heterogeneity": {
+        "cochrans_Q": 467.202069,
+        "Q_df": 467,
+        "Q_pvalue": 0.488661,
+        "I2_percent": 0.043251
+      },
+      "heat": {
+        "rr": 1.216211,
+        "ci_low": 1.167178,
+        "ci_high": 1.267303,
+        "log_rr": 0.19574,
+        "se": 0.020995
+      },
+      "cold": {
+        "rr": 1.244189,
+        "ci_low": 1.191335,
+        "ci_high": 1.299387,
+        "log_rr": 0.218484,
+        "se": 0.022148
+      },
+      "converged": true,
+      "method": "ml"
+    },
+    "respiratory": {
+      "n_regions": 354,
+      "pooled_mmt": 24.420278,
+      "heterogeneity": {
+        "cochrans_Q": 433.947146,
+        "Q_df": 353,
+        "Q_pvalue": 0.002084,
+        "I2_percent": 18.653688
+      },
+      "heat": {
+        "rr": 1.287391,
+        "ci_low": 1.211101,
+        "ci_high": 1.368486,
+        "log_rr": 0.252618,
+        "se": 0.031167
+      },
+      "cold": {
+        "rr": 1.271176,
+        "ci_low": 1.184651,
+        "ci_high": 1.36402,
+        "log_rr": 0.239943,
+        "se": 0.035966
+      },
+      "converged": true,
+      "method": "ml"
+    },
+    "external": {
+      "n_regions": 97,
+      "pooled_mmt": 24.439563,
+      "heterogeneity": {
+        "cochrans_Q": 88.460132,
+        "Q_df": 96,
+        "Q_pvalue": 0.695192,
+        "I2_percent": 0
+      },
+      "heat": {
+        "rr": 0.99408,
+        "ci_low": 0.836149,
+        "ci_high": 1.181842,
+        "log_rr": -0.005937,
+        "se": 0.088271
+      },
+      "cold": {
+        "rr": 1.153593,
+        "ci_low": 0.994028,
+        "ci_high": 1.338772,
+        "log_rr": 0.142882,
+        "se": 0.075955
+      },
+      "converged": true,
+      "method": "ml"
+    },
+    "other": {
+      "n_regions": 480,
+      "pooled_mmt": 24.864738,
+      "heterogeneity": {
+        "cochrans_Q": 578.638675,
+        "Q_df": 479,
+        "Q_pvalue": 0.00118,
+        "I2_percent": 17.219498
+      },
+      "heat": {
+        "rr": 1.38521,
+        "ci_low": 1.325718,
+        "ci_high": 1.447371,
+        "log_rr": 0.325852,
+        "se": 0.022397
+      },
+      "cold": {
+        "rr": 1.201254,
+        "ci_low": 1.161628,
+        "ci_high": 1.242231,
+        "log_rr": 0.183366,
+        "se": 0.017114
+      },
+      "converged": true,
+      "method": "ml"
+    }
+  }
+}

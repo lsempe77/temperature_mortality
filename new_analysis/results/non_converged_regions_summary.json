@@ -1,0 +1,52 @@
+{
+  "generated": "2025-12-24T12:47:17.641800",
+  "total_non_converged": 19,
+  "intermediate": {
+    "count": 4,
+    "region_codes": [
+      1201,
+      4202,
+      4203,
+      4205
+    ]
+  },
+  "immediate": {
+    "count": 15,
+    "region_codes": [
+      110004,
+      120002,
+      310053,
+      410003,
+      410004,
+      410010,
+      410029,
+      420003,
+      420005,
+      420006,
+      420008,
+      420014,
+      420015,
+      420017,
+      430039
+    ]
+  },
+  "causes": {
+    "low_deaths": 12,
+    "sparse_data": 8,
+    "low_temp_variance": 2,
+    "unknown": 6
+  },
+  "states_affected": {
+    "Santa Catarina": 10,
+    "Parana": 4,
+    "Acre": 2,
+    "Rondonia": 1,
+    "Minas Gerais": 1,
+    "Rio Grande do Sul": 1
+  },
+  "recommendations": {
+    "low_deaths": "Consider aggregating to larger regions or using weekly data",
+    "sparse_data": "Reduce spline degrees of freedom or use simpler model",
+    "low_temp_variance": "Use linear temperature term instead of non-linear spline"
+  }
+}

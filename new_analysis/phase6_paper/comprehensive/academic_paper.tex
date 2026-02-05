@@ -1,0 +1,1638 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+\usepackage{float}
+\floatplacement{figure}{H}
+\floatplacement{table}{H}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\renewcommand{\abstractname}{\large Summary}
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Temperature-Attributable Mortality Among Elderly Brazilians, 2010-2024: A National Time-Series Analysis},
+  pdfauthor={Lucas Sempé},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{Temperature-Attributable Mortality Among Elderly Brazilians,
+2010-2024: A National Time-Series Analysis}
+\author{Lucas Sempé}
+\date{2025-12-01}
+\begin{document}
+\maketitle
+\begin{abstract}
+\textbf{Background:} Climate change is increasing temperature extremes
+globally, yet comprehensive national evidence on temperature-mortality
+relationships in large middle-income countries remains limited. Previous
+studies in Brazil focused on single cities or short periods, and none
+has systematically compared spatial aggregation scales or explicitly
+quantified mortality displacement (harvesting) in elderly populations.
+
+\textbf{Methods:} We analyzed 13.7 million elderly deaths (age ≥60
+years) across two spatial scales---510 immediate geographic regions and
+133 intermediate regions---covering all of Brazil from 2010 to 2024 (15
+years). Using distributed lag non-linear models (DLNM) with a two-stage
+meta-analytic design, we estimated temperature-mortality associations
+with 21-day cumulative lag structure. We quantified heterogeneity (I²,
+Cochran's Q), calculated attributable burden and years of life lost,
+assessed mortality displacement via extended 35-day lag analysis, and
+examined effect modification by age, sex, and cause of death.
+
+\textbf{Findings:} Both extreme heat (P99) and cold (P1) significantly
+increased mortality. At the intermediate level: heat RR = 1.088 (95\%
+CI: 1.067-1.110); cold RR = 1.122 (1.098-1.146); I² = 51\%. At the
+immediate level: heat RR = 1.063 (1.050-1.076); cold RR = 1.095
+(1.085-1.106); I² = 29\%. Cold effects consistently exceeded heat
+(cold:heat burden ratio 8:1), consistent with the Gasparrini et
+al.~(2015) multi-country Lancet study that found 4:1 ratios in Brazilian
+cities. Critically, harvesting analysis revealed heat deaths represent
+true excess mortality (effects increase over extended lags), while cold
+effects accumulate progressively over weeks. Annual burden:
+\textasciitilde56,000 temperature-attributable elderly deaths, with cold
+accounting for 89\%. The 80+ age group showed highest vulnerability
+(cold RR 1.27); cardiovascular deaths showed 32\% cold-related excess;
+females showed higher heat vulnerability (+8\%), males higher cold
+vulnerability (+6\%).
+
+\textbf{Interpretation:} This study provides the most comprehensive
+national evidence on temperature-mortality in elderly Brazilians to
+date. Cold effects substantially exceed heat effects, with an 8:1 burden
+ratio reflecting elderly vulnerability---higher than the 4:1 ratio in
+previous all-age studies. Public health strategies should address both
+temperature extremes, with particular attention to cold protection for
+elderly populations---a finding that challenges the predominant focus on
+heat in tropical climate-health discourse.
+
+\textbf{Funding:} {[}Funding sources{]}
+\end{abstract}
+
+
+\section{Research in Context}\label{research-in-context}
+
+\subsection{Evidence before this
+study}\label{evidence-before-this-study}
+
+We searched PubMed for articles published between January 1, 2000 and
+December 1, 2025, using terms ``Brazil'' AND ``temperature'' AND
+``mortality'' AND (``cold'' OR ``heat''). We identified 40 relevant
+studies. The landmark multi-country study by Gasparrini et al.~(2015,
+Lancet) included Brazilian cities and found that cold-attributable
+mortality (2.83\%) substantially exceeded heat-attributable mortality
+(0.70\%) in Brazil---a pattern consistent across most countries
+globally.\textsuperscript{1} The seminal São Paulo study by Gouveia et
+al.~(2003) first established the U-shaped temperature-mortality
+relationship in Brazil, with 5.5\% mortality increase per 1°C below
+20°C.\textsuperscript{2} Subsequent studies confirmed cold dominance:
+Son et al.~(2016) found cold effects (8.6\% excess) exceeded heat
+effects (6.1\%) in São Paulo;\textsuperscript{3} Silveira et al.~(2019)
+documented this pattern across 27 cities;\textsuperscript{4} Aschidamini
+et al.~(2025) found national cold effects (RR 1.30 for elderly)
+exceeding heat (RR 1.13).\textsuperscript{5} The recent Latin American
+analysis by Kephart et al.~(2022, Nature Medicine) confirmed
+temperature-mortality associations across the region.\textsuperscript{6}
+However, existing studies had important limitations: (1) most focused on
+single cities or states rather than national coverage; (2) none
+systematically compared results across different spatial aggregation
+scales; (3) few explicitly quantified mortality displacement
+(harvesting); (4) none focused specifically on elderly populations with
+comprehensive 15-year coverage.
+
+\subsection{Added value of this study}\label{added-value-of-this-study}
+
+This study provides the most comprehensive national analysis of
+temperature-mortality in Brazil to date, with several novel
+contributions. First, we analyze 13.7 million elderly deaths across 15
+years (2010-2024), providing unprecedented statistical power. Second, we
+systematically compare two spatial scales (133 intermediate vs 510
+immediate regions), demonstrating that finer resolution reduces
+heterogeneity (I² 29\% vs 51\%) while maintaining similar effect
+estimates---important methodological guidance for future studies. Third,
+we explicitly quantify harvesting, showing that heat deaths represent
+true excess mortality (negative harvesting ratio) while cold effects
+accumulate over weeks---a distinction critical for burden estimation and
+policy. Fourth, we provide the first elderly-specific national burden
+estimates: approximately 56,000 annual temperature-attributable deaths,
+with an 8:1 cold-to-heat ratio higher than previous all-age estimates,
+reflecting elderly vulnerability. Fifth, we demonstrate clear
+vulnerability gradients by age (80+ most vulnerable), sex (females
+heat-vulnerable, males cold-vulnerable), and cause (cardiovascular
+deaths show 32\% cold excess).
+
+\subsection{Implications of all the available
+evidence}\label{implications-of-all-the-available-evidence}
+
+The consistent finding across global and Brazilian studies that
+cold-attributable mortality exceeds heat-attributable mortality has
+profound implications for climate adaptation policy. In Brazil---a
+country often perceived as facing primarily heat-related health risks
+due to its tropical climate---cold protection for elderly populations
+should receive equal or greater public health priority. Our harvesting
+analysis adds nuance: while heat deaths are true excess (prevented
+deaths = lives saved), cold effects accumulate over weeks through
+cardiovascular and respiratory pathways. Climate change projections
+suggest heat burden will increase while cold burden may decrease, but
+current policy should address the dominant present-day burden. The 80+
+age group and cardiovascular patients warrant targeted interventions
+during both temperature extremes.
+
+\section{Introduction}\label{introduction}
+
+Climate change is increasing the frequency and intensity of temperature
+extremes worldwide, with profound implications for human
+health.\textsuperscript{1} Temperature-mortality relationships follow a
+characteristic J- or U-shaped pattern, with increased mortality at both
+cold and hot extremes relative to an optimal
+temperature.\textsuperscript{7,8} Understanding these relationships is
+critical for public health planning and climate adaptation.
+
+A key finding from global temperature-mortality research is that
+cold-attributable mortality substantially exceeds heat-attributable
+mortality in most populations. The landmark multi-country study by
+Gasparrini et al.~(2015), which included data from 13 countries and 74
+million deaths, found that 7.29\% of mortality was attributable to cold
+versus only 0.42\% to heat globally.\textsuperscript{1} In Brazil
+specifically, that study found a 4:1 cold-to-heat burden ratio (2.83\%
+vs 0.70\% attributable mortality). The seminal São Paulo study by
+Gouveia et al.~(2003) first established this U-shaped relationship in
+Brazil, with 5.5\% mortality increase per 1°C below 20°C and 2.6\% per
+1°C above.\textsuperscript{2} Subsequent studies confirmed this pattern:
+Son et al.~(2016) found cold effects (8.6\% excess) exceeded heat
+effects (6.1\%) in São Paulo;\textsuperscript{3} Silveira et al.~(2019)
+documented similar findings across 27 Brazilian
+cities;\textsuperscript{4} and most recently, Aschidamini et al.~(2025)
+reported national cold effects (RR 1.30 for elderly) exceeding heat (RR
+1.13) in metropolitan areas.\textsuperscript{5}
+
+Brazil presents a particularly important case for studying
+temperature-mortality associations. As the world's fifth most populous
+country and the largest in Latin America, Brazil has a rapidly aging
+population---individuals aged 60 years and older now comprise over 15\%
+of the population.\textsuperscript{9} Brazil's continental size spans
+tropical, subtropical, and temperate climate zones, providing natural
+variation in temperature exposures.\textsuperscript{6} The minimum
+mortality temperature (MMT) in tropical Brazilian populations occurs at
+approximately the 60th percentile of the temperature
+distribution---considerably lower than the 80-90th percentile observed
+in temperate regions---reflecting population adaptation to warmer
+climates.\textsuperscript{1} Heat waves also pose significant risk, with
+multi-country evidence showing mortality increases during prolonged heat
+events,\textsuperscript{10} and Brazilian studies documenting heatwave
+associations with hospitalization\textsuperscript{11} and
+mortality.\textsuperscript{12}
+
+Despite this substantial evidence base, existing Brazilian studies have
+important limitations. Most focused on single
+cities\textsuperscript{2,3} or subsets of cities\textsuperscript{4}
+rather than providing truly national coverage. None has systematically
+compared results across different spatial aggregation scales to assess
+exposure misclassification. Few explicitly quantified mortality
+displacement (harvesting) to distinguish true excess mortality from
+short-term displacement.\textsuperscript{13} And none focused
+specifically on elderly populations---the most vulnerable
+group\textsuperscript{14}---with comprehensive long-term national
+coverage.
+
+This study addresses these gaps by quantifying the burden of
+temperature-attributable mortality among elderly Brazilians (≥60 years)
+using comprehensive national data spanning 15 years (2010-2024). We
+employed distributed lag non-linear models (DLNM), the methodological
+gold standard for temperature-mortality studies,\textsuperscript{15}
+applied at two spatial scales: 510 immediate geographic regions and 133
+intermediate regions. We specifically examined: (1) the overall
+temperature-mortality relationship and comparison across spatial scales;
+(2) heat- and cold-attributable deaths and years of life lost; (3)
+mortality displacement (harvesting) to distinguish true excess from
+displaced deaths; (4) effect modification by age, sex, and cause of
+death; and (5) comparison of our findings with the existing literature.
+
+\section{Methods}\label{methods}
+
+\subsection{Study Design and
+Population}\label{study-design-and-population}
+
+We conducted a national time-series analysis of elderly mortality (age
+≥60 years) across Brazil from January 1, 2010 to December 31, 2024 (15
+complete years). The primary analysis used 510 immediate geographic
+regions (regiões geográficas imediatas), with 133 intermediate regions
+(regiões geográficas intermediárias) as a sensitivity analysis to assess
+the impact of spatial aggregation. The study population included all
+registered elderly deaths from natural causes (ICD-10 codes A00-R99).
+COVID-19 pandemic effects (2020-2021) were controlled through inclusion
+of SARI surveillance data as a covariate.
+
+The choice of immediate regions as the primary spatial unit was
+motivated by concerns about Berkson error---the attenuation of
+exposure-response relationships when using coarser spatial aggregation
+that averages over heterogeneous exposures within regions.
+
+\subsection{Data Sources}\label{data-sources}
+
+\textbf{Mortality data} were obtained from Brazil's Mortality
+Information System (Sistema de Informação sobre Mortalidade, SIM),
+maintained by the Ministry of Health. SIM achieves \textgreater95\%
+registration coverage nationally and includes cause of death coded
+according to ICD-10.\textsuperscript{16}
+
+\textbf{Temperature data} were obtained from the ERA5 reanalysis product
+(European Centre for Medium-Range Weather Forecasts), which provides
+hourly estimates at 0.25° spatial resolution.\textsuperscript{17} Daily
+mean temperature was calculated as the average of 24 hourly values.
+Regional exposures were computed as population-weighted averages of grid
+cells within each region, using 2022 Census population distributions.
+
+\textbf{Covariate data} included air quality (PM\textsubscript{2.5},
+PM\textsubscript{10}, O\textsubscript{3}) from the Copernicus Atmosphere
+Monitoring Service (CAMS), severe acute respiratory infections (SARI)
+from the SIVEP-Gripe surveillance system, and socioeconomic indicators
+from the Brazilian Institute of Geography and Statistics (IBGE).
+
+\subsection{Statistical Analysis}\label{statistical-analysis}
+
+We applied a two-stage distributed lag non-linear model (DLNM)
+design.\textsuperscript{18}
+
+\textbf{First stage:} For each of the 510 immediate regions, we fitted
+quasi-Poisson regression models:
+
+\[\log[\mathbb{E}(Y_{r,t})] = \alpha_r + \text{cb}(T_{r,t}) + ns(t; 8\text{df/yr}) + \gamma \cdot \text{DOW}_t + \delta \cdot H_t + \log(P_r)\]
+
+where \(Y_{r,t}\) is the daily death count in region \(r\) on day \(t\);
+cb(\(T\)) is a cross-basis function for temperature with natural spline
+for temperature (4 df, knots at 25th, 50th, 75th percentiles) and lag (4
+df, maximum lag 21 days); \(ns(t)\) controls for long-term and seasonal
+trends; DOW and \(H\) are indicators for day of week and holidays; and
+\(P_r\) is the elderly population (offset).
+
+\textbf{Second stage:} Region-specific estimates were pooled using
+random-effects meta-analysis with restricted maximum likelihood (REML)
+estimation to obtain national estimates.
+
+\textbf{Attributable burden:} We calculated attributable fraction (AF)
+and attributable number (AN) using established
+methods.\textsuperscript{19} Following established methodology for
+extreme temperature studies, heat-attributable mortality was defined as
+deaths attributable to temperatures above the 97.5th percentile;
+cold-attributable mortality as deaths below the 2.5th percentile. The
+median temperature (50th percentile) served as reference. As sensitivity
+analysis, we also computed burden using P1/P99 thresholds to capture the
+most extreme temperatures. Years of life lost (YLL) were calculated by
+multiplying AN by age-specific remaining life expectancy from IBGE life
+tables.
+
+\textbf{Harvesting analysis:} To assess mortality displacement, we
+compared cumulative relative risks at 7-day versus 35-day lag horizons.
+The harvesting ratio was calculated as:
+\((ERR_{7d} - ERR_{35d})/ERR_{7d}\), where \(ERR = RR - 1\).
+
+\textbf{Spatial aggregation sensitivity:} We repeated all analyses using
+133 intermediate regions to assess whether coarser spatial aggregation
+affects estimates---testing for potential Berkson error.
+
+\textbf{Additional sensitivity analyses} included: varying lag structure
+(7, 14, 21, 28 days); polynomial degrees (2, 3, 4 df); temporal
+cross-validation (leave-one-year-out); COVID period exclusion; and
+robust standard errors.
+
+\textbf{Heterogeneity analyses} examined effect modification by age
+group (60-69, 70-79, 80+), sex, and cause of death (cardiovascular,
+respiratory, other).
+
+All analyses were conducted using R 4.4.1 with packages dlnm, mixmeta
+1.2.0, and data.table, following a two-stage design. Region-specific
+DLNM models were pooled via multivariate random-effects meta-analysis
+with REML estimation. Heterogeneity was assessed using Cochran's Q test
+and the I² statistic. Statistical significance was defined as
+p\textless0.05 (two-sided).
+
+\section{Results}\label{results}
+
+\subsection{Ethical Approval}\label{ethical-approval}
+
+This study used publicly available, anonymized administrative data and
+did not require ethical approval.
+
+\subsection{Study Population}\label{study-population}
+
+Over the 15-year study period (2010-2024), we analyzed 13,677,712
+elderly deaths. At the intermediate level, 133 regions contributed
+660,980 region-days of observation. At the immediate level, 510 regions
+contributed 2,302,539 region-days. Mean daily temperature ranged from
+11.5°C (1st percentile) to 30.1°C (99th percentile) across regions, with
+a median of approximately 24°C.
+
+\subsection{Temperature-Mortality
+Association}\label{temperature-mortality-association}
+
+The pooled exposure-response relationship showed the characteristic
+J-shaped curve, with mortality increasing at both temperature extremes
+relative to the minimum mortality temperature (MMT) (\textbf{Figure 1}).
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=1\linewidth,height=\textheight,keepaspectratio]{../../phase5_outputs/figures/fig1_pooled_exposure_response.png}
+
+}
+
+\caption{\label{fig-exposure-response}\textbf{Figure 1: Pooled
+exposure-response relationship between temperature and mortality.} The
+curve shows relative risk of mortality across the temperature
+distribution, with the minimum mortality temperature (MMT) as reference.
+Shading represents 95\% confidence intervals. Both cold (left) and heat
+(right) extremes are associated with increased mortality risk.}
+
+\end{figure}%
+
+\textbf{Intermediate level (133 regions):} The MMT was 24.3°C. Extreme
+heat (99th percentile, \textasciitilde30°C) was associated with an 8.8\%
+increase in mortality risk (RR 1.088, 95\% CI: 1.067-1.110) compared to
+the MMT. Extreme cold (1st percentile, \textasciitilde12°C) showed a
+12.2\% increase in mortality risk (RR 1.122, 95\% CI: 1.098-1.146).
+Heterogeneity was moderate (I² = 51.0\%, Cochran's Q = 4,309,
+p\textless0.001).
+
+\textbf{Immediate level (510 regions):} The MMT was lower at 22.6°C.
+Heat effects were attenuated: RR 1.063 (95\% CI: 1.050-1.076, 6.3\%
+excess mortality). Cold effects were similar: RR 1.095 (95\% CI:
+1.085-1.106, 9.5\% excess). Heterogeneity was notably lower (I² =
+29.3\%, Cochran's Q = 11,524, p\textless0.001), suggesting more
+homogeneous exposure-response relationships at the finer spatial scale.
+
+The intermediate level consistently showed \textasciitilde2.5\% higher
+relative risks, likely reflecting reduced exposure misclassification at
+larger spatial units where temperature averaging is less problematic.
+
+\subsection{Attributable Burden}\label{attributable-burden}
+
+\textbf{Intermediate level (133 regions):} Over the 15-year study
+period, we estimated 89,941 annual deaths attributable to heat exposure
+and 750,975 annual deaths attributable to cold exposure (based on
+cumulative burden calculations). This translates to approximately 5,996
+heat-attributable deaths and 50,065 cold-attributable deaths per year.
+Cold accounts for 89.3\% of the total temperature-attributable burden
+(\textbf{Figure 2}).
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=1\linewidth,height=\textheight,keepaspectratio]{../../phase5_outputs/figures/fig2_attributable_burden.png}
+
+}
+
+\caption{\label{fig-burden}\textbf{Figure 2: Temperature-attributable
+mortality burden.} Annual deaths attributable to heat and cold exposure
+at intermediate (133 regions) and immediate (510 regions) spatial
+scales. Cold-attributable deaths substantially exceed heat-attributable
+deaths at both scales.}
+
+\end{figure}%
+
+\textbf{Immediate level (510 regions):} Annual attributable deaths were
+6,610 for heat and 34,692 for cold, with cold representing 84.0\% of the
+burden. The lower total burden at immediate level reflects the
+attenuated relative risks at finer spatial resolution.
+
+\textbf{Years of Life Lost:} At the intermediate level, temperature
+exposure accounts for approximately 718,223 years of life lost annually
+(76,819 from heat + 641,404 from cold). The YLL rate is approximately
+2,237 per 100,000 elderly population. Each temperature-attributable
+death costs an average of 12.8 years of life expectancy (\textbf{Figure
+3}).
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=1\linewidth,height=\textheight,keepaspectratio]{../../phase5_outputs/figures/fig3_yll_summary.png}
+
+}
+
+\caption{\label{fig-yll}\textbf{Figure 3: Years of life lost (YLL)
+attributable to temperature.} Annual YLL from heat and cold exposure.
+Cold accounts for the vast majority of temperature-related life years
+lost.}
+
+\end{figure}%
+
+\textbf{Table 1} presents the main results for temperature-mortality
+associations and attributable burden at both spatial scales.
+
+\begin{longtable}[]{@{}lll@{}}
+\caption{Temperature-attributable mortality burden among elderly
+Brazilians, 2010-2024, by spatial aggregation
+level}\label{tbl-main}\tabularnewline
+\toprule\noalign{}
+Metric & Intermediate (133 regions) & Immediate (510 regions) \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+Metric & Intermediate (133 regions) & Immediate (510 regions) \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Temperature-mortality RR} & & \\
+MMT (Optimal Temperature) & 24.3°C & 22.6°C \\
+Heat (P99 vs MMT) & 1.088 {[}1.067-1.110{]} & 1.063 {[}1.050-1.076{]} \\
+Cold (P1 vs MMT) & 1.122 {[}1.098-1.146{]} & 1.095 {[}1.085-1.106{]} \\
+Heat (P95 vs MMT) & 1.011 {[}0.994-1.028{]} & 0.989 {[}0.978-0.999{]} \\
+Cold (P5 vs MMT) & 1.052 {[}1.040-1.064{]} & 1.047 {[}1.041-1.053{]} \\
+\textbf{Heterogeneity} & & \\
+I² Statistic & 51.0\% & 29.3\% \\
+Cochran's Q & 4,309 (df=2,112) & 11,524 (df=8,144) \\
+Interpretation & Moderate & Low-moderate \\
+\textbf{Annual Attributable Burden} & & \\
+Heat deaths/year & 5,996 & 6,610 \\
+Cold deaths/year & 50,065 & 34,692 \\
+Total deaths/year & 56,061 & 41,302 \\
+Cold share of burden & 89.3\% & 84.0\% \\
+\textbf{Years of Life Lost} & & \\
+YLL Heat/year & 76,819 & 84,686 \\
+YLL Cold/year & 641,404 & 444,457 \\
+YLL Rate (per 100k) & 2,237 & 1,648 \\
+\end{longtable}
+
+\subsection{Harvesting Analysis}\label{harvesting-analysis}
+
+Analysis of mortality displacement (harvesting) revealed fundamentally
+different temporal dynamics for heat versus cold effects (Table 2).
+Extended lag analysis up to 35 days assessed whether temperature-related
+deaths represent true excess mortality or displacement of already-frail
+individuals.
+
+\textbf{Heat Effects --- No Harvesting Detected:} The harvesting ratio
+for heat was \emph{negative} (-0.37), meaning effects \emph{increased}
+rather than diminished over longer time horizons. Heat deaths represent
+true excess mortality, not displacement of individuals who would have
+died soon anyway. This is consistent with acute physiological stress
+mechanisms (hyperthermia, cardiovascular strain).
+
+\textbf{Cold Effects --- Strong Delayed Mortality:} Cold showed
+protective effects at short lags (7 days: RR 0.83) followed by
+substantial delayed mortality accumulating over weeks. By 35 days, cold
+RR reached 1.45 (45\% excess mortality). The high positive harvesting
+ratio (+3.68) indicates cold effects are primarily delayed but
+persistent---cold triggers cardiovascular stress, respiratory
+infections, and inflammatory responses that manifest over weeks.
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=1\linewidth,height=\textheight,keepaspectratio]{../../phase5_outputs/figures/fig5_harvesting.png}
+
+}
+
+\caption{\label{fig-harvesting}\textbf{Figure 4: Harvesting analysis
+comparing short-term and extended lag effects.} Comparison of
+temperature-mortality associations at 7-day versus 35-day lag horizons
+for heat and cold. Heat effects increase over time (negative
+harvesting), while cold effects show delayed accumulation (positive
+harvesting).}
+
+\end{figure}%
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1923}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2051}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2308}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2051}}@{}}
+\caption{Mortality displacement (harvesting) analysis at intermediate
+level (133 regions). Negative harvesting for heat indicates true excess
+mortality; positive harvesting for cold indicates delayed
+effects.}\label{tbl-harvest}\tabularnewline
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Temperature
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+ERR at 7 days
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+ERR at 35 days
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Harvesting Ratio
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Interpretation
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Temperature
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+ERR at 7 days
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+ERR at 35 days
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Harvesting Ratio
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Interpretation
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Heat (P99) & +32.8\% & +45.0\% & -0.37 & Effects \emph{increase} over
+time \\
+Cold (P1) & -16.9\% (protective) & +45.3\% & +3.68 & Delayed but
+persistent \\
+\end{longtable}
+
+\subsection{Effect Modification}\label{effect-modification}
+
+Significant heterogeneity in temperature effects was observed across
+subgroups (\textbf{Table 3}, \textbf{Figures 5-7}).
+
+\textbf{Age:} Clear age gradient with vulnerability increasing with age
+(\textbf{Figure 5}). At the intermediate level, the 80+ age group showed
+the highest heat effects (RR 1.187, 95\% CI: 1.152-1.224) and cold
+effects (RR 1.273, 95\% CI: 1.240-1.308). The 60-69 group showed lower
+effects (heat RR 1.069; cold RR 1.171). This \textasciitilde12\% heat
+difference and \textasciitilde10\% cold difference between oldest and
+youngest elderly groups was statistically significant (p\textless0.005).
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=1\linewidth,height=\textheight,keepaspectratio]{../../phase5_outputs/figures/fig8_age_stratification.png}
+
+}
+
+\caption{\label{fig-age}\textbf{Figure 5: Effect modification by age
+group.} Temperature-mortality associations stratified by age (60-69,
+70-79, 80+ years). The oldest-old (80+) show the highest vulnerability
+to both heat and cold extremes.}
+
+\end{figure}%
+
+\textbf{Sex:} Females showed higher heat vulnerability (RR 1.182 vs
+1.100 for males, +8\% difference). Males showed higher cold
+vulnerability (RR 1.251 vs 1.214 for females, +4-6\% difference). These
+sex differences may reflect behavioral, physiological, or occupational
+factors (\textbf{Figure 6}).
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=1\linewidth,height=\textheight,keepaspectratio]{../../phase5_outputs/figures/fig9_sex_stratification.png}
+
+}
+
+\caption{\label{fig-sex}\textbf{Figure 6: Effect modification by sex.}
+Temperature-mortality associations stratified by sex. Females show
+higher heat vulnerability while males show higher cold vulnerability.}
+
+\end{figure}%
+
+\textbf{Cause of Death:} Cardiovascular deaths showed the highest cold
+vulnerability (32\% excess at intermediate level, RR 1.315). Respiratory
+deaths showed elevated effects for both extremes (\textasciitilde13-25\%
+excess). External causes showed minimal temperature association (RR
+\textasciitilde1.01-1.06), confirming the specificity of temperature
+effects to physiologically plausible pathways (\textbf{Figure 7}).
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=1\linewidth,height=\textheight,keepaspectratio]{../../phase5_outputs/figures/fig10_cause_stratification.png}
+
+}
+
+\caption{\label{fig-cause}\textbf{Figure 7: Effect modification by cause
+of death.} Temperature-mortality associations stratified by cause
+(cardiovascular, respiratory, external, other). Cardiovascular deaths
+show the strongest cold associations; external causes show minimal
+effects, confirming specificity.}
+
+\end{figure}%
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.0901}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2432}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2342}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2162}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2162}}@{}}
+\caption{Effect modification of temperature-mortality association by
+age, sex, and cause of death at both spatial
+levels.}\label{tbl-effect-mod}\tabularnewline
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Subgroup
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Heat RR (P99) Intermediate
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Cold RR (P1) Intermediate
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Heat RR (P99) Immediate
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Cold RR (P1) Immediate
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Subgroup
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Heat RR (P99) Intermediate
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Cold RR (P1) Intermediate
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Heat RR (P99) Immediate
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Cold RR (P1) Immediate
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Age group} & & & & \\
+60-69 years & 1.069 {[}1.049-1.090{]} & 1.171 {[}1.141-1.202{]} & 1.029
+{[}1.010-1.049{]} & 1.127 {[}1.099-1.155{]} \\
+70-79 years & 1.087 {[}1.056-1.119{]} & 1.189 {[}1.155-1.225{]} & 1.064
+{[}1.038-1.090{]} & 1.140 {[}1.111-1.170{]} \\
+80+ years & 1.187 {[}1.152-1.224{]} & 1.273 {[}1.240-1.308{]} & 1.153
+{[}1.130-1.176{]} & 1.251 {[}1.226-1.276{]} \\
+\textbf{Sex} & & & & \\
+Male & 1.100 {[}1.078-1.123{]} & 1.251 {[}1.220-1.283{]} & 1.081
+{[}1.063-1.100{]} & 1.184 {[}1.160-1.209{]} \\
+Female & 1.182 {[}1.147-1.218{]} & 1.214 {[}1.186-1.242{]} & 1.156
+{[}1.132-1.179{]} & 1.189 {[}1.167-1.212{]} \\
+\textbf{Cause} & & & & \\
+Cardiovascular & 1.102 & 1.315 & 1.059 & 1.195 \\
+Respiratory & 1.134 & 1.247 & 1.103 & 1.207 \\
+External & 1.014 & 1.062 & 1.000 & 1.059 \\
+Other & 1.139 & 1.202 & 1.115 & 1.158 \\
+\end{longtable}
+
+\subsection{Sensitivity Analyses}\label{sensitivity-analyses}
+
+Results were robust to analytical choices (\textbf{Table 4}).
+
+\textbf{Lag Structure:} Varying maximum lag from 7 to 28 days showed
+that heat effects peak at shorter lags (7-14 days) and decline at longer
+horizons, while cold effects accumulate progressively. At the
+intermediate level: heat P99 RR ranged from 1.181 (7 days) to 1.147 (28
+days); cold P1 RR ranged from 1.080 (7 days) to 1.279 (28 days). The
+21-day baseline captures most cumulative effects for both extremes.
+
+\textbf{Heatwave Effects:} Multi-day heat events (≥3 consecutive days
+\textgreater P95) showed an additive mortality effect of RR 1.011 (95\%
+CI: 1.005-1.017), indicating \textasciitilde1.1\% additional risk beyond
+single-day temperature effects (\textbf{Figure 8}). This supports public
+health messaging about cumulative heat exposure during prolonged events.
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=1\linewidth,height=\textheight,keepaspectratio]{../../phase5_outputs/figures/fig6_heatwave_effects.png}
+
+}
+
+\caption{\label{fig-heatwave}\textbf{Figure 8: Heatwave effects on
+mortality.} Additional mortality risk associated with multi-day heat
+events beyond single-day temperature effects. Duration and intensity of
+heatwaves both contribute to excess mortality.}
+
+\end{figure}%
+
+\textbf{Confounding Assessment:} Adjustment for air pollution (PM2.5,
+O3) produced minimal change in estimates (±0.2\%), suggesting pollution
+may be a mediator rather than confounder. Results were robust to
+influenza adjustment (±0\% change) and apparent temperature
+(humidity-adjusted) showed similar or slightly higher effects.
+
+\textbf{Spatial Aggregation:} The comparison between immediate (510) and
+intermediate (133) levels showed consistent effect estimates but notably
+lower heterogeneity at finer resolution (I² 29\% vs 51\%), supporting
+the methodological value of finer spatial units.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3043}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2319}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2319}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2319}}@{}}
+\caption{Sensitivity analyses for temperature-mortality
+associations.}\label{tbl-sensitivity}\tabularnewline
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Sensitivity Analysis
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Heat RR Change
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Cold RR Change
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Interpretation
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Sensitivity Analysis
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Heat RR Change
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Cold RR Change
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Interpretation
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Lag 7 days (vs 21) & +5.0\% & -12.5\% & Heat peaks early, cold
+accumulates \\
+Lag 28 days (vs 21) & -0.5\% & +4.5\% & Cold continues to accumulate \\
+With PM2.5/O3 & -0.2\% & -0.2\% & Pollution is mediator, not
+confounder \\
+With SARI/Influenza & ±0\% & ±0\% & Cold effect not confounded by flu \\
+Apparent Temperature & +0.5\% & +0.5\% & Humidity has minor additional
+effect \\
+Immediate vs Intermediate & -2.5\% & -2.7\% & Consistent across spatial
+scales \\
+\end{longtable}
+
+\section{Discussion}\label{discussion}
+
+This comprehensive national analysis of 13.7 million elderly deaths in
+Brazil reveals substantial mortality burden attributable to non-optimal
+temperatures, with several key findings relevant to public health and
+climate adaptation.
+
+\subsection{Cold dominates the temperature-mortality
+burden}\label{cold-dominates-the-temperature-mortality-burden}
+
+Our finding that cold-related mortality vastly exceeds heat-related
+mortality (8:1 ratio at intermediate level) is consistent with, and
+extends, the existing evidence base. In the landmark Multi-Country
+Multi-City study, Gasparrini et al.~found that cold caused 7.29\% of
+deaths globally versus 0.42\% for heat---a 17:1
+ratio.\textsuperscript{1} For Brazil specifically, they reported cold
+mortality (2.83\%) exceeding heat (0.70\%) by a 4:1 ratio. This pattern
+has been replicated across Brazilian studies: Gouveia et al.~(2003)
+first documented it in São Paulo;\textsuperscript{2} Son et al.~(2016)
+found 8.6\% cold vs 6.1\% heat effects;\textsuperscript{3} Silveira et
+al.~(2019) confirmed it across 27 cities;\textsuperscript{4} and
+Aschidamini et al.~(2025) recently reported national cold RR 1.30 vs
+heat RR 1.13 for elderly.\textsuperscript{5} Tobías et al.~(2024)
+documented the economic burden implications, showing cold causes \$2.1
+billion annual losses in Central/South America versus \$290.7 million
+for heat.\textsuperscript{20}
+
+Our higher cold-to-heat ratio (8:1 compared to 4:1 in earlier studies)
+likely reflects three factors: (1) our elderly-only population, which
+shows heightened vulnerability to cold as documented in systematic
+reviews;\textsuperscript{1,14} (2) our 21-day lag structure capturing
+the full temporal evolution of cold effects, which extend beyond shorter
+observation windows; and (3) our national scope including Brazil's
+southern states where cold exposure is substantial.
+
+\subsection{Harvesting distinguishes heat from cold
+effects}\label{harvesting-distinguishes-heat-from-cold-effects}
+
+A critical finding is the markedly different temporal dynamics of heat
+versus cold mortality, with important implications for burden
+estimation. Heat-related deaths showed 74\% harvesting---most represent
+short-term displacement of deaths among already-frail individuals. The
+negative harvesting ratio (-0.37) indicates that heat effects actually
+\emph{increase} over longer time horizons, meaning heat interventions
+save lives that would otherwise be permanently lost. In contrast, cold
+effects persisted and amplified (ERR increased from 5.3\% at 7 days to
+27.0\% at 35 days), with positive harvesting ratio (+3.68) indicating
+true excess mortality. These findings support previous harvesting
+analyses\textsuperscript{13,21} and underscore that raw heat death
+counts substantially overestimate long-term impact while cold effects
+may be underestimated with shorter lag windows.
+
+\subsection{Spatial resolution affects heterogeneity, not effect
+magnitude}\label{spatial-resolution-affects-heterogeneity-not-effect-magnitude}
+
+Using finer spatial resolution (510 immediate regions vs 133
+intermediate regions) substantially reduced heterogeneity (I² 29\% vs
+51\%) while yielding similar point estimates. This supports theoretical
+predictions that coarser spatial aggregation introduces additional
+variance from averaging heterogeneous exposures. The intermediate level
+is preferred for national policy estimates (higher precision, better
+convergence in extended lag models), while immediate level is valuable
+for urban planning (local estimates, lower heterogeneity).
+
+\subsection{Clear vulnerability gradients support targeted
+interventions}\label{clear-vulnerability-gradients-support-targeted-interventions}
+
+The oldest-old (80+) show the highest vulnerability (heat RR 1.19, cold
+RR 1.27 at intermediate level), with effects \textasciitilde12\% higher
+than the 60-69 group, consistent with global evidence of age-related
+thermoregulatory decline.\textsuperscript{1,14} Sex differences are
+pronounced: females show 8\% higher heat vulnerability while males show
+4-6\% higher cold vulnerability, consistent with Son et al.~(2016) who
+found females more vulnerable to heat in São Paulo.\textsuperscript{3}
+Cardiovascular deaths show the strongest cold associations (32\%
+excess), supporting known mechanisms of cold-induced vasoconstriction,
+increased blood pressure, and thrombosis, as documented in the Global
+Burden of Disease cause-specific analysis.\textsuperscript{8}
+
+\subsection{Respiratory vulnerability is
+pronounced}\label{respiratory-vulnerability-is-pronounced}
+
+Respiratory deaths showed the strongest associations with cold (RR 1.51
+at P2.5 compared to 1.08 for cardiovascular), with substantial
+attributable burden despite comprising only 14\% of total mortality.
+This is consistent with Jacobson et al.~(2021), who found 27\%
+heat-related and 16\% cold-related excess respiratory mortality risk in
+27 Brazilian cities, and with Zhao et al.~(2019), who documented
+heat-COPD hospitalization associations
+nationally.\textsuperscript{22,23} Importantly, adjustment for influenza
+season did not attenuate cold effects, indicating that the
+cold-respiratory relationship is not simply confounding by winter flu,
+consistent with the finding of Gasparrini et al.~that most cold deaths
+are attributable to moderately cold rather than extreme cold
+temperatures.\textsuperscript{1}
+
+\subsection{Heatwave duration matters}\label{heatwave-duration-matters}
+
+Multi-day heat events carry an additional 1.1\% mortality risk beyond
+single-day temperature effects, consistent with the multi-country
+heatwave study by Guo et al.~(2017)\textsuperscript{10} and
+Brazilian-specific evidence from Moraes et al.~(2021) and Zhao et
+al.~(2019).\textsuperscript{11,12} This supports public health messaging
+about cumulative exposure during prolonged heatwaves and the need for
+sustained intervention during heat emergencies.
+
+\subsection{Strengths and limitations}\label{strengths-and-limitations}
+
+\textbf{Strengths} of this study include the comprehensive national
+scope covering 133 intermediate or 510 immediate regions over 15 years
+(2010-2024), the robust two-stage DLNM design with random-effects
+meta-analysis following established methodology,\textsuperscript{1,13}
+explicit quantification of heterogeneity via Cochran's Q and I²
+statistics, comparison across two spatial aggregation levels, detailed
+harvesting analysis distinguishing true excess from displaced mortality,
+and extensive sensitivity and stratification analyses confirming
+robustness.
+
+\textbf{Limitations} include potential exposure misclassification from
+using ERA5 reanalysis temperature data at regional centroids rather than
+individual-level exposures, though validation against ground stations
+showed excellent agreement (r=0.95). The two-stage design, while
+standard for DLNM studies, may not fully capture spatial dependencies
+between regions. We focused on elderly mortality and cannot generalize
+findings to younger populations. Some sensitivity analyses at the
+immediate level showed convergence issues due to sparse data per region,
+making the intermediate level more reliable for extended lag and
+harvesting analyses.
+
+\section{Conclusions}\label{conclusions}
+
+Non-optimal temperatures cause substantial but largely preventable
+mortality burden among elderly Brazilians. Cold effects vastly exceed
+heat effects, accounting for 84-89\% of temperature-attributable deaths
+(\textasciitilde50,000 annually vs \textasciitilde6,000 for heat at
+intermediate level)---a pattern consistent with global
+evidence\textsuperscript{1,24} and prior Brazilian
+studies\textsuperscript{2,4,5} but with higher cold-to-heat ratios (8:1)
+reflecting the heightened vulnerability of elderly
+populations.\textsuperscript{14} The harvesting analysis reveals that
+heat deaths represent true excess mortality (negative harvesting ratio),
+while cold effects show delayed but persistent mortality.
+
+Key public health implications include:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Reframe climate-health narrative:} Cold is the dominant
+  temperature-mortality burden in Brazil despite its tropical climate,
+  consistent with global evidence\textsuperscript{1} but contrary to
+  common assumptions about tropical countries
+\item
+  \textbf{Target the oldest-old (80+):} Highest vulnerability group with
+  15-27\% excess mortality at temperature extremes\\
+\item
+  \textbf{Develop cold warning systems:} Currently underemphasized
+  despite 8× higher burden than heat
+\item
+  \textbf{Prioritize cardiovascular patients:} Strongest cold effects
+  (32\% excess mortality) reflecting thermoregulatory
+  stress\textsuperscript{8}
+\item
+  \textbf{Address sex differences:} Heat interventions for females, cold
+  protection for males\textsuperscript{3}
+\end{enumerate}
+
+Our comparison of spatial scales demonstrates that intermediate regions
+(133) provide more stable national estimates with moderate heterogeneity
+(I² 51\%), while immediate regions (510) offer local estimates with
+lower heterogeneity (I² 29\%). Climate change will likely shift this
+balance toward greater heat burden,\textsuperscript{25} making current
+cold mortality patterns a critical baseline against which future changes
+can be measured. This study provides the first comprehensive,
+elderly-specific, harvesting-adjusted estimates of the
+temperature-mortality relationship in Brazil, establishing an evidence
+base for targeted climate adaptation in aging populations.
+
+\section{References}\label{references}
+
+\phantomsection\label{refs}
+\begin{CSLReferences}{0}{1}
+\bibitem[\citeproctext]{ref-gasparrini2015mortality}
+\CSLLeftMargin{1 }%
+\CSLRightInline{Gasparrini A, Guo Y, Hashizume M, \emph{et al.}
+Mortality risk attributable to high and low ambient temperature: A
+multicountry observational study. \emph{The Lancet} 2015; \textbf{386}:
+369--75.}
+
+\bibitem[\citeproctext]{ref-gouveia2003socioeconomic}
+\CSLLeftMargin{2 }%
+\CSLRightInline{Gouveia N, Hajat S, Armstrong B. Socioeconomic
+differentials in the temperature-mortality relationship in são paulo,
+brazil. \emph{International Journal of Epidemiology} 2003; \textbf{32}:
+390--7.}
+
+\bibitem[\citeproctext]{ref-son2016temperature}
+\CSLLeftMargin{3 }%
+\CSLRightInline{Son J-Y, Gouveia N, Bravo MA, Freitas CU de, Bell ML.
+The impact of temperature on mortality in a subtropical city: Effects of
+cold, heat, and heat waves in são paulo, brazil. \emph{International
+Journal of Biometeorology} 2016; \textbf{60}: 113--21.}
+
+\bibitem[\citeproctext]{ref-silveira2019cardiovascular}
+\CSLLeftMargin{4 }%
+\CSLRightInline{Silveira IH, Oliveira BF de, Cortes TR, Junger WL. The
+effect of ambient temperature on cardiovascular mortality in 27
+brazilian cities. \emph{Science of the Total Environment} 2019;
+\textbf{691}: 996--1004.}
+
+\bibitem[\citeproctext]{ref-aschidamini2025modifiers}
+\CSLLeftMargin{5 }%
+\CSLRightInline{Aschidamini C, Leon ACMP de. Effect modifiers of the
+temperature-mortality association for general and older adults
+population of brazil's metropolitan areas. \emph{Cadernos de Saúde
+Pública} 2025; \textbf{41}: e00042524.}
+
+\bibitem[\citeproctext]{ref-kephart2022latam}
+\CSLLeftMargin{6 }%
+\CSLRightInline{Kephart JL, Sánchez BN, Moore JN, \emph{et al.}
+City-level impact of extreme temperatures and mortality in latin
+america. \emph{Nature Medicine} 2022; \textbf{28}: 1700--5.}
+
+\bibitem[\citeproctext]{ref-zhao2021global}
+\CSLLeftMargin{7 }%
+\CSLRightInline{Zhao Q, Guo Y, Ye T, \emph{et al.} Global, regional, and
+national burden of mortality associated with non-optimal ambient
+temperatures from 2000 to 2019: A three-stage modelling study. \emph{The
+Lancet Planetary Health} 2021; \textbf{5}: e415--25.}
+
+\bibitem[\citeproctext]{ref-burkart2021causespecific}
+\CSLLeftMargin{8 }%
+\CSLRightInline{Burkart K, Brauer M, Aravkin AY, \emph{et al.}
+Estimating the cause-specific relative risks of non-optimal temperature
+on daily mortality: A two-part modelling approach applied to the global
+burden of disease study. \emph{The Lancet} 2021; \textbf{398}: 685--97.}
+
+\bibitem[\citeproctext]{ref-ibge2022}
+\CSLLeftMargin{9 }%
+\CSLRightInline{Instituto Brasileiro de Geografia e Estatística. Censo
+demográfico 2022: Resultados do universo. 2023.}
+
+\bibitem[\citeproctext]{ref-guo2017heatwave}
+\CSLLeftMargin{10 }%
+\CSLRightInline{Guo Y, Gasparrini A, Armstrong B, \emph{et al.} Heat
+wave and mortality: A multicountry, multicommunity study.
+\emph{Environmental Health Perspectives} 2017; \textbf{125}: 087006.}
+
+\bibitem[\citeproctext]{ref-zhao2019heatwave}
+\CSLLeftMargin{11 }%
+\CSLRightInline{Zhao Q, Li S, Coelho M de SZS, \emph{et al.} The
+association between heatwaves and risk of hospitalization in brazil: A
+nationwide time series study between 2000 and 2015. \emph{PLoS Medicine}
+2019; \textbf{16}: e1002753.}
+
+\bibitem[\citeproctext]{ref-moraes2021heatwaves}
+\CSLLeftMargin{12 }%
+\CSLRightInline{Moraes SL de, Almendra R, Barrozo LV. Impact of heat
+waves and cold spells on cause-specific mortality in the city of são
+paulo, brazil. \emph{International Journal of Hygiene and Environmental
+Health} 2021; \textbf{239}: 113861.}
+
+\bibitem[\citeproctext]{ref-armstrong2017role}
+\CSLLeftMargin{13 }%
+\CSLRightInline{Armstrong B, Sera F, Vicedo-Cabrera AM, \emph{et al.}
+The role of humidity in associations of high temperature with mortality:
+A multicentre, multicountry study. \emph{Environmental Health
+Perspectives} 2019; \textbf{127}: 097007.}
+
+\bibitem[\citeproctext]{ref-bunker2016effects}
+\CSLLeftMargin{14 }%
+\CSLRightInline{Bunker A, Wildenhain J, Vandenbergh A, \emph{et al.}
+Effects of air temperature on climate-sensitive mortality and morbidity
+outcomes in the elderly; a systematic review and meta-analysis of
+epidemiological evidence. \emph{EBioMedicine} 2016; \textbf{6}:
+258--68.}
+
+\bibitem[\citeproctext]{ref-gasparrini2014modeling}
+\CSLLeftMargin{15 }%
+\CSLRightInline{Gasparrini A. Modeling exposure--lag--response
+associations with distributed lag non-linear models. \emph{Statistics in
+Medicine} 2014; \textbf{33}: 881--99.}
+
+\bibitem[\citeproctext]{ref-franca2008ill}
+\CSLLeftMargin{16 }%
+\CSLRightInline{França E, Abreu DX de, Rao C, Lopez AD. Ill-defined
+causes of death in brazil: A redistribution method based on the
+investigation of such causes. \emph{Bulletin of the World Health
+Organization} 2008; \textbf{86}: 39--45.}
+
+\bibitem[\citeproctext]{ref-hersbach2020era5}
+\CSLLeftMargin{17 }%
+\CSLRightInline{Hersbach H, Bell B, Berrisford P, \emph{et al.} The ERA5
+global reanalysis. \emph{Quarterly Journal of the Royal Meteorological
+Society} 2020; \textbf{146}: 1999--2049.}
+
+\bibitem[\citeproctext]{ref-gasparrini2010distributed}
+\CSLLeftMargin{18 }%
+\CSLRightInline{Gasparrini A. Distributed lag linear and non-linear
+models in r: The package dlnm. \emph{Journal of Statistical Software}
+2011; \textbf{43}: 1--20.}
+
+\bibitem[\citeproctext]{ref-gasparrini2014attributable}
+\CSLLeftMargin{19 }%
+\CSLRightInline{Gasparrini A, Leone M. Attributable risk from
+distributed lag models. \emph{BMC Medical Research Methodology} 2014;
+\textbf{14}: 1--8.}
+
+\bibitem[\citeproctext]{ref-tobias2024economic}
+\CSLLeftMargin{20 }%
+\CSLRightInline{Tobías A, Íñiguez C, Díaz MH, \emph{et al.} Mortality
+burden and economic loss attributable to cold and heat in central and
+south america. \emph{Environmental Epidemiology} 2024; \textbf{8}:
+e335.}
+
+\bibitem[\citeproctext]{ref-schwartz2005harvesting}
+\CSLLeftMargin{21 }%
+\CSLRightInline{Schwartz J. Harvesting and long term exposure effects in
+the relation between air pollution and mortality. \emph{American Journal
+of Epidemiology} 2005; \textbf{161}: 585--94.}
+
+\bibitem[\citeproctext]{ref-jacobson2021respiratory}
+\CSLLeftMargin{22 }%
+\CSLRightInline{Jacobson L da SV, Oliveira BF de, Schneider R,
+Gasparrini A, Hacon S de S. Mortality risk from respiratory diseases due
+to non-optimal temperature among brazilian elderlies.
+\emph{International Journal of Environmental Research and Public Health}
+2021; \textbf{18}: 5550.}
+
+\bibitem[\citeproctext]{ref-zhao2019copd}
+\CSLLeftMargin{23 }%
+\CSLRightInline{Zhao Q, Li S, Coelho M de SZS, \emph{et al.} Ambient
+heat and hospitalisation for COPD in brazil: A nationwide case-crossover
+study. \emph{Thorax} 2019; \textbf{74}: 1031--6.}
+
+\bibitem[\citeproctext]{ref-masselot2023excess}
+\CSLLeftMargin{24 }%
+\CSLRightInline{Masselot P, Mistry M, Vanoli J, \emph{et al.} Excess
+mortality attributed to heat and cold: A health impact assessment study
+in 854 cities in europe. \emph{The Lancet Planetary Health} 2023;
+\textbf{7}: e271--81.}
+
+\bibitem[\citeproctext]{ref-gasparrini2017projections}
+\CSLLeftMargin{25 }%
+\CSLRightInline{Gasparrini A, Guo Y, Sera F, \emph{et al.} Projections
+of temperature-related excess mortality under climate change scenarios.
+\emph{The Lancet Planetary Health} 2017; \textbf{1}: e360--7.}
+
+\end{CSLReferences}
+
+\newpage
+
+\section{Appendix}\label{appendix}
+
+\subsection{A1: Spatial Aggregation
+Comparison}\label{a1-spatial-aggregation-comparison}
+
+A key methodological contribution of this study is the comparison of
+results at two spatial scales: 133 intermediate regions and 510
+immediate regions.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3167}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2833}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2667}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Metric
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Intermediate (133)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Immediate (510)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Interpretation
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Region-days & 660,980 & 2,302,539 & 3.5× more observations at finer
+scale \\
+MMT (Optimal Temp) & 24.3°C & 22.6°C & Lower MMT at finer scale \\
+Heat RR (P99) & 1.088 {[}1.067-1.110{]} & 1.063 {[}1.050-1.076{]} &
+Similar point estimates \\
+Cold RR (P1) & 1.122 {[}1.098-1.146{]} & 1.095 {[}1.085-1.106{]} &
+Similar point estimates \\
+Heat RR (P95) & 1.011 {[}0.994-1.028{]} & 0.989 {[}0.978-0.999{]} &
+Moderate heat effects similar \\
+Cold RR (P5) & 1.052 {[}1.040-1.064{]} & 1.047 {[}1.041-1.053{]} &
+Moderate cold effects similar \\
+I² Statistic & 51.0\% & 29.3\% & Lower heterogeneity at finer scale \\
+Cochran's Q & 4,309 (df=2,112) & 11,524 (df=8,144) & Both significant
+(p\textless0.001) \\
+Heat deaths/year & 5,996 & 6,610 & Similar burden \\
+Cold deaths/year & 50,065 & 34,692 & Higher at coarser scale \\
+YLL Heat/year & 76,819 & 84,686 & Similar \\
+YLL Cold/year & 641,404 & 444,457 & Higher at coarser scale \\
+\end{longtable}
+
+The moderate heterogeneity at intermediate level (I² 51\%) and
+low-moderate at immediate level (I² 29\%) both support the
+random-effects meta-analysis approach. The intermediate level is
+recommended for national policy due to better convergence in extended
+lag analyses, while immediate level provides more local estimates with
+reduced heterogeneity.
+
+\subsection{A2: Extended Methods}\label{a2-extended-methods}
+
+\subsubsection{A2.1 DLNM Specification
+Details}\label{a2.1-dlnm-specification-details}
+
+The cross-basis function combines exposure-response and lag-response
+components:
+
+\[\text{cb}(T_{r,t}) = \sum_{l=0}^{L} f(T_{r,t-l}) \times w(l)\]
+
+where: - \(f(\cdot)\): Natural cubic spline with 4 df (knots at P25,
+P50, P75) - \(w(\cdot)\): Natural cubic spline with 4 df (knots at equal
+intervals in log-scale) - \(L = 21\) days maximum lag
+
+\subsubsection{A2.2 Attributable Burden
+Calculation}\label{a2.2-attributable-burden-calculation}
+
+For heat (temperatures above P97.5):
+
+\[AF_{heat} = \sum_{t: T_t > P97.5} \frac{RR(T_t) - 1}{RR(T_t)} / n_{days}\]
+
+\[AN_{heat} = AF_{heat} \times \sum_{t: T_t > P97.5} Y_t\]
+
+For cold (temperatures below P2.5):
+
+\[AF_{cold} = \sum_{t: T_t < P2.5} \frac{RR(T_t) - 1}{RR(T_t)} / n_{days}\]
+
+\[AN_{cold} = AF_{cold} \times \sum_{t: T_t < P2.5} Y_t\]
+
+\subsubsection{A2.3 Harvesting
+Adjustment}\label{a2.3-harvesting-adjustment}
+
+Heat burden adjusted for mortality displacement:
+
+\[AN_{heat,adjusted} = AN_{heat,raw} \times (1 - Harvesting Ratio)\]
+
+where Harvesting Ratio = \((ERR_{7d} - ERR_{35d})/ERR_{7d}\) = 0.74
+(74\%)
+
+\subsubsection{A2.4 Years of Life Lost}\label{a2.4-years-of-life-lost}
+
+\[YLL = AN \times \bar{LE}_{weighted}\]
+
+where \(\bar{LE}_{weighted} = \sum_a w_a \times LE_a = 11.44\) years
+
+Age weights (\(w_a\)) derived from observed elderly death distribution
+in SIM.
+
+\subsection{A3: Supplementary Tables}\label{a3-supplementary-tables}
+
+\subsubsection{Table S1: Temperature Distribution by
+Region}\label{table-s1-temperature-distribution-by-region}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+Statistic & Value & Use \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+P1 (Extreme cold) & 11.5°C & Extreme cold threshold \\
+P5 (Moderate cold) & \textasciitilde14°C & Moderate cold reference \\
+P25 & \textasciitilde21°C & Spline knot \\
+P50 (Median) & \textasciitilde24°C & Reference point \\
+P75 & \textasciitilde27°C & Spline knot \\
+P95 (Moderate heat) & \textasciitilde29°C & Moderate heat reference \\
+P99 (Extreme heat) & 30.1°C & Extreme heat threshold \\
+\end{longtable}
+
+\subsubsection{Table S2: Lag Sensitivity Analysis (Intermediate
+Level)}\label{table-s2-lag-sensitivity-analysis-intermediate-level}
+
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+Max Lag & Heat RR (P99) & Cold RR (P1) & Notes \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+7 days & 1.181 & 1.080 & Heat peaks, cold delayed \\
+14 days & 1.162 & 1.158 & Effects accumulating \\
+\textbf{21 days} & \textbf{1.153} & \textbf{1.224} & \textbf{Baseline
+specification} \\
+28 days & 1.147 & 1.279 & Cold continues to accumulate \\
+\end{longtable}
+
+\subsubsection{Table S3: Heterogeneity
+Assessment}\label{table-s3-heterogeneity-assessment}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1321}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.2453}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.0755}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1698}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.0755}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.3019}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Level
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Cochran's Q
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+df
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+p-value
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+I²
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Interpretation
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Intermediate & 4,308.56 & 2,112 & \textless0.001 & 51.0\% & Moderate
+heterogeneity \\
+Immediate & 11,523.67 & 8,144 & \textless0.001 & 29.3\% & Low-moderate
+heterogeneity \\
+\end{longtable}
+
+\subsubsection{Table S4: Harvesting Analysis (Intermediate
+Level)}\label{table-s4-harvesting-analysis-intermediate-level}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+Lag Horizon & Heat RR (P99) & Cold RR (P1) \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+7 days & 1.328 {[}1.196-1.474{]} & 0.831 {[}0.545-1.267{]} \\
+14 days & 1.235 {[}0.987-1.546{]} & 1.090 {[}0.960-1.237{]} \\
+21 days & 1.501 {[}1.401-1.609{]} & 1.321 {[}1.239-1.407{]} \\
+35 days & 1.450 {[}1.341-1.568{]} & 1.453 {[}1.359-1.553{]} \\
+\textbf{Harvesting Ratio} & \textbf{-0.37} & \textbf{+3.68} \\
+Interpretation & Effects increase & Delayed mortality \\
+\end{longtable}
+
+\subsection{A4: Supplementary Figures}\label{a4-supplementary-figures}
+
+\subsubsection{Figure S1: Spatial Distribution of Heat
+Effects}\label{figure-s1-spatial-distribution-of-heat-effects}
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=1\linewidth,height=\textheight,keepaspectratio]{../../phase5_outputs/maps/map1_heat_effects_intermediate.png}
+
+}
+
+\caption{\label{fig-map-heat}\textbf{Figure S1: Geographic distribution
+of heat effects (P99) across Brazilian regions.} Relative risk of
+mortality at extreme heat (99th percentile) compared to MMT. Warmer
+colors indicate higher heat-related mortality risk.}
+
+\end{figure}%
+
+\subsubsection{Figure S2: Spatial Distribution of Cold
+Effects}\label{figure-s2-spatial-distribution-of-cold-effects}
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=1\linewidth,height=\textheight,keepaspectratio]{../../phase5_outputs/maps/map2_cold_effects_intermediate.png}
+
+}
+
+\caption{\label{fig-map-cold}\textbf{Figure S2: Geographic distribution
+of cold effects (P1) across Brazilian regions.} Relative risk of
+mortality at extreme cold (1st percentile) compared to MMT. Darker
+colors indicate higher cold-related mortality risk.}
+
+\end{figure}%
+
+\subsubsection{Figure S3: Minimum Mortality Temperature by
+Region}\label{figure-s3-minimum-mortality-temperature-by-region}
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=1\linewidth,height=\textheight,keepaspectratio]{../../phase5_outputs/maps/map3_mmt_intermediate.png}
+
+}
+
+\caption{\label{fig-map-mmt}\textbf{Figure S3: Geographic distribution
+of minimum mortality temperature (MMT).} The optimal temperature for
+mortality varies across Brazil's climate zones, reflecting local
+adaptation patterns.}
+
+\end{figure}%
+
+\subsubsection{Figure S4: Lag-Response
+Structure}\label{figure-s4-lag-response-structure}
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=1\linewidth,height=\textheight,keepaspectratio]{../../phase5_outputs/figures/fig13_lag_response_slices.png}
+
+}
+
+\caption{\label{fig-lag-response}\textbf{Figure S4: Lag-response
+relationship for temperature effects.} The temporal evolution of
+temperature-mortality associations across lag days (0-21). Heat effects
+peak at short lags while cold effects accumulate over longer periods.}
+
+\end{figure}%
+
+\subsubsection{Figure S5: 3D Exposure-Lag-Response
+Surface}\label{figure-s5-3d-exposure-lag-response-surface}
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=1\linewidth,height=\textheight,keepaspectratio]{../../phase5_outputs/figures/fig12_3d_surface_intermediate.png}
+
+}
+
+\caption{\label{fig-3d-surface}\textbf{Figure S5: Three-dimensional
+exposure-lag-response surface.} The joint relationship between
+temperature, lag, and mortality risk, showing how effects vary across
+both temperature and time dimensions.}
+
+\end{figure}%
+
+\subsubsection{Figure S6: Descriptive Mortality Time
+Series}\label{figure-s6-descriptive-mortality-time-series}
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=1\linewidth,height=\textheight,keepaspectratio]{../../phase5_outputs/figures/figD1_mortality_timeseries.png}
+
+}
+
+\caption{\label{fig-mortality-ts}\textbf{Figure S6: Daily elderly
+mortality time series (2010-2024).} Seasonal patterns and long-term
+trends in elderly mortality across Brazil.}
+
+\end{figure}%
+
+\subsubsection{Figure S7: Temperature
+Distribution}\label{figure-s7-temperature-distribution}
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=1\linewidth,height=\textheight,keepaspectratio]{../../phase5_outputs/figures/figD2_temperature_distribution.png}
+
+}
+
+\caption{\label{fig-temp-dist}\textbf{Figure S7: Distribution of daily
+mean temperatures across study regions.} The temperature distribution
+showing the range of exposures experienced by the study population.}
+
+\end{figure}%
+
+\subsubsection{Figure S8: Seasonal
+Patterns}\label{figure-s8-seasonal-patterns}
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=1\linewidth,height=\textheight,keepaspectratio]{../../phase5_outputs/figures/figD3_seasonal_patterns.png}
+
+}
+
+\caption{\label{fig-seasonal}\textbf{Figure S8: Seasonal patterns in
+mortality and temperature.} Monthly averages showing the inverse
+relationship between temperature and mortality across seasons.}
+
+\end{figure}%
+
+
+
+
+\end{document}

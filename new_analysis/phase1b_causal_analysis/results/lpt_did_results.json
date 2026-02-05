@@ -1,0 +1,275 @@
+{
+  "level": "intermediate",
+  "twfe": {
+    "deaths_all": {
+      "method": "TWFE",
+      "treatment": "post_lpt",
+      "outcome": "deaths_all",
+      "n_obs": 721096,
+      "n_regions": 133,
+      "n_treated_regions": 128,
+      "att": 0.21606856570455493,
+      "std_error": 0.018070209334795244,
+      "t_stat": 11.957170041660905,
+      "p_value": 5.955718838849312e-33,
+      "ci_lower": 0.18065160621525678,
+      "ci_upper": 0.2514855251938531,
+      "r_squared": 0.012136546444326046
+    },
+    "deaths_cardiovascular": {
+      "method": "TWFE",
+      "treatment": "post_lpt",
+      "outcome": "deaths_cardiovascular",
+      "n_obs": 721096,
+      "n_regions": 133,
+      "n_treated_regions": 128,
+      "att": 0.03355980980923644,
+      "std_error": 0.004375493418746726,
+      "t_stat": 7.669948642923336,
+      "p_value": 1.720652297183397e-14,
+      "ci_lower": 0.02498400029390082,
+      "ci_upper": 0.042135619324572056,
+      "r_squared": 0.0145290323528936
+    },
+    "deaths_respiratory": {
+      "method": "TWFE",
+      "treatment": "post_lpt",
+      "outcome": "deaths_respiratory",
+      "n_obs": 721096,
+      "n_regions": 133,
+      "n_treated_regions": 128,
+      "att": 0.03475971436824136,
+      "std_error": 0.003892322890049138,
+      "t_stat": 8.93032652997669,
+      "p_value": 4.24753210695028e-19,
+      "ci_lower": 0.02713090168754419,
+      "ci_upper": 0.04238852704893852,
+      "r_squared": 0.014368643911838341
+    }
+  },
+  "callaway_santanna": {
+    "deaths_all": {
+      "method": "Callaway-SantAnna",
+      "outcome": "deaths_all",
+      "aggregate_att": null,
+      "aggregate_se": null,
+      "t_stat": null,
+      "p_value": null,
+      "n_cohorts": 3,
+      "cohort_results": [
+        {
+          "cohort": 2005,
+          "att": null,
+          "std_error": null,
+          "n_treated_regions": 15,
+          "n_control_regions": 5,
+          "cohort_pre_mean": null,
+          "cohort_post_mean": 11.376052404199022,
+          "control_pre_mean": null,
+          "control_post_mean": 22.42471078621179
+        },
+        {
+          "cohort": 2007,
+          "att": null,
+          "std_error": null,
+          "n_treated_regions": 2,
+          "n_control_regions": 5,
+          "cohort_pre_mean": null,
+          "cohort_post_mean": 4.872496090378485,
+          "control_pre_mean": null,
+          "control_post_mean": 22.42471078621179
+        },
+        {
+          "cohort": 2010,
+          "att": null,
+          "std_error": null,
+          "n_treated_regions": 1,
+          "n_control_regions": 5,
+          "cohort_pre_mean": null,
+          "cohort_post_mean": 1.5770334928229666,
+          "control_pre_mean": null,
+          "control_post_mean": 22.42471078621179
+        }
+      ]
+    },
+    "deaths_cardiovascular": {
+      "method": "Callaway-SantAnna",
+      "outcome": "deaths_cardiovascular",
+      "aggregate_att": null,
+      "aggregate_se": null,
+      "t_stat": null,
+      "p_value": null,
+      "n_cohorts": 3,
+      "cohort_results": [
+        {
+          "cohort": 2005,
+          "att": null,
+          "std_error": null,
+          "n_treated_regions": 15,
+          "n_control_regions": 5,
+          "cohort_pre_mean": null,
+          "cohort_post_mean": 2.837085925017388,
+          "control_pre_mean": null,
+          "control_post_mean": 6.058171746301194
+        },
+        {
+          "cohort": 2007,
+          "att": null,
+          "std_error": null,
+          "n_treated_regions": 2,
+          "n_control_regions": 5,
+          "cohort_pre_mean": null,
+          "cohort_post_mean": 0.9320021250110381,
+          "control_pre_mean": null,
+          "control_post_mean": 6.058171746301194
+        },
+        {
+          "cohort": 2010,
+          "att": null,
+          "std_error": null,
+          "n_treated_regions": 1,
+          "n_control_regions": 5,
+          "cohort_pre_mean": null,
+          "cohort_post_mean": 0.3244019138755981,
+          "control_pre_mean": null,
+          "control_post_mean": 6.058171746301194
+        }
+      ]
+    },
+    "deaths_respiratory": {
+      "method": "Callaway-SantAnna",
+      "outcome": "deaths_respiratory",
+      "aggregate_att": null,
+      "aggregate_se": null,
+      "t_stat": null,
+      "p_value": null,
+      "n_cohorts": 3,
+      "cohort_results": [
+        {
+          "cohort": 2005,
+          "att": null,
+          "std_error": null,
+          "n_treated_regions": 15,
+          "n_control_regions": 5,
+          "cohort_pre_mean": null,
+          "cohort_post_mean": 1.2011589806799001,
+          "control_pre_mean": null,
+          "control_post_mean": 2.2669933609269877
+        },
+        {
+          "cohort": 2007,
+          "att": null,
+          "std_error": null,
+          "n_treated_regions": 2,
+          "n_control_regions": 5,
+          "cohort_pre_mean": null,
+          "cohort_post_mean": 0.4724920169659058,
+          "control_pre_mean": null,
+          "control_post_mean": 2.2669933609269877
+        },
+        {
+          "cohort": 2010,
+          "att": null,
+          "std_error": null,
+          "n_treated_regions": 1,
+          "n_control_regions": 5,
+          "cohort_pre_mean": null,
+          "cohort_post_mean": 0.1397129186602871,
+          "control_pre_mean": null,
+          "control_post_mean": 2.2669933609269877
+        }
+      ]
+    }
+  },
+  "triple_difference": {
+    "deaths_all": {
+      "method": "Triple Difference",
+      "outcome": "deaths_all",
+      "n_obs": 721096,
+      "triple_diff_estimate": -66608039676.8904,
+      "std_error": 377861327788.3026,
+      "t_stat": -0.17627641353710496,
+      "p_value": 0.8600767911397612,
+      "ci_lower": -807202633292.4474,
+      "ci_upper": 673986553938.6666,
+      "coefficients": {
+        "post": 26058140.352563303,
+        "hot": 1.487867159041744,
+        "post_hot": 66608039677.7252,
+        "treated_post": -26058140.209305163,
+        "treated_hot": -0.5430656211746985,
+        "triple": -66608039676.8904
+      }
+    },
+    "deaths_cardiovascular": {
+      "method": "Triple Difference",
+      "outcome": "deaths_cardiovascular",
+      "n_obs": 721096,
+      "triple_diff_estimate": 9119576111.52016,
+      "std_error": 75105613951.3378,
+      "t_stat": 0.12142336147373602,
+      "p_value": 0.9033557139990896,
+      "ci_lower": -138084722269.87094,
+      "ci_upper": 156323874492.9113,
+      "coefficients": {
+        "post": -3567725.3714969726,
+        "hot": 0.35271263345955894,
+        "post_hot": -9119576111.045483,
+        "treated_post": 3567725.3867521305,
+        "treated_hot": -0.41948679077117185,
+        "triple": 9119576111.52016
+      }
+    },
+    "deaths_respiratory": {
+      "method": "Triple Difference",
+      "outcome": "deaths_respiratory",
+      "n_obs": 721096,
+      "triple_diff_estimate": 31552792358.050705,
+      "std_error": 114493293126.96349,
+      "t_stat": 0.2755863814927683,
+      "p_value": 0.7828657707528804,
+      "ci_lower": -192849938642.18506,
+      "ci_upper": 255955523358.28644,
+      "coefficients": {
+        "post": -12343961.669525553,
+        "hot": 0.4364090121322643,
+        "post_hot": -31552792358.874073,
+        "treated_post": 12343961.69574115,
+        "treated_hot": 0.6844571422073019,
+        "triple": 31552792358.050705
+      }
+    }
+  },
+  "intensity": {
+    "deaths_all": {
+      "method": "Intensity",
+      "outcome": "deaths_all",
+      "n_obs": 721096,
+      "coefficient": 0.026312025325522934,
+      "std_error": 0.0020025456085006003,
+      "t_stat": 13.139288919978197,
+      "p_value": 1.960604655689163e-39,
+      "interpretation": "Effect of 1 log-unit increase in households electrified"
+    },
+    "deaths_cardiovascular": {
+      "method": "Intensity",
+      "outcome": "deaths_cardiovascular",
+      "n_obs": 721096,
+      "coefficient": 0.00422916737668077,
+      "std_error": 0.00045426835929981036,
+      "t_stat": 9.309843598174933,
+      "p_value": 1.280207244646094e-20,
+      "interpretation": "Effect of 1 log-unit increase in households electrified"
+    },
+    "deaths_respiratory": {
+      "method": "Intensity",
+      "outcome": "deaths_respiratory",
+      "n_obs": 721096,
+      "coefficient": 0.003954896230144935,
+      "std_error": 0.00044609802061573213,
+      "t_stat": 8.86553189517887,
+      "p_value": 7.613971541775824e-19,
+      "interpretation": "Effect of 1 log-unit increase in households electrified"
+    }
+  }
+}

@@ -1,0 +1,61 @@
+# Preface {.unnumbered}
+
+This comprehensive technical report documents the complete methodology and results of our analysis of temperature-related mortality among elderly Brazilians from 2010 to 2024.
+
+## Document Purpose
+
+This report serves as:
+
+1. **Technical documentation** for all analytical phases (0-5)
+2. **Reproducibility guide** with complete code and data provenance
+3. **Extended methods** for the academic paper submission
+4. **Supplementary materials** for peer review
+
+## Build Information
+
+```{python}
+#| echo: false
+from datetime import datetime
+from pathlib import Path
+import subprocess
+
+# Capture build information
+try:
+    commit = subprocess.run(['git', 'rev-parse', '--short', 'HEAD'], 
+                           capture_output=True, text=True, timeout=5)
+    git_commit = commit.stdout.strip() if commit.returncode == 0 else "not available"
+except:
+    git_commit = "not available"
+
+print(f"Build date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+print(f"Git commit: {git_commit}")
+```
+
+## Quick Links
+
+- **Main Paper**: See `academic_paper.qmd` for the journal submission version
+- **Figures**: Generated in `phase5_outputs/v2/figures/`
+- **Tables**: Generated in `tables/`
+- **Data Audit**: See `phase5_outputs/DATA_AUDIT.md` for data provenance
+
+## How to Render
+
+```bash
+cd phase6_paper/comprehensive
+
+# Render full book
+quarto render
+
+# Render single chapter
+quarto render 02_phase0_data.qmd
+
+# Render academic paper only
+quarto render academic_paper.qmd --to pdf
+```
+
+## Version History
+
+| Version | Date | Description |
+|---------|------|-------------|
+| 2.0 | 2025-01-09 | Major refactoring: v2 modular architecture, path fixes |
+| 1.0 | 2025-12-08 | Initial comprehensive document |

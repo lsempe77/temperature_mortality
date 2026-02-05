@@ -1,0 +1,147 @@
+# Abstract
+
+## Background
+Climate change is intensifying heat extremes globally, with profound implications for human health. Brazil, the world's fifth-largest country by area and population, spans diverse climate zones from equatorial to subtropical, making it a critical setting for understanding temperature-mortality relationships. The elderly population is particularly vulnerable to temperature extremes due to impaired thermoregulation, high prevalence of chronic diseases, and reduced adaptive capacity.
+
+## Objectives
+This study aimed to: (1) quantify the relationship between ambient temperature and elderly mortality across Brazil at two spatial scales; (2) estimate the attributable burden of heat and cold exposure; (3) calculate years of life lost attributable to non-optimal temperatures; (4) examine effect modification by age, sex, cause of death, and regional characteristics; and (5) assess the robustness of findings to analytical choices and spatial aggregation.
+
+## Methods
+We conducted a time-series analysis using distributed lag non-linear models (DLNM) with quasi-Poisson regression at two spatial scales: 133 intermediate geographic regions and 510 immediate geographic regions of Brazil from 2010-2024. Daily mortality data for adults aged ≥60 years were obtained from the Mortality Information System (SIM). Temperature exposure was derived from ERA5 reanalysis data. We used a two-stage design: first fitting region-specific models with 21-day lag structure, then pooling estimates via random-effects meta-analysis with REML estimation. Heterogeneity was assessed using Cochran's Q test and I² statistic. Attributable deaths and years of life lost were calculated using Brazilian-specific life tables from IBGE.
+
+## Results
+Over 15 years, we analyzed 13,677,712 elderly deaths. At the intermediate level (133 regions): extreme heat (P99, 30.1°C) was associated with 8.8% increased mortality (RR: 1.088; 95% CI: 1.067-1.110), while extreme cold (P1, 11.5°C) showed 12.2% increased risk (RR: 1.122; 95% CI: 1.098-1.146). The minimum mortality temperature (MMT) was 24.3°C. Heterogeneity was moderate (I² = 51.0%). At the immediate level (510 regions): heat RR was 1.063 (95% CI: 1.050-1.076) and cold RR was 1.095 (95% CI: 1.085-1.106), with lower heterogeneity (I² = 29.3%).
+
+We estimated approximately 56,000 temperature-attributable deaths annually at the intermediate level (5,996 heat + 50,065 cold), with cold accounting for 89% of the burden. Annual years of life lost totaled 718,223 (76,819 heat + 641,404 cold). Harvesting analysis revealed fundamentally different mechanisms: heat effects increase over extended lags (harvesting ratio -0.37, indicating true excess mortality), while cold effects accumulate progressively (ratio +3.68, indicating delayed but persistent mortality). 
+
+Clear vulnerability gradients were observed: 80+ age group showed highest effects (heat RR 1.187, cold RR 1.273); females showed 8% higher heat vulnerability; males showed 4-6% higher cold vulnerability; cardiovascular deaths showed 32% excess during cold. Results were robust to sensitivity analyses including lag structure variation, pollution adjustment, and heatwave analysis (additional 1.1% mortality during multi-day events).
+
+## Conclusions
+Temperature extremes pose a substantial mortality burden among elderly Brazilians, with cold effects exceeding heat effects both in magnitude (8:1 ratio) and persistence. The intermediate spatial scale (133 regions) provides stable national estimates with moderate heterogeneity, while the immediate scale (510 regions) offers local estimates with lower heterogeneity. These findings highlight the need for comprehensive climate adaptation strategies addressing both heat and cold exposure, with particular attention to the oldest-old and cardiovascular patients during cold periods.
+
+## Keywords
+Temperature; Mortality; Elderly; Brazil; Distributed lag non-linear models; Attributable burden; Years of life lost; Climate change; Heat; Cold; Meta-analysis; Heterogeneity
+
+---
+
+# Document Structure
+
+This comprehensive report is organized into the following sections:
+
+1. **Front Matter** (this section): Abstract, keywords, document overview
+2. **Phase 0: Data Preparation**: Complete data inventory, sources, processing methods
+3. **Phase 1: Core DLNM Analysis**: Methodology, model specification, main results
+4. **Phase 2: Sensitivity Analyses**: Robustness checks, lag sensitivity, harvesting
+5. **Phase 3: Confounding Assessment**: Pollution, influenza, humidity adjustments
+6. **Phase 4: Heterogeneity Analysis**: Age, sex, cause stratification, meta-regression
+7. **Phase 5: Figures and Tables**: Complete catalog of all outputs
+8. **Discussion**: Interpretation, comparison with literature, limitations
+9. **Conclusions**: Policy implications, future directions
+10. **Supplementary Materials**: Additional tables, figures, technical details
+
+---
+
+# Acronyms and Abbreviations
+
+| Abbreviation | Definition |
+|--------------|------------|
+| AF | Attributable Fraction |
+| AN | Attributable Number (deaths) |
+| AIC | Akaike Information Criterion |
+| CI | Confidence Interval |
+| CVD | Cardiovascular Disease |
+| DLNM | Distributed Lag Non-linear Model |
+| ERA5 | ECMWF Reanalysis 5th Generation |
+| ERR | Excess Relative Risk |
+| HC1 | Heteroskedasticity-Consistent Standard Errors (Type 1) |
+| IBGE | Instituto Brasileiro de Geografia e Estatística |
+| ICD | International Classification of Diseases |
+| MMT | Minimum Mortality Temperature |
+| P1, P2.5, P50, P97.5, P99 | Temperature percentiles (PRIMARY: P2.5/P97.5) |
+| RR | Relative Risk |
+| SE | Standard Error |
+| SIM | Sistema de Informações sobre Mortalidade |
+| SRAG | Síndrome Respiratória Aguda Grave |
+| YLL | Years of Life Lost |
+
+---
+
+# Study Design Overview
+
+```{python}
+#| label: study-design-summary
+#| tbl-cap: "Study Design Summary"
+
+import pandas as pd
+
+design = {
+    'Parameter': [
+        'Study Type',
+        'Study Period',
+        'Geographic Scope',
+        'Primary Spatial Unit',
+        'Alternative Spatial Unit',
+        'Study Population',
+        'Outcome',
+        'Primary Exposure',
+        'Statistical Model',
+        'Meta-Analysis',
+        'Lag Structure',
+        'Reference Temperature',
+        'Extreme Heat Threshold',
+        'Extreme Cold Threshold',
+        'Heterogeneity Assessment'
+    ],
+    'Specification': [
+        'Time-series ecological study with two-stage design',
+        'January 1, 2010 – December 31, 2024 (15 years)',
+        'Brazil (27 states, 5,570 municipalities)',
+        '133 Intermediate Geographic Regions (IBGE)',
+        '510 Immediate Geographic Regions (IBGE)',
+        'Adults aged ≥60 years',
+        'Daily all-cause mortality count',
+        'Mean daily temperature (°C) from ERA5 reanalysis',
+        'DLNM with quasi-Poisson regression (R: dlnm package)',
+        'Random-effects with REML (R: mixmeta 1.2.0)',
+        'Up to 21 days (natural cubic splines, 4 df)',
+        'Minimum Mortality Temperature (MMT: 22.6-24.3°C)',
+        '99th percentile (30.1°C)',
+        '1st percentile (11.5°C)',
+        'Cochran\'s Q test and I² statistic'
+    ]
+}
+
+pd.DataFrame(design)
+```
+
+---
+
+# Ethical Considerations
+
+This study used anonymized administrative mortality data from the Brazilian Mortality Information System (SIM), which is publicly available through the DATASUS platform. The data contain no individual identifiers and are released as aggregate death counts by municipality, date, age, sex, and cause of death. As such, this research qualifies as secondary analysis of de-identified public data and is exempt from ethical review requirements under Brazilian regulations (Resolution CNS 510/2016, Article 1, §1, Items I-V).
+
+No informed consent was required as all data were obtained from publicly accessible government databases intended for research and public health surveillance purposes.
+
+---
+
+# Data Availability Statement
+
+All mortality data used in this study are publicly available from the Brazilian Ministry of Health's DATASUS portal (https://datasus.saude.gov.br/). Temperature data from ERA5 reanalysis are available from the Copernicus Climate Data Store (https://cds.climate.copernicus.eu/). Air quality data from CAMS are available from the Copernicus Atmosphere Data Store. Geographic boundary files are available from IBGE (https://www.ibge.gov.br/). Analysis code is available upon request.
+
+---
+
+# Funding Statement
+
+[To be completed by authors]
+
+---
+
+# Conflicts of Interest
+
+[To be completed by authors]
+
+---
+
+# Author Contributions
+
+[To be completed using CRediT taxonomy]
