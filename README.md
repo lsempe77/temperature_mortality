@@ -1,106 +1,150 @@
 # Temperature-Mortality Analysis: Brazil 2010-2024
 
-[![DOI](https://img.shields.io/badge/DOI-pending-blue)]()
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 ## Overview
 
-This repository contains the analysis code for studying the relationship between temperature and elderly mortality in Brazil (2010-2024) using Distributed Lag Non-linear Models (DLNM) and multivariate meta-analysis.
+Analysis of temperature-mortality relationships among elderly population in Brazil using Distributed Lag Non-linear Models (DLNM) and multivariate meta-analysis.
 
-**Key Features:**
-- Two-stage DLNM with meta-analytic pooling
-- Analysis at two spatial scales: 509 Immediate Geographic Regions and 133 Intermediate Geographic Regions
-- Comprehensive robustness checks (sensitivity analyses, harvesting, heatwave effects)
-- Heterogeneity analysis (age, sex, cause of death)
-- Causal inference extensions (ENSO IV, Luz Para Todos DiD)
+**Geographic scales:** 509 Immediate Regions / 133 Intermediate Regions  
+**Study period:** 2010-2024  
+**Population:** Elderly (60+ years)
+
+---
 
 ## Repository Structure
 
 ```
 new_analysis/
-├── phase0_data_prep/     # Data download and preprocessing scripts
-├── phase1_core_model/    # Core DLNM analysis (Python)
-├── phase1_r/             # Core DLNM analysis (R implementation)
-├── phase1b_causal/       # Causal inference extensions
-├── phase2_robustness/    # Sensitivity and harvesting analyses
-├── phase2_r/             # R robustness checks
-├── phase3_confounding/   # Supplementary confounding analyses
-├── phase3_r/             # R supplementary analyses
-├── phase4_heterogeneity/ # Effect modification analyses
-├── phase4_r/             # R heterogeneity analyses
-├── phase5_outputs/       # Figure and table generation
-└── utils/                # Shared utility modules
+├── phase0_data_prep/          # Step 1: Data preparation
+│   ├── downloads/             # Scripts to download raw data
+│   ├── aggregation/           # Aggregate to regional level
+│   └── covariates/            # Process covariates
+│
+├── phase1_r/                  # Step 2: Core analysis
+│   ├── 01_dlnm_analysis_v2.R  # Two-stage DLNM
+│   ├── 01b_attributable_burden.R
+│   ├── 01c_yll_calculation.R
+│   ├── 01d_case_crossover.R
+│   └── 01e_excess_mortality.R
+│
+├── phase2_r/                  # Step 3: Robustness checks
+│   ├── 02a_sensitivity.R      # Sensitivity analyses
+│   ├── 02b_harvesting.R       # Mortality displacement
+│   └── 02c_heatwave.R         # Heatwave effects
+│
+├── phase3_r/                  # Step 4: Confounding
+│   └── 03a_supplementary.R    # Time-varying confounders
+│
+└── phase4_r/                  # Step 5: Heterogeneity
+    ├── 04a_meta_regression.R  # Effect modifiers
+    ├── 04b_age_stratification.R
+    ├── 04c_sex_stratification.R
+    └── 04d_cause_stratification.R
 ```
+
+---
+
+## Reproduction Pipeline
+
+### Requirements
+
+```r
+install.packages(c(
+  "dlnm",        # Distributed lag models
+  "mvmeta",      # Multivariate meta-analysis
+  "splines",     # Natural splines
+  "survival",    # Case-crossover
+  "tidyverse",   # Data manipulation
+  "arrow"        # Parquet files
+))
+```
+
+### Step-by-Step Execution
+
+```r
+# Set working directory
+setwd("path/to/new_analysis")
+
+# PHASE 0: Data Preparation (Python scripts - run once)
+# Download data from sources below, then run aggregation scripts
+
+# PHASE 1: Core DLNM Analysis
+source("phase1_r/01_dlnm_analysis_v2.R")      # ~2-4 hours
+source("phase1_r/01b_attributable_burden.R")   # ~30 min
+source("phase1_r/01c_yll_calculation.R")       # ~15 min
+source("phase1_r/01d_case_crossover.R")        # ~1 hour
+source("phase1_r/01e_excess_mortality.R")      # ~30 min
+
+# PHASE 2: Robustness
+source("phase2_r/02a_sensitivity.R")           # ~1 hour
+source("phase2_r/02b_harvesting.R")            # ~2 hours
+source("phase2_r/02c_heatwave.R")              # ~1 hour
+
+# PHASE 3: Confounding
+source("phase3_r/03a_supplementary.R")         # ~1 hour
+
+# PHASE 4: Heterogeneity
+source("phase4_r/04a_meta_regression.R")       # ~30 min
+source("phase4_r/04b_age_stratification.R")    # ~2 hours
+source("phase4_r/04c_sex_stratification.R")    # ~2 hours
+source("phase4_r/04d_cause_stratification.R")  # ~2 hours
+```
+
+---
 
 ## Data Sources
 
-**This repository contains CODE ONLY.** Data must be obtained from the original sources:
-
 ### Mortality Data
-- **Source:** Brazilian Ministry of Health - DATASUS
-- **System:** Sistema de Informação sobre Mortalidade (SIM)
-- **URL:** https://datasus.saude.gov.br/transferencia-de-arquivos/
-- **Files:** DO10OPEN.csv to DO24OPEN.csv (2010-2024)
-- **Variables:** Daily mortality counts by municipality, age, sex, ICD-10 cause
+| Source | DATASUS - Sistema de Informação sobre Mortalidade (SIM) |
+|--------|----------------------------------------------------------|
+| URL | https://datasus.saude.gov.br/transferencia-de-arquivos/ |
+| Files | DO10OPEN.csv to DO24OPEN.csv |
+| Variables | Daily deaths by municipality, age, sex, ICD-10 cause |
 
 ### Climate Data
-- **Source:** ECMWF ERA5 Reanalysis
-- **URL:** https://cds.climate.copernicus.eu/
-- **Variables:** 2m temperature (hourly → daily mean)
-- **Resolution:** 0.25° × 0.25°, aggregated to geographic regions
-- **Period:** 2010-2024
+| Source | ECMWF ERA5 Reanalysis |
+|--------|----------------------|
+| URL | https://cds.climate.copernicus.eu/ |
+| Variables | 2m temperature (hourly → daily mean) |
+| Resolution | 0.25° × 0.25° |
 
 ### Air Quality Data
-- **Source:** Copernicus Atmosphere Monitoring Service (CAMS)
-- **URL:** https://ads.atmosphere.copernicus.eu/
-- **Variables:** PM2.5, PM10, O3, NO2 (daily means)
-- **Period:** 2010-2024
+| Source | Copernicus CAMS |
+|--------|-----------------|
+| URL | https://ads.atmosphere.copernicus.eu/ |
+| Variables | PM2.5, PM10, O3, NO2 |
 
 ### Geographic Boundaries
-- **Source:** IBGE (Brazilian Institute of Geography and Statistics)
-- **URL:** https://www.ibge.gov.br/geociencias/
-- **Files:** brazil_municipalities_2022.gpkg
-- **Levels:** Municipalities → Immediate Regions → Intermediate Regions → States
+| Source | IBGE |
+|--------|------|
+| URL | https://www.ibge.gov.br/geociencias/ |
+| File | brazil_municipalities_2022.gpkg |
 
-### Covariates
-| Variable | Source | URL |
-|----------|--------|-----|
-| Life tables | IBGE | https://www.ibge.gov.br/estatisticas/sociais/populacao/9126-tabuas-completas-de-mortalidade.html |
-| Holidays | Brazilian federal calendar | - |
-| ENSO indices | NOAA Climate Prediction Center | https://psl.noaa.gov/data/correlation/oni.data |
-| Luz Para Todos | Ministry of Mines and Energy | https://www.gov.br/mme/ |
-| AC ownership | PNAD Contínua | https://www.ibge.gov.br/estatisticas/sociais/trabalho/17270-pnad-continua.html |
+### Other Covariates
+| Variable | Source |
+|----------|--------|
+| Life tables | IBGE (tabuas de mortalidade) |
+| Holidays | Brazilian federal calendar |
+| ENSO indices | NOAA Climate Prediction Center |
 
-## Requirements
+---
 
-### Python
-```bash
-pip install pandas numpy scipy statsmodels patsy xarray geopandas matplotlib seaborn
-```
+## Key Outputs
 
-### R
-```r
-install.packages(c("dlnm", "mvmeta", "splines", "survival", "tidyverse", "arrow"))
-```
+Results are saved to `phase*_r/results/` folders:
 
-## Reproducibility
+- `dlnm_r_*_summary.csv` - Temperature-mortality coefficients by region
+- `attributable_burden_r_*.csv` - Attributable deaths and fractions
+- `yll_r_*_regions.csv` - Years of life lost
+- `excess_mortality_r_*.csv` - Annual excess deaths
 
-1. **Download data** from sources listed above
-2. **Place in `Input_data/` folder** with expected filenames
-3. **Run Phase 0 scripts** to aggregate data to regional level
-4. **Execute analyses** following the pipeline in `ANALYSIS_ROADMAP.md`
-
-### Sample Data
-
-Small sample datasets are included in `*_sample.csv` files to demonstrate data structure and allow code testing without full data downloads.
+---
 
 ## Citation
 
-If you use this code, please cite:
-
 ```bibtex
 @article{temperature_mortality_brazil_2026,
-  title={Temperature-Mortality Relationships in Brazil: A Multi-Region Analysis (2010-2024)},
+  title={Temperature and Elderly Mortality in Brazil: 
+         A Multi-Region Time-Series Analysis (2010-2024)},
   author={[Authors]},
   journal={[Journal]},
   year={2026}
@@ -109,8 +153,4 @@ If you use this code, please cite:
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-For questions about the code or analysis, please open an issue on this repository.
+MIT License
