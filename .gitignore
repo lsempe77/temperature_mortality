@@ -124,3 +124,6 @@ new_analysis/rerun_*.ps1
 new_analysis/run_all_immediate.ps1
 new_analysis/run_all_intermediate.ps1
 new_analysis/run_intermediate_batch.ps1
+
+# Local archive of removed files
+_archive/
